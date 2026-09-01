@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services Portuaires & Logistiques au Maroc | Handling Services SARL</title>
+
+    <meta name="description"
+        content="Handling Services SARL propose des solutions professionnelles de manutention, déchargement maritime, logistique et location de matériel à Agadir, Dakhla et dans les principaux ports du Maroc.">
+
+    <meta name="keywords"
+        content="manutention maritime Agadir, manutention Dakhla, déchargement thonier Maroc, services portuaires Maroc, logistique pêche, manutention portuaire Agadir, location matériel manutention">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://VOTRE-DOMAINE.com/fr/services.html">
+
+    <link rel="icon" type="image/webp" href="../images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+            --navy: #05233d;
+            --navy-dark: #02182b;
+            --navy-deep: #011321;
+
+            --blue: #128bd4;
+            --blue-light: #43b3ef;
+            --blue-soft: #eaf6fd;
+
+            --white: #ffffff;
+            --light: #f4f8fb;
+            --border: #dfe8ee;
+
+            --text: #17354d;
+            --muted: #718394;
+
+            --container: 1180px;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(var(--container), calc(100% - 44px));
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           TOPBAR
+        ===================================================== */
+
+        .topbar {
+            height: 34px;
+            background: var(--navy-deep);
+            color: #9eb5c7;
+            font-size: 10px;
+        }
+
+        .topbar-inner {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .topbar-left,
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .topbar-right a {
+            color: #d8e6ef;
+            transition: .25s ease;
+        }
+
+        .topbar-right a:hover {
+            color: var(--blue-light);
+        }
+
+        .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--blue);
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            height: 78px;
+            background: #fff;
+            border-bottom: 1px solid #e7edf1;
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-inner {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .brand {
+            width: 155px;
+            flex-shrink: 0;
+        }
+
+        .brand img {
+            width: 100%;
+        }
+
+        .main-navigation {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            height: 78px;
+            position: relative;
+            color: #334b5e;
+            font-size: 11px;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--blue);
+        }
+
+        .nav-link.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 21px;
+            height: 2px;
+            background: var(--blue);
+        }
+
+
+        /* =====================================================
+           DROPDOWN
+        ===================================================== */
+
+        .dropdown-panel {
+            position: absolute;
+            top: 72px;
+            left: 50%;
+            transform: translateX(-50%) translateY(12px);
+            width: 240px;
+            background: #fff;
+            border: 1px solid var(--border);
+            box-shadow: 0 25px 60px rgba(2, 24, 43, .15);
+            opacity: 0;
+            visibility: hidden;
+            transition: .25s ease;
+        }
+
+        .nav-item:hover .dropdown-panel {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-panel a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 18px;
+            border-bottom: 1px solid #edf1f4;
+            color: var(--navy);
+            font-size: 10px;
+            font-weight: 800;
+            transition: .2s ease;
+        }
+
+        .dropdown-panel a:last-child {
+            border-bottom: 0;
+        }
+
+        .dropdown-panel a:hover {
+            background: var(--blue-soft);
+            color: var(--blue);
+        }
+
+        .dropdown-number {
+            color: var(--blue);
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           HEADER ACTION
+        ===================================================== */
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-left: 15px;
+        }
+
+        .header-button {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--navy);
+            color: #fff;
+            padding: 12px 15px;
+            font-size: 9px;
+            font-weight: 800;
+            transition: .3s ease;
+        }
+
+        .header-button strong {
+            color: var(--blue-light);
+            font-size: 15px;
+        }
+
+        .header-button:hover {
+            background: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        .language button {
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--navy);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .services-hero {
+            min-height: 590px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: var(--navy-deep);
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: heroZoom 12s ease-out infinite alternate;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(1, 19, 33, .98) 0%,
+                    rgba(1, 19, 33, .91) 35%,
+                    rgba(1, 19, 33, .63) 65%,
+                    rgba(1, 19, 33, .20) 100%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+            padding: 80px 0;
+            animation: fadeUp .9s ease both;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--blue-light);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: var(--blue);
+        }
+
+        .hero-content h1 {
+            color: #fff;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.02;
+            letter-spacing: -2.8px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .hero-content h1 span {
+            color: var(--blue-light);
+        }
+
+        .hero-content p {
+            max-width: 650px;
+            color: #c8d8e3;
+            font-size: 13px;
+            line-height: 1.9;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 21px;
+            background: var(--blue);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 800;
+            transition: .3s ease;
+        }
+
+        .hero-button:hover {
+            background: #0879bd;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(18, 139, 212, .25);
+        }
+
+        .hero-button.secondary {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .20);
+        }
+
+        .hero-button.secondary:hover {
+            background: rgba(255, 255, 255, .15);
+        }
+
+
+        /* =====================================================
+           HERO BADGES
+        ===================================================== */
+
+        .hero-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            border-top: 1px solid rgba(255, 255, 255, .10);
+            background: rgba(1, 19, 33, .72);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-badges {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .hero-badge {
+            padding: 20px;
+            border-right: 1px solid rgba(255, 255, 255, .09);
+        }
+
+        .hero-badge:last-child {
+            border-right: 0;
+        }
+
+        .hero-badge strong {
+            display: block;
+            color: #fff;
+            font-family: "Manrope";
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        .hero-badge span {
+            color: #8fa8ba;
+            font-size: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: var(--blue);
+            font-size: 9px;
+            letter-spacing: 1.7px;
+            font-weight: 800;
+            margin-bottom: 13px;
+        }
+
+        .intro h2 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 37px;
+            line-height: 1.12;
+            letter-spacing: -1.2px;
+            margin-bottom: 20px;
+        }
+
+        .intro h2 span {
+            color: var(--blue);
+        }
+
+        .intro-text {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.95;
+        }
+
+        .intro-right {
+            position: relative;
+        }
+
+        .intro-card {
+            padding: 38px;
+            background: var(--light);
+            border-left: 3px solid var(--blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-card::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 1px solid #d9eaf4;
+            border-radius: 50%;
+            right: -90px;
+            top: -80px;
+        }
+
+        .intro-card strong {
+            display: block;
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 42px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .intro-card strong span {
+            color: var(--blue);
+        }
+
+        .intro-card h3 {
+            color: var(--navy);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .intro-card p {
+            color: var(--muted);
+            font-size: 10px;
+            line-height: 1.7;
+            max-width: 450px;
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ===================================================== */
+
+        .services {
+            padding: 95px 0 105px;
+            background: var(--light);
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 36px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-top: 6px;
+        }
+
+        .section-heading p {
+            max-width: 430px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease,
+                border-color .35s ease;
+            animation: fadeUp .7s ease both;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #b9dced;
+            box-shadow: 0 25px 55px rgba(5, 35, 61, .12);
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: .12s;
+        }
+
+        .service-card:nth-child(3) {
+            animation-delay: .24s;
+        }
+
+        .service-image {
+            height: 235px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .7s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.07);
+        }
+
+        .service-number {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            min-width: 42px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy);
+            color: #fff;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .service-content {
+            padding: 28px 26px 30px;
+        }
+
+        .service-content h3 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-content p {
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .service-list li {
+            display: flex;
+            gap: 9px;
+            color: #40596b;
+            font-size: 10px;
+        }
+
+        .service-list li::before {
+            content: "✓";
+            color: var(--blue);
+            font-weight: 900;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--blue);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .8px;
+            text-transform: uppercase;
+        }
+
+        .service-link span {
+            transition: .25s ease;
+        }
+
+        .service-card:hover .service-link span {
+            transform: translateX(6px);
+        }
+
+
+        /* =====================================================
+           CAPABILITIES
+        ===================================================== */
+
+        .capabilities {
+            padding: 100px 0;
+            background: var(--navy);
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .capabilities h2 {
+            color: #fff;
+            font-family: "Manrope";
+            font-size: 38px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 18px;
+        }
+
+        .capabilities h2 span {
+            color: var(--blue-light);
+        }
+
+        .capabilities-text {
+            color: #a9bfce;
+            font-size: 11px;
+            line-height: 1.9;
+            max-width: 540px;
+            margin-bottom: 28px;
+        }
+
+        .capability-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .capability {
+            padding: 16px;
+            border: 1px solid rgba(255, 255, 255, .09);
+            background: rgba(255, 255, 255, .035);
+            transition: .3s ease;
+        }
+
+        .capability:hover {
+            background: rgba(255, 255, 255, .07);
+            transform: translateY(-3px);
+        }
+
+        .capability strong {
+            display: block;
+            color: #fff;
+            font-size: 11px;
+            margin-bottom: 4px;
+        }
+
+        .capability span {
+            color: #8da5b7;
+            font-size: 9px;
+        }
+
+        .capability-visual {
+            min-height: 430px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .capability-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+        }
+
+        .capability-visual::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    0deg,
+                    rgba(1, 19, 33, .75),
+                    transparent 60%
+                );
+        }
+
+        .visual-label {
+            position: absolute;
+            z-index: 2;
+            bottom: 25px;
+            left: 25px;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .stats {
+            padding: 35px 0;
+            background: #031c30;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 8px 20px;
+            border-right: 1px solid rgba(255, 255, 255, .09);
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat strong {
+            display: block;
+            color: #fff;
+            font-family: "Manrope";
+            font-size: 30px;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .stat strong span {
+            color: var(--blue-light);
+        }
+
+        .stat small {
+            color: #8da6b7;
+            font-size: 8px;
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           CLIENTS
+        ===================================================== */
+
+        .clients {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .clients-heading {
+            max-width: 650px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .clients-heading h2 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 36px;
+            line-height: 1.1;
+            margin: 7px 0 13px;
+        }
+
+        .clients-heading p {
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .client {
+            height: 125px;
+            background: var(--light);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: .3s ease;
+        }
+
+        .client::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 2px;
+            background: var(--blue);
+            transition: .35s ease;
+        }
+
+        .client:hover {
+            background: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(5, 35, 61, .08);
+        }
+
+        .client:hover::before {
+            width: 100%;
+        }
+
+        .client img {
+            max-width: 78%;
+            max-height: 65px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: .75;
+            transition: .3s ease;
+        }
+
+        .client:hover img {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.04);
+        }
+
+
+        /* =====================================================
+           LOCATIONS
+        ===================================================== */
+
+        .locations {
+            padding: 95px 0;
+            background: var(--light);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .location {
+            height: 340px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .6s ease;
+        }
+
+        .location:hover img {
+            transform: scale(1.06);
+        }
+
+        .location::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    0deg,
+                    rgba(2, 24, 43, .96),
+                    rgba(2, 24, 43, .10)
+                );
+        }
+
+        .location-content {
+            position: absolute;
+            z-index: 2;
+            left: 28px;
+            right: 28px;
+            bottom: 28px;
+        }
+
+        .location-content small {
+            color: var(--blue-light);
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .location-content h3 {
+            color: #fff;
+            font-family: "Manrope";
+            font-size: 32px;
+            line-height: 1;
+            margin: 7px 0 10px;
+        }
+
+        .location-content p {
+            color: #c1d1dc;
+            max-width: 440px;
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           PROMISE
+        ===================================================== */
+
+        .promise {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .promise-card {
+            padding: 32px 28px;
+            border: 1px solid var(--border);
+            position: relative;
+            transition: .3s ease;
+            animation: fadeUp .7s ease both;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-6px);
+            border-color: #b9dced;
+            box-shadow: 0 20px 45px rgba(5, 35, 61, .08);
+        }
+
+        .promise-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--blue-soft);
+            color: var(--blue);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .promise-card h3 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .promise-card p {
+            color: var(--muted);
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            padding: 85px 0;
+            background: var(--light);
+        }
+
+        .cta-box {
+            min-height: 270px;
+            padding: 50px 60px;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .cta-box::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            right: -170px;
+            top: -210px;
+            border: 1px solid rgba(67, 179, 239, .18);
+            border-radius: 50%;
+        }
+
+        .cta-box::after {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            right: -90px;
+            top: -130px;
+            border: 1px solid rgba(67, 179, 239, .10);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content small {
+            color: var(--blue-light);
+            font-size: 8px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+
+        .cta-content h2 {
+            color: #fff;
+            font-family: "Manrope";
+            font-size: 32px;
+            line-height: 1.1;
+            margin: 8px 0 10px;
+        }
+
+        .cta-content p {
+            color: #a9bfce;
+            font-size: 10px;
+        }
+
+        .cta-button {
+            position: relative;
+            z-index: 3;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--blue);
+            color: #fff;
+            padding: 16px 23px;
+            font-size: 10px;
+            font-weight: 800;
+            transition: .3s ease;
+        }
+
+        .cta-button:hover {
+            background: #0879bd;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(18, 139, 212, .25);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+            background: #021a2e;
+            color: #fff;
+        }
+
+        .footer-main {
+            padding: 65px 0 45px;
+            display: grid;
+            grid-template-columns: 1.5fr .8fr .9fr 1fr;
+            gap: 45px;
+        }
+
+        .footer-brand img {
+            width: 150px;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            max-width: 290px;
+            color: #8ea6b8;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .footer-column h3 {
+            color: var(--blue-light);
+            font-size: 9px;
+            letter-spacing: 1.4px;
+            margin-bottom: 9px;
+        }
+
+        .footer-column a,
+        .footer-column span {
+            color: #99afbe;
+            font-size: 10px;
+            transition: .2s ease;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 20px 0;
+        }
+
+        .footer-bottom p {
+            color: #6f8799;
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heroZoom {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.06);
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .main-navigation {
+                gap: 14px;
+            }
+
+            .header-actions {
+                margin-left: 5px;
+            }
+
+            .header-button span {
+                display: none;
+            }
+
+            .intro-grid {
+                gap: 45px;
+            }
+        }
+
+
+        @media (max-width: 850px) {
+
+            .topbar-right {
+                display: none;
+            }
+
+            .topbar-inner {
+                justify-content: center;
+            }
+
+            .main-navigation {
+                display: none;
+            }
+
+            .header-actions {
+                margin-left: auto;
+            }
+
+            .services-hero {
+                min-height: 570px;
+            }
+
+            .hero-content {
+                padding: 70px 0;
+            }
+
+            .hero-badges {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-badge:nth-child(2) {
+                border-right: 0;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .capability-visual {
+                min-height: 350px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0;
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .promise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 45px 35px;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .container {
+                width: calc(100% - 30px);
+            }
+
+            .topbar {
+                display: none;
+            }
+
+            .site-header {
+                height: 68px;
+            }
+
+            .header-inner {
+                height: 68px;
+            }
+
+            .brand {
+                width: 135px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+                letter-spacing: -1.8px;
+            }
+
+            .hero-content p {
+                font-size: 11px;
+            }
+
+            .hero-badges {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-badge {
+                padding: 15px;
+            }
+
+            .hero-badge strong {
+                font-size: 15px;
+            }
+
+            .intro,
+            .services,
+            .capabilities,
+            .clients,
+            .locations,
+            .promise {
+                padding: 65px 0;
+            }
+
+            .intro h2,
+            .section-heading h2,
+            .clients-heading h2 {
+                font-size: 29px;
+            }
+
+            .capabilities h2 {
+                font-size: 30px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 15px;
+            }
+
+            .capability-list {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .09);
+                padding-bottom: 20px;
+            }
+
+            .stat:last-child {
+                border-bottom: 0;
+            }
+
+            .clients-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .client {
+                height: 105px;
+                padding: 18px;
+            }
+
+            .location {
+                height: 280px;
+            }
+
+            .location-content h3 {
+                font-size: 28px;
+            }
+
+            .cta-content h2 {
+                font-size: 27px;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         TOPBAR
+    ===================================================== -->
+
+    <div class="topbar">
+
+        <div class="container topbar-inner">
+
+            <div class="topbar-left">
+
+                <span>Agadir · Dakhla · Maroc</span>
+
+                <span class="dot"></span>
+
+                <span>Disponibilité opérationnelle</span>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <a href="tel:+212528822185">
+                    +212 528 82 21 85
+                </a>
+
+                <a href="mailto:handlingservices1@gmail.com">
+                    handlingservices1@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="../index.html" class="brand">
+                <img
+                    src="../images/logo.webp"
+                    alt="Handling Services SARL">
+            </a>
+
+
+            <nav class="main-navigation" aria-label="Navigation principale">
+
+                <a href="../index.html" class="nav-link">
+                    Accueil
+                </a>
+
+
+                <div class="nav-item">
+
+                    <a href="services.html" class="nav-link active">
+                        Services
+                        <span>⌄</span>
+                    </a>
+
+                    <div class="dropdown-panel">
+
+                        <a href="manutention.html">
+                            <span class="dropdown-number">01</span>
+                            Manutention
+                        </a>
+
+                        <a href="dechargement.html">
+                            <span class="dropdown-number">02</span>
+                            Déchargement
+                        </a>
+
+                        <a href="location-materiel.html">
+                            <span class="dropdown-number">03</span>
+                            Location de matériel
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a href="agadir.html" class="nav-link">
+                    Agadir
+                </a>
+
+                <a href="dakhla.html" class="nav-link">
+                    Dakhla
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    À propos
+                </a>
+
+                <a href="realisations.html" class="nav-link">
+                    Réalisations
+                </a>
+
+                <a href="contact.html" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a href="contact.html?source=services" class="header-button">
+
+                    <span>
+                        Demander un devis
+                    </span>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </a>
+
+                <div class="language">
+                    <button type="button">FR</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="services-hero">
+
+            <div class="hero-background">
+
+                <img
+                    src="../images/manutention.webp"
+                    alt="Services portuaires Handling Services SARL">
+
+            </div>
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        HANDLING SERVICES SARL
+                    </div>
+
+                    <h1>
+                        Une organisation
+                        <span>solide.</span>
+                        Des opérations maîtrisées.
+                    </h1>
+
+                    <p>
+                        De la manutention portuaire au déchargement
+                        maritime, jusqu'à la mise à disposition
+                        de matériel, nous accompagnons les opérations
+                        professionnelles avec une organisation rigoureuse,
+                        des équipes expérimentées et une exigence constante
+                        en matière de sécurité, de ponctualité et de qualité.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="#services" class="hero-button">
+                            Découvrir nos services
+                            <span>↓</span>
+                        </a>
+
+                        <a
+                            href="contact.html?source=services"
+                            class="hero-button secondary">
+
+                            Parler à notre équipe
+                            <span>↗</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-bottom">
+
+                <div class="container">
+
+                    <div class="hero-badges">
+
+                        <div class="hero-badge">
+                            <strong>29+</strong>
+                            <span>ANNÉES D'EXPÉRIENCE</span>
+                        </div>
+
+                        <div class="hero-badge">
+                            <strong>24/7</strong>
+                            <span>RÉACTIVITÉ OPÉRATIONNELLE</span>
+                        </div>
+
+                        <div class="hero-badge">
+                            <strong>AGADIR · DAKHLA</strong>
+                            <span>PRÉSENCE AU MAROC</span>
+                        </div>
+
+                        <div class="hero-badge">
+                            <strong>SÉCURITÉ</strong>
+                            <span>PRIORITÉ À CHAQUE OPÉRATION</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="intro-grid">
+
+                    <div>
+
+                        <div class="section-label">
+                            NOTRE SAVOIR-FAIRE
+                        </div>
+
+                        <h2>
+                            Plus qu'un service,
+                            une <span>capacité opérationnelle.</span>
+                        </h2>
+
+                        <p class="intro-text">
+
+                            Handling Services SARL intervient dans
+                            des environnements où la coordination,
+                            la rapidité et la maîtrise des opérations
+                            sont essentielles.
+
+                            <br><br>
+
+                            Notre rôle est d'organiser les ressources
+                            humaines et matérielles nécessaires afin
+                            d'assurer une exécution fluide des opérations,
+                            tout en respectant les contraintes du site,
+                            les délais convenus et les exigences
+                            de sécurité.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="intro-right">
+
+                        <div class="intro-card">
+
+                            <strong>
+                                1997<span>→</span>
+                            </strong>
+
+                            <h3>
+                                Une expérience construite sur le terrain.
+                            </h3>
+
+                            <p>
+                                Depuis 1997, notre activité s'est développée
+                                autour des opérations de manutention,
+                                de déchargement et des besoins logistiques
+                                liés aux activités professionnelles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <section class="services" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <div class="section-label">
+                            NOS DOMAINES D'INTERVENTION
+                        </div>
+
+                        <h2>
+                            Trois expertises.
+                            <br>
+                            <span style="color:#128bd4;">
+                                Une même exigence.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Des solutions complémentaires pour accompagner
+                        vos opérations portuaires, maritimes et logistiques
+                        avec une organisation adaptée à chaque situation.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article class="service-card">
+
+                        <div class="service-image">
+
+                            <img
+                                src="../images/manutention.webp"
+                                alt="Manutention portuaire professionnelle à Agadir et Dakhla"
+                                loading="lazy">
+
+                            <div class="service-number">
+                                01
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h3>
+                                Manutention
+                            </h3>
+
+                            <p>
+                                Une prise en charge organisée des opérations
+                                de manipulation, déplacement, chargement,
+                                déchargement et mise en place des marchandises.
+                            </p>
+
+                            <ul class="service-list">
+
+                                <li>Manutention portuaire</li>
+                                <li>Organisation des équipes</li>
+                                <li>Manipulation des produits de pêche</li>
+                                <li>Chargement & déplacement</li>
+                                <li>Coordination sur site</li>
+
+                            </ul>
+
+                            <a href="manutention.html" class="service-link">
+                                Voir la manutention
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article class="service-card">
+
+                        <div class="service-image">
+
+                            <img
+                                src="../images/dechargement.webp"
+                                alt="Déchargement maritime et thonier au Maroc"
+                                loading="lazy">
+
+                            <div class="service-number">
+                                02
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h3>
+                                Déchargement maritime
+                            </h3>
+
+                            <p>
+                                Des opérations de déchargement pensées
+                                pour les navires, thoniers et différentes
+                                activités de pêche, avec une coordination
+                                précise des équipes et des flux.
+                            </p>
+
+                            <ul class="service-list">
+
+                                <li>Déchargement de thoniers</li>
+                                <li>Produits de la pêche</li>
+                                <li>Coordination quai & terre</li>
+                                <li>Gestion des volumes</li>
+                                <li>Rapidité & maîtrise des opérations</li>
+
+                            </ul>
+
+                            <a href="dechargement.html" class="service-link">
+                                Voir le déchargement
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article class="service-card">
+
+                        <div class="service-image">
+
+                            <img
+                                src="../images/location-materiel.webp"
+                                alt="Location de matériel de manutention au Maroc"
+                                loading="lazy">
+
+                            <div class="service-number">
+                                03
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <h3>
+                                Location de matériel
+                            </h3>
+
+                            <p>
+                                Mise à disposition de moyens matériels
+                                adaptés aux besoins de vos opérations,
+                                chantiers et interventions professionnelles.
+                            </p>
+
+                            <ul class="service-list">
+
+                                <li>Chariots élévateurs</li>
+                                <li>Transpalettes</li>
+                                <li>Matériel de manutention</li>
+                                <li>Solutions ponctuelles</li>
+                                <li>Mise à disposition professionnelle</li>
+
+                            </ul>
+
+                            <a href="location-materiel.html" class="service-link">
+                                Voir le matériel
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAPABILITIES -->
+
+        <section class="capabilities">
+
+            <div class="container">
+
+                <div class="capabilities-grid">
+
+                    <div>
+
+                        <div class="section-label">
+                            NOTRE FORCE OPÉRATIONNELLE
+                        </div>
+
+                        <h2>
+                            Quand l'opération exige
+                            de la <span>rigueur.</span>
+                        </h2>
+
+                        <p class="capabilities-text">
+                            Une opération réussie ne dépend pas uniquement
+                            du matériel. Elle repose sur la préparation,
+                            la coordination des équipes, la maîtrise des
+                            flux et la capacité à réagir efficacement
+                            aux contraintes du terrain.
+                        </p>
+
+
+                        <div class="capability-list">
+
+                            <div class="capability">
+                                <strong>Équipes professionnelles</strong>
+                                <span>Personnel organisé et expérimenté</span>
+                            </div>
+
+                            <div class="capability">
+                                <strong>Respect des délais</strong>
+                                <span>Organisation orientée ponctualité</span>
+                            </div>
+
+                            <div class="capability">
+                                <strong>Sécurité</strong>
+                                <span>Vigilance à chaque étape</span>
+                            </div>
+
+                            <div class="capability">
+                                <strong>Coordination</strong>
+                                <span>Une gestion fluide des opérations</span>
+                            </div>
+
+                            <div class="capability">
+                                <strong>Réactivité</strong>
+                                <span>Capacité d'intervention adaptée</span>
+                            </div>
+
+                            <div class="capability">
+                                <strong>Maîtrise des flux</strong>
+                                <span>Organisation des mouvements</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="capability-visual">
+
+                        <img
+                            src="../images/operation-01.webp"
+                            alt="Équipe Handling Services en opération"
+                            loading="lazy">
+
+                        <div class="visual-label">
+                            SUR LE TERRAIN · HANDLING SERVICES SARL
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="stats">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat">
+                        <strong>29<span>+</span></strong>
+                        <small>ANNÉES D'EXPÉRIENCE</small>
+                    </div>
+
+                    <div class="stat">
+                        <strong>5000<span>+</span></strong>
+                        <small>OPÉRATIONS</small>
+                    </div>
+
+                    <div class="stat">
+                        <strong>24/7</strong>
+                        <small>RÉACTIVITÉ</small>
+                    </div>
+
+                    <div class="stat">
+                        <strong>02</strong>
+                        <small>ZONES PRINCIPALES</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLIENTS -->
+
+        <section class="clients">
+
+            <div class="container">
+
+                <div class="clients-heading">
+
+                    <div class="section-label">
+                        NOS CLIENTS & PARTENAIRES
+                    </div>
+
+                    <h2>
+                        Des professionnels
+                        qui nous accordent leur confiance.
+                    </h2>
+
+                    <p>
+                        Nous accompagnons différents acteurs professionnels
+                        dans leurs opérations. Cette sélection présente
+                        quelques-uns des clients et partenaires avec lesquels
+                        nous avons eu le plaisir de collaborer.
+                    </p>
+
+                </div>
+
+
+                <div class="clients-grid">
+
+                    <div class="client">
+                        <img
+                            src="../images/client-01.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                    <div class="client">
+                        <img
+                            src="../images/client-02.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                    <div class="client">
+                        <img
+                            src="../images/client-03.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                    <div class="client">
+                        <img
+                            src="../images/client-04.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                    <div class="client">
+                        <img
+                            src="../images/client-05.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                    <div class="client">
+                        <img
+                            src="../images/client-06.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                    <div class="client">
+                        <img
+                            src="../images/client-07.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                    <div class="client">
+                        <img
+                            src="../images/client-08.webp"
+                            alt="Client partenaire Handling Services"
+                            loading="lazy">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOCATIONS -->
+
+        <section class="locations">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <div class="section-label">
+                            NOTRE PRÉSENCE
+                        </div>
+
+                        <h2>
+                            Là où vos opérations
+                            ont besoin de nous.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Une présence opérationnelle à Agadir et Dakhla,
+                        au cœur de zones stratégiques pour les activités
+                        portuaires et de pêche.
+                    </p>
+
+                </div>
+
+
+                <div class="locations-grid">
+
+
+                    <a href="agadir.html" class="location">
+
+                        <img
+                            src="../images/agadir.webp"
+                            alt="Handling Services Agadir"
+                            loading="lazy">
+
+                        <div class="location-content">
+
+                            <small>ZONE 01</small>
+
+                            <h3>
+                                Agadir
+                            </h3>
+
+                            <p>
+                                Manutention, déchargement et opérations
+                                professionnelles au sein d'un important
+                                environnement portuaire marocain.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="dakhla.html" class="location">
+
+                        <img
+                            src="../images/dakhla.webp"
+                            alt="Handling Services Dakhla"
+                            loading="lazy">
+
+                        <div class="location-content">
+
+                            <small>ZONE 02</small>
+
+                            <h3>
+                                Dakhla
+                            </h3>
+
+                            <p>
+                                Une capacité d'intervention adaptée
+                                aux activités professionnelles de pêche,
+                                de manutention et de logistique.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROMISE -->
+
+        <section class="promise">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <div class="section-label">
+                            NOS ENGAGEMENTS
+                        </div>
+
+                        <h2>
+                            Une exigence
+                            à chaque opération.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Notre manière de travailler repose sur des
+                        principes simples : préparer, coordonner,
+                        exécuter et contrôler.
+                    </p>
+
+                </div>
+
+
+                <div class="promise-grid">
+
+
+                    <div class="promise-card">
+
+                        <div class="promise-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Sécurité
+                        </h3>
+
+                        <p>
+                            La sécurité des équipes, des marchandises
+                            et de l'environnement de travail reste
+                            une priorité permanente.
+                        </p>
+
+                    </div>
+
+
+                    <div class="promise-card">
+
+                        <div class="promise-icon">
+                            ◷
+                        </div>
+
+                        <h3>
+                            Ponctualité
+                        </h3>
+
+                        <p>
+                            Une organisation pensée pour respecter
+                            les horaires convenus et maintenir
+                            la fluidité des opérations.
+                        </p>
+
+                    </div>
+
+
+                    <div class="promise-card">
+
+                        <div class="promise-icon">
+                            +
+                        </div>
+
+                        <h3>
+                            Maîtrise
+                        </h3>
+
+                        <p>
+                            Une approche structurée permettant
+                            de limiter les erreurs et de préserver
+                            la qualité des opérations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="cta">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-content">
+
+                        <small>
+                            PARLONS DE VOTRE OPÉRATION
+                        </small>
+
+                        <h2>
+                            Besoin d'une équipe
+                            capable de passer à l'action ?
+                        </h2>
+
+                        <p>
+                            Transmettez-nous votre besoin,
+                            votre site d'intervention et les
+                            contraintes de votre opération.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="contact.html?source=services"
+                        class="cta-button">
+
+                        Demander un devis
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-main">
+
+
+            <div class="footer-brand">
+
+                <a href="../index.html">
+
+                    <img
+                        src="../images/logo.webp"
+                        alt="Handling Services SARL">
+
+                </a>
+
+                <p>
+                    Handling Services SARL accompagne
+                    les professionnels dans leurs opérations
+                    de manutention, de déchargement et
+                    de location de matériel au Maroc.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    NAVIGATION
+                </h3>
+
+                <a href="../index.html">
+                    Accueil
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="agadir.html">
+                    Agadir
+                </a>
+
+                <a href="dakhla.html">
+                    Dakhla
+                </a>
+
+                <a href="about.html">
+                    À propos
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    SERVICES
+                </h3>
+
+                <a href="manutention.html">
+                    Manutention
+                </a>
+
+                <a href="dechargement.html">
+                    Déchargement
+                </a>
+
+                <a href="location-materiel.html">
+                    Location de matériel
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    CONTACT
+                </h3>
+
+                <a href="tel:+212528822185">
+                    +212 528 82 21 85
+                </a>
+
+                <a href="mailto:handlingservices1@gmail.com">
+                    handlingservices1@gmail.com
+                </a>
+
+                <span>
+                    Agadir · Dakhla · Maroc
+                </span>
+
+                <span>
+                    Disponibilité opérationnelle
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Handling Services SARL.
+                Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

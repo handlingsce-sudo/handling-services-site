@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manutention au Port d'Agadir | Handling Services SARL</title>
+
+    <meta name="description"
+        content="Handling Services SARL accompagne les professionnels dans leurs opérations de manutention, déchargement et location de matériel à l'Ancien Port d'Agadir. Expertise depuis 1997.">
+
+    <meta name="keywords"
+        content="manutention Agadir, manutention port Agadir, Ancien Port Agadir, déchargement Agadir, location matériel Agadir, services portuaires Agadir">
+
+    <meta name="author" content="Handling Services SARL">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://VOTRE-DOMAINE.com/fr/agadir.html">
+
+    <link rel="alternate" hreflang="fr" href="https://VOTRE-DOMAINE.com/fr/agadir.html">
+    <link rel="alternate" hreflang="en" href="https://VOTRE-DOMAINE.com/en/agadir.html">
+    <link rel="alternate" hreflang="es" href="https://VOTRE-DOMAINE.com/es/agadir.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Handling Services à Agadir | Manutention Portuaire">
+    <meta property="og:description"
+        content="Solutions professionnelles de manutention, déchargement et location de matériel à Agadir.">
+    <meta property="og:image" content="../images/agadir-port.webp">
+    <meta property="og:locale" content="fr_MA">
+
+    <link rel="icon" type="image/webp" href="../images/logo.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+        /* =====================================================
+           AGADIR PAGE
+        ===================================================== */
+
+        .city-hero {
+            position: relative;
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .city-hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .city-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .city-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 24, 45, .96) 0%,
+                    rgba(3, 24, 45, .86) 38%,
+                    rgba(3, 24, 45, .45) 68%,
+                    rgba(3, 24, 45, .15) 100%
+                );
+        }
+
+        .city-hero-inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .city-hero-content {
+            max-width: 680px;
+            padding: 80px 0;
+        }
+
+        .city-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #55b8ef;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .city-eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 2px;
+            background: var(--blue);
+        }
+
+        .city-hero h1 {
+            color: #fff;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(44px, 5.8vw, 76px);
+            line-height: .96;
+            letter-spacing: -3px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .city-hero h1 span {
+            color: #35a5ef;
+        }
+
+        .city-hero-description {
+            max-width: 590px;
+            color: #d8e7f2;
+            font-size: 14px;
+            line-height: 1.85;
+            margin-bottom: 30px;
+        }
+
+        .city-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .city-actions .btn-primary,
+        .city-actions .btn-secondary {
+            min-height: 46px;
+            padding: 0 22px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+
+        .city-actions .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            border: 1px solid rgba(255, 255, 255, .4);
+            color: #fff;
+            font-weight: 800;
+            transition: .25s ease;
+        }
+
+        .city-actions .btn-secondary:hover {
+            background: #fff;
+            color: var(--navy);
+        }
+
+
+        /* =====================================================
+           CITY INFO BAR
+        ===================================================== */
+
+        .city-info-bar {
+            background: var(--navy);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .city-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .city-info-item {
+            min-height: 105px;
+            padding: 22px 30px;
+            border-right: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .city-info-item:last-child {
+            border-right: 0;
+        }
+
+        .city-info-icon {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(71, 174, 232, .4);
+            color: #54b8ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 13px;
+            flex: 0 0 38px;
+        }
+
+        .city-info-item strong {
+            display: block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .city-info-item span {
+            display: block;
+            color: #9db2c4;
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .city-intro {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .city-intro-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .section-kicker-city {
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+            margin-bottom: 13px;
+        }
+
+        .city-intro-title {
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -1.6px;
+            font-weight: 800;
+        }
+
+        .city-intro-title span {
+            color: var(--blue);
+        }
+
+        .city-intro-content p {
+            color: #66788a;
+            font-size: 13px;
+            line-height: 1.85;
+            margin-bottom: 18px;
+        }
+
+        .city-intro-content .lead {
+            color: #233d57;
+            font-size: 17px;
+            line-height: 1.7;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ===================================================== */
+
+        .city-services {
+            padding: 90px 0;
+            background: #f5f8fa;
+        }
+
+        .city-section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 40px;
+            margin-bottom: 42px;
+        }
+
+        .city-section-heading h2 {
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            font-weight: 800;
+        }
+
+        .city-section-heading h2 span {
+            color: var(--blue);
+        }
+
+        .city-section-heading p {
+            max-width: 420px;
+            color: #6d7e8e;
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        .city-service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .city-service-card {
+            background: #fff;
+            border: 1px solid #e2e8ed;
+            transition: transform .3s ease, box-shadow .3s ease;
+            overflow: hidden;
+        }
+
+        .city-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 45px rgba(8, 35, 60, .09);
+        }
+
+        .city-service-image {
+            height: 205px;
+            overflow: hidden;
+        }
+
+        .city-service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .city-service-card:hover .city-service-image img {
+            transform: scale(1.045);
+        }
+
+        .city-service-body {
+            padding: 25px;
+        }
+
+        .city-service-number {
+            color: #9aabb9;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .city-service-body h3 {
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .city-service-body p {
+            color: #718293;
+            font-size: 11px;
+            line-height: 1.75;
+            margin-bottom: 17px;
+        }
+
+        .city-service-body a {
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           PORT SECTION
+        ===================================================== */
+
+        .port-section {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .port-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .port-image {
+            height: 470px;
+            overflow: hidden;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .port-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .port-image-label {
+            position: absolute;
+            left: 22px;
+            bottom: 22px;
+            padding: 10px 15px;
+            background: rgba(3, 28, 51, .9);
+            color: #fff;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .8px;
+        }
+
+        .port-content .section-kicker-city {
+            margin-bottom: 12px;
+        }
+
+        .port-content h2 {
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 39px;
+            line-height: 1.08;
+            letter-spacing: -1.6px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .port-content h2 span {
+            color: var(--blue);
+        }
+
+        .port-content p {
+            color: #68798a;
+            font-size: 13px;
+            line-height: 1.85;
+            margin-bottom: 17px;
+        }
+
+        .port-list {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .port-list div {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #30475e;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .port-list div::before {
+            content: "✓";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #e5f4fc;
+            color: var(--blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           ADVANTAGES
+        ===================================================== */
+
+        .advantages-section {
+            padding: 90px 0;
+            background: #f5f8fa;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #dce5eb;
+            border: 1px solid #dce5eb;
+        }
+
+        .advantage-card {
+            background: #fff;
+            padding: 30px 25px;
+            min-height: 220px;
+        }
+
+        .advantage-number {
+            color: #91a4b4;
+            font-size: 10px;
+            font-weight: 800;
+            margin-bottom: 35px;
+        }
+
+        .advantage-card h3 {
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .advantage-card p {
+            color: #728292;
+            font-size: 11px;
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .city-faq {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .city-faq-grid {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 90px;
+        }
+
+        .city-faq-title h2 {
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 36px;
+            line-height: 1.1;
+            letter-spacing: -1.3px;
+            font-weight: 800;
+        }
+
+        .city-faq-title h2 span {
+            color: var(--blue);
+        }
+
+        .city-faq-title p {
+            color: #718191;
+            font-size: 12px;
+            line-height: 1.75;
+            margin-top: 15px;
+        }
+
+        .city-faq-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .city-faq-item {
+            border-top: 1px solid #dce4e9;
+            padding: 20px 0;
+        }
+
+        .city-faq-item:last-child {
+            border-bottom: 1px solid #dce4e9;
+        }
+
+        .city-faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 800;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .city-faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .city-faq-item summary::after {
+            content: "+";
+            color: var(--blue);
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .city-faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .city-faq-item p {
+            color: #718191;
+            font-size: 11px;
+            line-height: 1.75;
+            padding-top: 12px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .city-cta {
+            padding: 0 0 90px;
+            background: #fff;
+        }
+
+        .city-cta-inner {
+            min-height: 230px;
+            padding: 45px 55px;
+            border-radius: 7px;
+            background:
+                linear-gradient(
+                    105deg,
+                    rgba(4, 37, 68, .98),
+                    rgba(8, 101, 160, .88)
+                ),
+                url("../images/agadir-port.webp");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .city-cta-inner .section-kicker-city {
+            color: #65c3f2;
+        }
+
+        .city-cta-inner h2 {
+            color: #fff;
+            font-family: "Manrope", sans-serif;
+            font-size: 31px;
+            line-height: 1.12;
+            font-weight: 800;
+        }
+
+        .city-cta-inner h2 span {
+            color: #55b9ef;
+        }
+
+        .city-cta-inner p {
+            max-width: 480px;
+            color: #cfe0eb;
+            font-size: 11px;
+            line-height: 1.7;
+            margin-top: 10px;
+        }
+
+        .city-cta-inner .btn-primary {
+            background: #fff;
+            color: var(--blue);
+            flex: 0 0 auto;
+            min-height: 48px;
+            padding: 0 23px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .city-cta-inner .btn-primary:hover {
+            background: #eaf6fd;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .city-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .city-info-item {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .1);
+            }
+
+            .city-info-item:last-child {
+                border-bottom: 0;
+            }
+
+            .city-intro-grid,
+            .port-grid,
+            .city-faq-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .city-service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .port-image {
+                height: 380px;
+            }
+
+            .city-section-heading {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .city-cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .city-hero {
+                min-height: 600px;
+            }
+
+            .city-hero-overlay {
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(3, 24, 45, .72),
+                        rgba(3, 24, 45, .96)
+                    );
+            }
+
+            .city-hero-content {
+                padding: 55px 0;
+            }
+
+            .city-hero h1 {
+                font-size: 43px;
+                letter-spacing: -2px;
+            }
+
+            .city-intro,
+            .city-services,
+            .port-section,
+            .advantages-section,
+            .city-faq {
+                padding: 60px 0;
+            }
+
+            .city-intro-title,
+            .city-section-heading h2,
+            .port-content h2,
+            .city-faq-title h2 {
+                font-size: 29px;
+            }
+
+            .port-image {
+                height: 300px;
+            }
+
+            .port-list {
+                grid-template-columns: 1fr;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .city-cta {
+                padding-bottom: 60px;
+            }
+
+            .city-cta-inner {
+                padding: 32px 25px;
+            }
+
+            .city-cta-inner h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Handling Services SARL",
+        "description": "Services professionnels de manutention, déchargement et location de matériel à Agadir.",
+        "telephone": "+212528822185",
+        "email": "handlingservices1@gmail.com",
+        "foundingDate": "1997",
+        "areaServed": {
+            "@type": "City",
+            "name": "Agadir"
+        },
+        "serviceType": [
+            "Manutention",
+            "Déchargement",
+            "Location de matériel"
+        ]
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <div class="topbar-info">
+
+            <span>Agadir · Dakhla · Maroc</span>
+
+            <span class="topbar-separator"></span>
+
+            <span>Lun — Sam · 09:00 — 17:00</span>
+
+        </div>
+
+
+        <div class="topbar-contact">
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <!-- LOGO -->
+
+        <a href="../index.html" class="brand">
+
+            <img
+                src="../images/logo.webp"
+                alt="Handling Services SARL"
+            >
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="main-navigation"
+            aria-label="Navigation principale"
+        >
+
+            <a
+                href="../index.html"
+                class="nav-link"
+            >
+                Accueil
+            </a>
+
+
+            <div class="nav-item dropdown">
+
+                <a
+                    href="services.html"
+                    class="nav-link"
+                >
+                    Services
+                    <span class="dropdown-arrow">⌄</span>
+                </a>
+
+
+                <div class="dropdown-panel">
+
+                    <a href="manutention.html">
+
+                        <span>01</span>
+
+                        Manutention
+
+                    </a>
+
+
+                    <a href="dechargement.html">
+
+                        <span>02</span>
+
+                        Déchargement
+
+                    </a>
+
+
+                    <a href="location-materiel.html">
+
+                        <span>03</span>
+
+                        Location de matériel
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="agadir.html"
+                class="nav-link active"
+            >
+                Agadir
+            </a>
+
+
+            <a
+                href="dakhla.html"
+                class="nav-link"
+            >
+                Dakhla
+            </a>
+
+
+            <a
+                href="about.html"
+                class="nav-link"
+            >
+                À propos
+            </a>
+
+
+            <a
+                href="realisations.html"
+                class="nav-link"
+            >
+                Réalisations
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="nav-link"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <a
+                href="../devis.html?zone=agadir"
+                class="header-quote"
+            >
+
+                <span>
+                    Demander un devis
+                </span>
+
+                <strong>
+                    ↗
+                </strong>
+
+            </a>
+
+
+            <div class="language">
+
+                <button type="button">
+
+                    FR
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div class="language-dropdown">
+
+                    <a href="agadir.html">
+                        Français
+                    </a>
+
+                    <a href="../en/agadir.html">
+                        English
+                    </a>
+
+                    <a href="../es/agadir.html">
+                        Español
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="city-hero">
+
+
+    <div class="city-hero-bg">
+
+        <img
+            src="../images/agadir-port.webp"
+            alt="Ancien Port d'Agadir"
+        >
+
+    </div>
+
+
+    <div class="city-hero-overlay"></div>
+
+
+    <div class="container city-hero-inner">
+
+        <div class="city-hero-content">
+
+
+            <div class="city-eyebrow">
+
+                HANDLING SERVICES · AGADIR
+
+            </div>
+
+
+            <h1>
+
+                Votre partenaire
+                <span>
+                    à Agadir.
+                </span>
+
+            </h1>
+
+
+            <p class="city-hero-description">
+
+                Handling Services SARL accompagne les professionnels
+                dans leurs opérations de manutention, de déchargement
+                et de location de matériel à Agadir, notamment au niveau
+                de l'Ancien Port.
+
+            </p>
+
+
+            <div class="city-actions">
+
+
+                <a
+                    href="../devis.html?zone=agadir"
+                    class="btn-primary"
+                >
+
+                    Demander un devis
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="btn-secondary"
+                >
+
+                    Nous contacter
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INFO BAR
+===================================================== -->
+
+<section class="city-info-bar">
+
+    <div class="container city-info-grid">
+
+
+        <div class="city-info-item">
+
+            <div class="city-info-icon">
+                01
+            </div>
+
+            <div>
+
+                <strong>
+                    Zone d'intervention
+                </strong>
+
+                <span>
+                    Ancien Port d'Agadir
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="city-info-item">
+
+            <div class="city-info-icon">
+                02
+            </div>
+
+            <div>
+
+                <strong>
+                    Expertise
+                </strong>
+
+                <span>
+                    Manutention & opérations portuaires
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="city-info-item">
+
+            <div class="city-info-icon">
+                03
+            </div>
+
+            <div>
+
+                <strong>
+                    Expérience
+                </strong>
+
+                <span>
+                    Une expertise développée depuis 1997
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="city-intro">
+
+    <div class="container city-intro-grid">
+
+
+        <div>
+
+            <div class="section-kicker-city">
+
+                HANDLING SERVICES À AGADIR
+
+            </div>
+
+
+            <h2 class="city-intro-title">
+
+                Une présence locale
+                <span>
+                    au service de vos opérations.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="city-intro-content">
+
+
+            <p class="lead">
+
+                Agadir constitue l'une des principales zones
+                d'activité portuaire du Maroc. Notre présence
+                locale nous permet d'accompagner les professionnels
+                au plus près de leurs opérations.
+
+            </p>
+
+
+            <p>
+
+                Handling Services SARL intervient pour des besoins
+                de manutention, de déchargement et de mise à
+                disposition de matériel, avec une organisation
+                adaptée aux exigences de chaque intervention.
+
+            </p>
+
+
+            <p>
+
+                Notre approche repose sur la préparation,
+                la coordination des équipes et l'attention
+                portée à la sécurité et à la bonne exécution
+                des opérations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="city-services">
+
+    <div class="container">
+
+
+        <div class="city-section-heading">
+
+
+            <div>
+
+                <div class="section-kicker-city">
+
+                    NOS SERVICES À AGADIR
+
+                </div>
+
+
+                <h2>
+
+                    Des solutions adaptées
+                    <span>
+                        au terrain.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Trois domaines d'intervention pour répondre
+                aux besoins des professionnels opérant dans
+                la zone portuaire d'Agadir.
+
+            </p>
+
+        </div>
+
+
+        <div class="city-service-grid">
+
+
+            <!-- SERVICE 01 -->
+
+            <article class="city-service-card">
+
+                <div class="city-service-image">
+
+                    <img
+                        src="../images/manutention.webp"
+                        alt="Manutention au port d'Agadir"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="city-service-body">
+
+                    <div class="city-service-number">
+                        SERVICE 01
+                    </div>
+
+
+                    <h3>
+                        Manutention
+                    </h3>
+
+
+                    <p>
+
+                        Organisation et réalisation d'opérations
+                        de manutention adaptées à la nature
+                        des marchandises et aux contraintes du site.
+
+                    </p>
+
+
+                    <a href="manutention.html">
+
+                        Découvrir le service →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- SERVICE 02 -->
+
+            <article class="city-service-card">
+
+                <div class="city-service-image">
+
+                    <img
+                        src="../images/dechargement.webp"
+                        alt="Déchargement au port d'Agadir"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="city-service-body">
+
+                    <div class="city-service-number">
+                        SERVICE 02
+                    </div>
+
+
+                    <h3>
+                        Déchargement
+                    </h3>
+
+
+                    <p>
+
+                        Des opérations organisées avec rigueur
+                        afin d'assurer efficacité, continuité
+                        et sécurité.
+
+                    </p>
+
+
+                    <a href="dechargement.html">
+
+                        Découvrir le service →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- SERVICE 03 -->
+
+            <article class="city-service-card">
+
+                <div class="city-service-image">
+
+                    <img
+                        src="../images/location-materiel.webp"
+                        alt="Location de matériel à Agadir"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="city-service-body">
+
+                    <div class="city-service-number">
+                        SERVICE 03
+                    </div>
+
+
+                    <h3>
+                        Location de matériel
+                    </h3>
+
+
+                    <p>
+
+                        Des équipements pouvant accompagner
+                        les besoins spécifiques de vos opérations
+                        professionnelles.
+
+                    </p>
+
+
+                    <a href="location-materiel.html">
+
+                        Découvrir le service →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PORT
+===================================================== -->
+
+<section class="port-section">
+
+    <div class="container port-grid">
+
+
+        <div class="port-image">
+
+            <img
+                src="../images/agadir-port.webp"
+                alt="Ancien Port d'Agadir"
+                loading="lazy"
+            >
+
+
+            <div class="port-image-label">
+
+                ANCIEN PORT D'AGADIR · MAROC
+
+            </div>
+
+        </div>
+
+
+        <div class="port-content">
+
+
+            <div class="section-kicker-city">
+
+                UNE ZONE STRATÉGIQUE
+
+            </div>
+
+
+            <h2>
+
+                Au cœur de
+                <span>
+                    l'activité portuaire.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                L'Ancien Port d'Agadir constitue un environnement
+                où la réactivité, l'organisation et la maîtrise
+                des opérations sont essentielles.
+
+            </p>
+
+
+            <p>
+
+                Notre équipe accompagne les professionnels avec
+                des solutions adaptées aux caractéristiques de
+                leurs opérations et aux contraintes du terrain.
+
+            </p>
+
+
+            <div class="port-list">
+
+
+                <div>
+                    Présence locale
+                </div>
+
+
+                <div>
+                    Intervention professionnelle
+                </div>
+
+
+                <div>
+                    Organisation des équipes
+                </div>
+
+
+                <div>
+                    Attention à la sécurité
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADVANTAGES
+===================================================== -->
+
+<section class="advantages-section">
+
+    <div class="container">
+
+
+        <div class="city-section-heading">
+
+            <div>
+
+                <div class="section-kicker-city">
+
+                    POURQUOI NOUS CHOISIR
+
+                </div>
+
+
+                <h2>
+
+                    Une approche basée sur
+                    <span>
+                        la fiabilité.
+                    </span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="advantages-grid">
+
+
+            <!-- 01 -->
+
+            <article class="advantage-card">
+
+                <div class="advantage-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Expérience
+                </h3>
+
+
+                <p>
+
+                    Une expérience dans le domaine de la
+                    manutention développée depuis 1997.
+
+                </p>
+
+            </article>
+
+
+            <!-- 02 -->
+
+            <article class="advantage-card">
+
+                <div class="advantage-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Proximité
+                </h3>
+
+
+                <p>
+
+                    Une présence à Agadir permettant
+                    d'être au plus près des opérations.
+
+                </p>
+
+            </article>
+
+
+            <!-- 03 -->
+
+            <article class="advantage-card">
+
+                <div class="advantage-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Réactivité
+                </h3>
+
+
+                <p>
+
+                    Une organisation conçue pour répondre
+                    aux contraintes opérationnelles.
+
+                </p>
+
+            </article>
+
+
+            <!-- 04 -->
+
+            <article class="advantage-card">
+
+                <div class="advantage-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Sécurité
+                </h3>
+
+
+                <p>
+
+                    Une attention constante portée aux
+                    conditions et procédures d'intervention.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="city-faq">
+
+    <div class="container city-faq-grid">
+
+
+        <div class="city-faq-title">
+
+
+            <div class="section-kicker-city">
+
+                QUESTIONS FRÉQUENTES
+
+            </div>
+
+
+            <h2>
+
+                Handling Services
+                <span>
+                    à Agadir.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Les principales informations concernant
+                nos interventions dans la zone d'Agadir.
+
+            </p>
+
+        </div>
+
+
+        <div class="city-faq-list">
+
+
+            <details class="city-faq-item">
+
+                <summary>
+                    Où intervenez-vous à Agadir ?
+                </summary>
+
+
+                <p>
+
+                    Handling Services SARL intervient notamment
+                    au niveau de l'Ancien Port d'Agadir et selon
+                    les besoins spécifiques de chaque opération.
+
+                </p>
+
+            </details>
+
+
+            <details class="city-faq-item">
+
+                <summary>
+                    Quels services proposez-vous à Agadir ?
+                </summary>
+
+
+                <p>
+
+                    Nous proposons des services de manutention,
+                    de déchargement et de location de matériel
+                    pour les besoins professionnels.
+
+                </p>
+
+            </details>
+
+
+            <details class="city-faq-item">
+
+                <summary>
+                    Depuis quand êtes-vous actifs dans la manutention ?
+                </summary>
+
+
+                <p>
+
+                    Notre expérience dans le domaine de la
+                    manutention remonte à 1997.
+
+                </p>
+
+            </details>
+
+
+            <details class="city-faq-item">
+
+                <summary>
+                    Comment demander un devis ?
+                </summary>
+
+
+                <p>
+
+                    Vous pouvez nous contacter directement ou
+                    envoyer une demande de devis en précisant
+                    la nature de votre opération, sa localisation
+                    et les besoins prévus.
+
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="city-cta">
+
+    <div class="container">
+
+
+        <div class="city-cta-inner">
+
+
+            <div>
+
+
+                <div class="section-kicker-city">
+
+                    VOTRE OPÉRATION À AGADIR
+
+                </div>
+
+
+                <h2>
+
+                    Parlons de votre
+                    <span>
+                        prochain projet.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Contactez Handling Services SARL pour
+                    discuter de vos besoins en manutention,
+                    déchargement ou location de matériel.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="../devis.html?zone=agadir"
+                class="btn-primary"
+            >
+
+                Demander un devis
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+
+    <div class="container footer-main">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+
+            <a href="../index.html">
+
+                <img
+                    src="../images/logo.webp"
+                    alt="Handling Services SARL"
+                >
+
+            </a>
+
+
+            <p>
+
+                Expertise en manutention, déchargement
+                et location de matériel au Maroc.
+
+            </p>
+
+
+            <div class="footer-social">
+
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    f
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="LinkedIn"
+                >
+                    in
+                </a>
+
+
+                <a
+                    href="https://wa.me/212528822185"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                >
+                    W
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="footer-column">
+
+
+            <h3>
+                NAVIGATION
+            </h3>
+
+
+            <a href="../index.html">
+                Accueil
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="agadir.html">
+                Agadir
+            </a>
+
+
+            <a href="dakhla.html">
+                Dakhla
+            </a>
+
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <a href="realisations.html">
+                Réalisations
+            </a>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+
+            <h3>
+                SERVICES
+            </h3>
+
+
+            <a href="manutention.html">
+                Manutention
+            </a>
+
+
+            <a href="dechargement.html">
+                Déchargement
+            </a>
+
+
+            <a href="location-materiel.html">
+                Location de matériel
+            </a>
+
+
+            <a
+                href="../devis.html?zone=agadir"
+                class="btn-primary"
+            >
+
+                Demander un devis
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+
+            <h3>
+                CONTACT
+            </h3>
+
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+
+            <span>
+                Agadir · Dakhla · Maroc
+            </span>
+
+
+            <span>
+                Lun — Sam · 09:00 — 17:00
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="container footer-bottom">
+
+
+        <p>
+
+            © 2026 Handling Services SARL.
+            Tous droits réservés.
+
+        </p>
+
+
+        <div>
+
+
+            <a href="mentions-legales.html">
+                Mentions légales
+            </a>
+
+
+            <span>
+                ·
+            </span>
+
+
+            <a href="politique-confidentialite.html">
+                Politique de confidentialité
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE MENU BUTTON
+===================================================== -->
+
+<button
+    class="mobile-menu-button"
+    type="button"
+    aria-label="Ouvrir le menu"
+    aria-expanded="false"
+>
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+
+</body>
+
+</html>

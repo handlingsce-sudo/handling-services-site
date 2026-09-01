@@ -1,0 +1,2985 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Déchargement Thonier & Maritime au Maroc | Handling Services SARL</title>
+
+    <meta name="description"
+        content="HANDLING SERVICES SARL assure le déchargement des thoniers et navires de pêche à Agadir, Dakhla et dans les principaux ports marocains. Rapidité, sécurité, maîtrise des flux et respect de la chaîne du froid.">
+
+    <meta name="keywords"
+        content="déchargement thonier Maroc, déchargement thonier Agadir, déchargement thonier Dakhla, manutention maritime Maroc, services portuaires Agadir, logistique pêche Maroc, déchargement poisson, chaîne du froid portuaire">
+
+    <meta name="author" content="HANDLING SERVICES SARL">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="Déchargement Thonier & Maritime | HANDLING SERVICES SARL">
+    <meta property="og:description"
+        content="La puissance d'un thonier. La précision de nos opérations. Déchargement maritime professionnel au Maroc.">
+    <meta property="og:image"
+        content="../images/thonier.webp">
+
+    <link rel="icon" type="image/webp" href="../images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #102b43;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: auto;
+        }
+
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+            --navy: #041c31;
+            --navy-2: #062943;
+            --blue: #1599e5;
+            --cyan: #50c5f5;
+            --light: #f4f8fb;
+            --text: #64778a;
+            --line: #dce6ed;
+        }
+
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomHero {
+            from {
+                transform: scale(1.08);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: .7;
+            }
+
+            50% {
+                transform: scale(1.08);
+                opacity: 1;
+            }
+        }
+
+        @keyframes lineMove {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+        @keyframes scan {
+            from {
+                top: 0;
+            }
+
+            to {
+                top: 100%;
+            }
+        }
+
+        .reveal {
+            animation: fadeUp .9s ease both;
+        }
+
+
+        /* =========================================================
+           TOP BAR
+        ========================================================= */
+
+        .topbar {
+            background: #021725;
+            color: #a9c0d1;
+            font-size: 10px;
+            letter-spacing: .3px;
+        }
+
+        .topbar-inner {
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .topbar-info,
+        .topbar-contact {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .topbar-contact a {
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .topbar-contact a:hover {
+            color: #fff;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: relative;
+            z-index: 50;
+            background: rgba(255, 255, 255, .97);
+            border-bottom: 1px solid #e7edf2;
+        }
+
+        .header-inner {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand img {
+            width: 185px;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #19344d;
+            font-size: 11px;
+            font-weight: 700;
+            transition: .25s;
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            color: var(--blue);
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 42px;
+            padding: 0 18px;
+            border-radius: 4px;
+            background: var(--navy);
+            color: #fff;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 800;
+            transition: .3s;
+        }
+
+        .header-cta:hover {
+            background: var(--blue);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            position: relative;
+            min-height: 730px;
+            overflow: hidden;
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            animation: zoomHero 2s ease forwards;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(2, 22, 38, .98) 0%,
+                    rgba(3, 28, 48, .91) 36%,
+                    rgba(3, 30, 51, .55) 67%,
+                    rgba(3, 28, 48, .18) 100%
+                );
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 3;
+            min-height: 730px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            padding: 70px 0;
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--cyan);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+            animation: fadeLeft .8s ease both;
+        }
+
+        .hero-kicker::before {
+            content: "";
+            width: 42px;
+            height: 2px;
+            background: var(--blue);
+        }
+
+        .hero h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(48px, 6.3vw, 86px);
+            line-height: .94;
+            letter-spacing: -4px;
+            font-weight: 900;
+            max-width: 850px;
+            animation: fadeUp 1s .1s ease both;
+        }
+
+        .hero h1 span {
+            color: #35b5f3;
+            display: block;
+        }
+
+        .hero-subtitle {
+            margin-top: 28px;
+            max-width: 640px;
+            color: #d6e5ee;
+            font-size: 15px;
+            line-height: 1.85;
+            animation: fadeUp 1s .25s ease both;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 34px;
+            animation: fadeUp 1s .4s ease both;
+        }
+
+        .btn {
+            min-height: 51px;
+            padding: 0 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: .3px;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: #fff;
+            box-shadow: 0 15px 35px rgba(21, 153, 229, .25);
+        }
+
+        .btn-primary:hover {
+            background: #fff;
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, .45);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: var(--navy);
+        }
+
+
+        /* =========================================================
+           HERO STATUS
+        ========================================================= */
+
+        .hero-status {
+            position: absolute;
+            right: 0;
+            bottom: 50px;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: rgba(3, 25, 43, .8);
+            border: 1px solid rgba(255, 255, 255, .15);
+            backdrop-filter: blur(12px);
+        }
+
+        .status-item {
+            min-width: 145px;
+            padding: 18px 22px;
+            border-right: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .status-item:last-child {
+            border: 0;
+        }
+
+        .status-number {
+            color: #fff;
+            font-family: "Manrope";
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .status-label {
+            margin-top: 4px;
+            color: #9eb7c9;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================================================
+           POWER STRIP
+        ========================================================= */
+
+        .power-strip {
+            background: var(--navy);
+            color: #fff;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .power-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .power-item {
+            position: relative;
+            padding: 27px 25px;
+            border-right: 1px solid rgba(255,255,255,.09);
+            overflow: hidden;
+        }
+
+        .power-item:last-child {
+            border: 0;
+        }
+
+        .power-icon {
+            color: var(--cyan);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .power-item h3 {
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .power-item p {
+            color: #829daf;
+            font-size: 9px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+            padding: 105px 0;
+            background: #fff;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 1.8px;
+            margin-bottom: 14px;
+        }
+
+        .intro h2 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: clamp(34px, 4vw, 53px);
+            line-height: 1.02;
+            letter-spacing: -2.5px;
+            font-weight: 900;
+        }
+
+        .intro h2 span {
+            color: var(--blue);
+        }
+
+        .intro-copy {
+            color: var(--text);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .intro-copy strong {
+            display: block;
+            color: #17364f;
+            font-size: 17px;
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .intro-copy p {
+            margin-bottom: 17px;
+        }
+
+
+        /* =========================================================
+           THONIER FEATURE
+        ========================================================= */
+
+        .thonier {
+            padding: 0 0 105px;
+            background: #fff;
+        }
+
+        .thonier-box {
+            position: relative;
+            min-height: 570px;
+            overflow: hidden;
+            background: var(--navy);
+            border-radius: 8px;
+        }
+
+        .thonier-image {
+            position: absolute;
+            inset: 0;
+        }
+
+        .thonier-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 1s ease;
+        }
+
+        .thonier-box:hover .thonier-image img {
+            transform: scale(1.04);
+        }
+
+        .thonier-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 22, 38, .98) 0%,
+                    rgba(3, 27, 46, .9) 38%,
+                    rgba(3, 28, 47, .48) 72%,
+                    rgba(3, 28, 47, .12)
+                );
+        }
+
+        .thonier-content {
+            position: relative;
+            z-index: 2;
+            max-width: 590px;
+            min-height: 570px;
+            padding: 65px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .thonier-tag {
+            color: var(--cyan);
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .thonier h2 {
+            color: #fff;
+            font-family: "Manrope";
+            font-size: clamp(35px, 4vw, 55px);
+            line-height: 1;
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .thonier h2 span {
+            color: #38b5f0;
+        }
+
+        .thonier p {
+            margin-top: 22px;
+            color: #d0e0e9;
+            font-size: 12px;
+            line-height: 1.85;
+        }
+
+        .thonier-list {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 11px 25px;
+        }
+
+        .thonier-list div {
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .thonier-list div::before {
+            content: "✓";
+            color: var(--cyan);
+            font-weight: 900;
+        }
+
+
+        /* =========================================================
+           SPECIES
+        ========================================================= */
+
+        .species {
+            padding: 105px 0;
+            background: var(--light);
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 43px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: clamp(33px, 4vw, 48px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .section-heading h2 span {
+            color: var(--blue);
+        }
+
+        .section-heading p {
+            margin-top: 15px;
+            color: var(--text);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .species-card {
+            position: relative;
+            min-height: 265px;
+            overflow: hidden;
+            border-radius: 5px;
+            background: #08283f;
+            cursor: pointer;
+        }
+
+        .species-card img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            object-fit: cover;
+            transition: transform .7s ease;
+        }
+
+        .species-card:hover img {
+            transform: scale(1.09);
+        }
+
+        .species-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                0deg,
+                rgba(3, 22, 37, .95),
+                rgba(3, 22, 37, .08)
+            );
+        }
+
+        .species-content {
+            position: absolute;
+            z-index: 2;
+            left: 20px;
+            right: 20px;
+            bottom: 19px;
+            color: #fff;
+        }
+
+        .species-content small {
+            color: var(--cyan);
+            font-size: 8px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .species-content h3 {
+            margin-top: 5px;
+            font-family: "Manrope";
+            font-size: 21px;
+            font-weight: 900;
+        }
+
+        .species-content p {
+            margin-top: 5px;
+            color: #c4d5df;
+            font-size: 9px;
+        }
+
+
+        /* =========================================================
+           OPERATIONS FLOW
+        ========================================================= */
+
+        .flow {
+            padding: 110px 0;
+            background: #fff;
+        }
+
+        .flow-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            align-items: end;
+            margin-bottom: 50px;
+        }
+
+        .flow-header h2 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: clamp(34px, 4vw, 48px);
+            line-height: 1;
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .flow-header h2 span {
+            color: var(--blue);
+        }
+
+        .flow-header p {
+            max-width: 410px;
+            color: var(--text);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid var(--line);
+        }
+
+        .flow-card {
+            position: relative;
+            padding: 31px 22px;
+            border-right: 1px solid var(--line);
+            min-height: 245px;
+            transition: .3s;
+        }
+
+        .flow-card:hover {
+            background: #f7fafc;
+            transform: translateY(-5px);
+        }
+
+        .flow-card:last-child {
+            border-right: 0;
+        }
+
+        .flow-number {
+            color: #a3b4c2;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .flow-card h3 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .flow-card p {
+            color: var(--text);
+            font-size: 10px;
+            line-height: 1.75;
+        }
+
+        .flow-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--blue);
+            transition: .35s;
+        }
+
+        .flow-card:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================================================
+           COLD CHAIN
+        ========================================================= */
+
+        .cold-chain {
+            padding: 105px 0;
+            background: var(--navy);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .cold-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .cold-content .eyebrow {
+            color: var(--cyan);
+        }
+
+        .cold-content h2 {
+            font-family: "Manrope";
+            font-size: clamp(35px, 4vw, 53px);
+            line-height: 1;
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .cold-content h2 span {
+            color: var(--cyan);
+        }
+
+        .cold-content > p {
+            margin-top: 20px;
+            color: #aec3d0;
+            font-size: 12px;
+            line-height: 1.85;
+        }
+
+        .cold-points {
+            margin-top: 28px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .cold-point {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 13px 15px;
+            border: 1px solid rgba(255,255,255,.1);
+            background: rgba(255,255,255,.025);
+        }
+
+        .cold-point strong {
+            color: #fff;
+            font-size: 10px;
+        }
+
+        .cold-point span {
+            color: #89a5b8;
+            font-size: 9px;
+            margin-left: auto;
+        }
+
+        .cold-visual {
+            position: relative;
+            min-height: 430px;
+            border: 1px solid rgba(255,255,255,.1);
+            background:
+                radial-gradient(circle at center, rgba(41, 173, 231, .15), transparent 55%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .cold-circle {
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(80,197,245,.45);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        .cold-circle::before {
+            content: "";
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            border: 1px dashed rgba(80,197,245,.3);
+            border-radius: 50%;
+        }
+
+        .cold-center {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .cold-center strong {
+            display: block;
+            font-family: "Manrope";
+            font-size: 52px;
+            font-weight: 900;
+            color: var(--cyan);
+        }
+
+        .cold-center span {
+            font-size: 9px;
+            color: #b2c9d6;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           SAFETY
+        ========================================================= */
+
+        .safety {
+            padding: 105px 0;
+            background: #f6f9fb;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 80px;
+        }
+
+        .safety-title h2 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: clamp(35px, 4vw, 51px);
+            line-height: 1;
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .safety-title h2 span {
+            color: var(--blue);
+        }
+
+        .safety-title p {
+            margin-top: 17px;
+            color: var(--text);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .safety-grid-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+        }
+
+        .safety-card {
+            padding: 28px;
+            background: #fff;
+            border: 1px solid var(--line);
+            transition: .3s;
+        }
+
+        .safety-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(4, 38, 64, .08);
+        }
+
+        .safety-card-number {
+            color: var(--blue);
+            font-size: 9px;
+            font-weight: 900;
+            margin-bottom: 28px;
+        }
+
+        .safety-card h3 {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 15px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .safety-card p {
+            color: var(--text);
+            font-size: 10px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           PERFORMANCE
+        ========================================================= */
+
+        .performance {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid var(--line);
+        }
+
+        .performance-item {
+            padding: 35px 25px;
+            text-align: center;
+            border-right: 1px solid var(--line);
+        }
+
+        .performance-item:last-child {
+            border-right: 0;
+        }
+
+        .performance-number {
+            color: var(--navy);
+            font-family: "Manrope";
+            font-size: 42px;
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        .performance-number span {
+            color: var(--blue);
+        }
+
+        .performance-item p {
+            margin-top: 9px;
+            color: #718394;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+        }
+
+
+        /* =========================================================
+           LOCATIONS
+        ========================================================= */
+
+        .locations {
+            padding: 105px 0;
+            background: var(--light);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .location-card {
+            position: relative;
+            min-height: 290px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .location-card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .7s;
+        }
+
+        .location-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .location-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                0deg,
+                rgba(2,24,41,.95),
+                rgba(2,24,41,.1)
+            );
+        }
+
+        .location-content {
+            position: absolute;
+            z-index: 2;
+            bottom: 25px;
+            left: 27px;
+        }
+
+        .location-content small {
+            color: var(--cyan);
+            font-size: 8px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .location-content h3 {
+            margin-top: 4px;
+            color: #fff;
+            font-family: "Manrope";
+            font-size: 31px;
+            font-weight: 900;
+        }
+
+        .location-content p {
+            color: #c3d5df;
+            font-size: 9px;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            padding: 0 0 100px;
+            background: var(--light);
+        }
+
+        .cta-box {
+            position: relative;
+            overflow: hidden;
+            min-height: 275px;
+            padding: 55px 65px;
+            border-radius: 7px;
+            background:
+                linear-gradient(
+                    100deg,
+                    rgba(3,28,48,.98),
+                    rgba(8,101,158,.9)
+                );
+            color: #fff;
+        }
+
+        .cta-box::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            right: -100px;
+            top: -180px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .cta-content .eyebrow {
+            color: var(--cyan);
+        }
+
+        .cta-content h2 {
+            font-family: "Manrope";
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1;
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .cta-content h2 span {
+            color: var(--cyan);
+        }
+
+        .cta-content p {
+            margin-top: 13px;
+            color: #c4d9e5;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .cta-actions {
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cta .btn-primary {
+            background: #fff;
+            color: var(--navy);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #021725;
+            color: #fff;
+        }
+
+        .footer-main {
+            padding: 65px 0;
+            display: grid;
+            grid-template-columns: 1.4fr .8fr .8fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-brand img {
+            width: 180px;
+            margin-bottom: 18px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-brand p {
+            max-width: 280px;
+            color: #8198a9;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            font-size: 9px;
+            letter-spacing: 1.3px;
+            margin-bottom: 8px;
+        }
+
+        .footer-column a,
+        .footer-column span {
+            color: #8198a9;
+            text-decoration: none;
+            font-size: 9px;
+            line-height: 1.5;
+            transition: .25s;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #62798b;
+            font-size: 8px;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .navigation {
+                display: none;
+            }
+
+            .hero-status {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin-top: 50px;
+                width: max-content;
+            }
+
+            .hero-grid {
+                align-items: flex-start;
+                padding-top: 70px;
+            }
+
+            .hero-content {
+                padding-top: 40px;
+            }
+
+            .power-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .species-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .flow-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .flow-card {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .cold-grid,
+            .safety-grid,
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cold-grid {
+                gap: 50px;
+            }
+
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .topbar-info {
+                display: none;
+            }
+
+            .topbar-inner {
+                justify-content: center;
+            }
+
+            .topbar-contact {
+                padding: 9px 0;
+                font-size: 9px;
+            }
+
+            .header-inner {
+                min-height: 65px;
+            }
+
+            .brand img {
+                width: 150px;
+            }
+
+            .header-cta {
+                padding: 0 12px;
+                font-size: 8px;
+            }
+
+            .hero {
+                min-height: 720px;
+            }
+
+            .hero-grid {
+                min-height: 720px;
+                padding-top: 35px;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+                letter-spacing: -2.8px;
+            }
+
+            .hero-subtitle {
+                font-size: 12px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-status {
+                width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .status-item {
+                min-width: 0;
+                padding: 14px 8px;
+                text-align: center;
+            }
+
+            .status-number {
+                font-size: 17px;
+            }
+
+            .status-label {
+                font-size: 7px;
+            }
+
+            .power-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .power-item {
+                padding: 20px 14px;
+            }
+
+            .intro,
+            .species,
+            .flow,
+            .cold-chain,
+            .safety,
+            .locations {
+                padding: 70px 0;
+            }
+
+            .thonier {
+                padding-bottom: 70px;
+            }
+
+            .thonier-content {
+                min-height: 580px;
+                padding: 35px 25px;
+                justify-content: flex-end;
+            }
+
+            .thonier-list {
+                grid-template-columns: 1fr;
+            }
+
+            .species-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .species-card {
+                min-height: 210px;
+            }
+
+            .flow-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .flow-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-card {
+                min-height: 190px;
+                border-right: 0;
+            }
+
+            .safety-grid-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .performance-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .performance-item:nth-child(2) {
+                border-right: 0;
+            }
+
+            .performance-item:nth-child(-n+2) {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                padding: 40px 25px;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <div class="topbar-info">
+            <span>AGADIR · DAKHLA · MAROC</span>
+            <span>•</span>
+            <span>OPÉRATIONS PORTUAIRES 24/7</span>
+        </div>
+
+        <div class="topbar-contact">
+            <a href="tel:+212528822185">+212 528 82 21 85</a>
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="container header-inner">
+
+        <a href="../index.html" class="brand">
+            <img
+                src="../images/logo.webp"
+                alt="HANDLING SERVICES SARL">
+        </a>
+
+        <nav class="navigation">
+
+            <a href="../index.html">
+                Accueil
+            </a>
+
+            <a href="services.html" class="active">
+                Services
+            </a>
+
+            <a href="manutention.html">
+                Manutention
+            </a>
+
+            <a href="dechargement.html">
+                Déchargement
+            </a>
+
+            <a href="agadir.html">
+                Agadir
+            </a>
+
+            <a href="dakhla.html">
+                Dakhla
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <a
+            href="../devis.html?service=dechargement"
+            class="header-cta">
+
+            DEMANDER UN DEVIS
+            <span>↗</span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-image">
+
+        <img
+            src="../images/thonier.webp"
+            alt="Thonier en opération maritime">
+
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-kicker">
+                DÉCHARGEMENT MARITIME · THONIERS
+            </div>
+
+            <h1>
+
+                La puissance
+                d'un <span>thonier.</span>
+
+            </h1>
+
+            <p class="hero-subtitle">
+
+                La précision de nos opérations.
+                HANDLING SERVICES SARL accompagne les
+                navires de pêche dans leurs opérations de
+                déchargement avec une organisation rigoureuse,
+                des équipes formées et une exigence constante
+                de sécurité, de rapidité et de maîtrise des flux.
+
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="../devis.html?service=dechargement"
+                    class="btn btn-primary">
+
+                    ORGANISER UNE OPÉRATION
+                    <span>↗</span>
+
+                </a>
+
+                <a
+                    href="#process"
+                    class="btn btn-outline">
+
+                    VOIR NOTRE MÉTHODE
+                    <span>↓</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-status">
+
+            <div class="status-item">
+
+                <div class="status-number">
+                    24/7
+                </div>
+
+                <div class="status-label">
+                    Disponibilité
+                </div>
+
+            </div>
+
+            <div class="status-item">
+
+                <div class="status-number">
+                    1997
+                </div>
+
+                <div class="status-label">
+                    Expérience
+                </div>
+
+            </div>
+
+            <div class="status-item">
+
+                <div class="status-number">
+                    360°
+                </div>
+
+                <div class="status-label">
+                    Coordination
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     POWER STRIP
+========================================================= -->
+
+<section class="power-strip">
+
+    <div class="container power-grid">
+
+        <article class="power-item">
+
+            <div class="power-icon">⚓</div>
+
+            <h3>
+                MAÎTRISE PORTUAIRE
+            </h3>
+
+            <p>
+                Coordination des opérations
+                au plus près du navire et du quai.
+            </p>
+
+        </article>
+
+
+        <article class="power-item">
+
+            <div class="power-icon">⚡</div>
+
+            <h3>
+                RÉACTIVITÉ
+            </h3>
+
+            <p>
+                Des équipes préparées pour
+                intervenir selon les fenêtres opérationnelles.
+            </p>
+
+        </article>
+
+
+        <article class="power-item">
+
+            <div class="power-icon">🛡</div>
+
+            <h3>
+                SÉCURITÉ
+            </h3>
+
+            <p>
+                Une organisation basée sur
+                la prévention et la maîtrise des risques.
+            </p>
+
+        </article>
+
+
+        <article class="power-item">
+
+            <div class="power-icon">❄</div>
+
+            <h3>
+                CHAÎNE DU FROID
+            </h3>
+
+            <p>
+                Prise en compte des exigences
+                liées aux produits de la pêche.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro">
+
+    <div class="container intro-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                UNE OPÉRATION À HAUTE INTENSITÉ
+            </div>
+
+            <h2>
+
+                Des volumes importants.
+                <span>Une exigence absolue.</span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="intro-copy">
+
+            <strong>
+
+                Un déchargement de thonier ne laisse
+                aucune place à l'improvisation.
+
+            </strong>
+
+            <p>
+
+                Chaque minute compte. Chaque mouvement doit
+                être coordonné. Chaque lot doit être manipulé
+                avec la précision nécessaire à la préservation
+                de sa qualité.
+
+            </p>
+
+            <p>
+
+                HANDLING SERVICES SARL organise ses opérations
+                autour d'une logique simple : préparer,
+                coordonner, exécuter et contrôler.
+
+            </p>
+
+            <p>
+
+                Du quai à la prise en charge de la marchandise,
+                nos équipes travaillent pour assurer une
+                opération fluide, sécurisée et adaptée aux
+                contraintes du navire.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     THONIER
+========================================================= -->
+
+<section class="thonier">
+
+    <div class="container">
+
+        <div class="thonier-box">
+
+            <div class="thonier-image">
+
+                <img
+                    src="../images/thonier.webp"
+                    alt="Déchargement professionnel d'un thonier">
+
+            </div>
+
+            <div class="thonier-overlay"></div>
+
+
+            <div class="thonier-content">
+
+                <div class="thonier-tag">
+                    THONIER · OPÉRATION PORTUAIRE
+                </div>
+
+                <h2>
+
+                    Un navire puissant.
+                    <span>Une opération maîtrisée.</span>
+
+                </h2>
+
+                <p>
+
+                    Les opérations de déchargement de thoniers
+                    nécessitent une coordination précise entre
+                    le navire, le quai, les équipes de manutention,
+                    le pesage, les moyens de transport et les
+                    solutions de conservation.
+
+                </p>
+
+                <div class="thonier-list">
+
+                    <div>
+                        Préparation du quai
+                    </div>
+
+                    <div>
+                        Coordination avec le navire
+                    </div>
+
+                    <div>
+                        Déchargement organisé
+                    </div>
+
+                    <div>
+                        Pesage & contrôle
+                    </div>
+
+                    <div>
+                        Manutention maîtrisée
+                    </div>
+
+                    <div>
+                        Orientation vers stockage / frigo
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SPECIES
+========================================================= -->
+
+<section class="species">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                PRODUITS DE LA PÊCHE
+            </div>
+
+            <h2>
+                Une connaissance concrète
+                des <span>espèces manipulées.</span>
+            </h2>
+
+            <p>
+                Nos opérations peuvent concerner différentes
+                espèces issues des activités de pêche.
+                Chaque produit est pris en charge selon ses
+                caractéristiques, son volume et les exigences
+                de conservation.
+            </p>
+
+        </div>
+
+
+        <div class="species-grid">
+
+
+            <!-- =====================================================
+                 01 — THON
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/thon.webp"
+                    alt="Thon"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 01
+                    </small>
+
+                    <h3>
+                        Thon
+                    </h3>
+
+                    <p>
+                        Déchargement & manutention portuaire
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 02 — DORADE
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/dorade.webp"
+                    alt="Dorade"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 02
+                    </small>
+
+                    <h3>
+                        Dorade
+                    </h3>
+
+                    <p>
+                        Manipulation adaptée au produit
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 03 — MONGO
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/mongo.webp"
+                    alt="Mongo"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 03
+                    </small>
+
+                    <h3>
+                        Mongo
+                    </h3>
+
+                    <p>
+                        Prise en charge opérationnelle
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 04 — CHOCO
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/choco.webp"
+                    alt="Choco"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 04
+                    </small>
+
+                    <h3>
+                        Choco
+                    </h3>
+
+                    <p>
+                        Manutention et orientation
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 05 — LENGUADO
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/lenguado.webp"
+                    alt="Lenguado"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 05
+                    </small>
+
+                    <h3>
+                        Lenguado
+                    </h3>
+
+                    <p>
+                        Déchargement contrôlé
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 06 — CALAMAR
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/calamar.webp"
+                    alt="Calamar"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 06
+                    </small>
+
+                    <h3>
+                        Calamar
+                    </h3>
+
+                    <p>
+                        Gestion adaptée des flux
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 07 — RAYA
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/raya.webp"
+                    alt="Raya"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 07
+                    </small>
+
+                    <h3>
+                        Raya
+                    </h3>
+
+                    <p>
+                        Manipulation professionnelle
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 08 — GAMBA
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/gamba.webp"
+                    alt="Gamba - Crevette"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 08
+                    </small>
+
+                    <h3>
+                        Gamba
+                    </h3>
+
+                    <p>
+                        Manutention précise et soignée
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 09 — AUTRES ESPÈCES
+            ====================================================== -->
+
+            <article class="species-card">
+
+                <img
+                    src="../images/autres-especes.webp"
+                    alt="Autres espèces de pêche"
+                    loading="lazy">
+
+                <div class="species-content">
+
+                    <small>
+                        ESPÈCE 09
+                    </small>
+
+                    <h3>
+                        Autres espèces
+                    </h3>
+
+                    <p>
+                        Prise en charge adaptée aux exigences
+                        de chaque opération
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section class="flow" id="process">
+
+    <div class="container">
+
+        <div class="flow-header">
+
+            <div>
+
+                <div class="eyebrow">
+                    PROCESSUS OPÉRATIONNEL
+                </div>
+
+                <h2>
+
+                    Du navire à la destination.
+                    <span>Chaque étape compte.</span>
+
+                </h2>
+
+            </div>
+
+            <p>
+
+                Une organisation structurée permet à nos équipes
+                d'anticiper les besoins de l'opération et de
+                maintenir un niveau élevé de contrôle à chaque
+                étape du déchargement.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-grid">
+
+
+            <article class="flow-card">
+
+                <div class="flow-number">
+                    01 · ARRIVÉE
+                </div>
+
+                <h3>
+                    Accueil & préparation
+                </h3>
+
+                <p>
+
+                    Préparation des équipes, des zones de
+                    travail et des moyens nécessaires avant
+                    le démarrage de l'opération.
+
+                </p>
+
+            </article>
+
+
+            <article class="flow-card">
+
+                <div class="flow-number">
+                    02 · QUAI
+                </div>
+
+                <h3>
+                    Mise en place
+                </h3>
+
+                <p>
+
+                    Coordination de l'intervention autour du
+                    navire et organisation du flux de
+                    déchargement.
+
+                </p>
+
+            </article>
+
+
+            <article class="flow-card">
+
+                <div class="flow-number">
+                    03 · DÉCHARGEMENT
+                </div>
+
+                <h3>
+                    Déchargement maîtrisé
+                </h3>
+
+                <p>
+
+                    Manipulation organisée de la marchandise
+                    avec une attention constante portée à la
+                    sécurité et à la préservation du produit.
+
+                </p>
+
+            </article>
+
+
+            <article class="flow-card">
+
+                <div class="flow-number">
+                    04 · CONTRÔLE
+                </div>
+
+                <h3>
+                    Pesage & orientation
+                </h3>
+
+                <p>
+
+                    Organisation des flux vers les étapes
+                    suivantes : pesage, stockage, transport
+                    ou solutions frigorifiques.
+
+                </p>
+
+            </article>
+
+
+            <article class="flow-card">
+
+                <div class="flow-number">
+                    05 · SORTIE
+                </div>
+
+                <h3>
+                    Évacuation & suivi
+                </h3>
+
+                <p>
+
+                    Coordination de la sortie de la marchandise
+                    et suivi de la fin de l'opération.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COLD CHAIN
+========================================================= -->
+
+<section class="cold-chain">
+
+    <div class="container cold-grid">
+
+
+        <div class="cold-content">
+
+            <div class="eyebrow">
+                QUALITÉ · CONSERVATION · RÉACTIVITÉ
+            </div>
+
+            <h2>
+
+                La chaîne du froid
+                n'attend <span>pas.</span>
+
+            </h2>
+
+            <p>
+
+                Pour les produits de la pêche, la rapidité de
+                prise en charge et la bonne organisation des
+                flux sont des éléments essentiels. Notre
+                organisation intègre les contraintes liées
+                à la conservation et à l'orientation rapide
+                des marchandises.
+
+            </p>
+
+
+            <div class="cold-points">
+
+                <div class="cold-point">
+
+                    <strong>
+                        Prise en charge rapide
+                    </strong>
+
+                    <span>
+                        RÉACTIVITÉ
+                    </span>
+
+                </div>
+
+                <div class="cold-point">
+
+                    <strong>
+                        Orientation vers solutions frigorifiques
+                    </strong>
+
+                    <span>
+                        FRIGO
+                    </span>
+
+                </div>
+
+                <div class="cold-point">
+
+                    <strong>
+                        Organisation des flux
+                    </strong>
+
+                    <span>
+                        CONTRÔLE
+                    </span>
+
+                </div>
+
+                <div class="cold-point">
+
+                    <strong>
+                        Préservation de la marchandise
+                    </strong>
+
+                    <span>
+                        QUALITÉ
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="cold-visual">
+
+            <div class="cold-circle">
+
+                <div class="cold-center">
+
+                    <strong>24/7</strong>
+
+                    <span>
+                        opérationnelle
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SAFETY
+========================================================= -->
+
+<section class="safety">
+
+    <div class="container safety-grid">
+
+
+        <div class="safety-title">
+
+            <div class="eyebrow">
+                SÉCURITÉ OPÉRATIONNELLE
+            </div>
+
+            <h2>
+
+                La performance
+                commence par la
+                <span>sécurité.</span>
+
+            </h2>
+
+            <p>
+
+                Une opération portuaire performante est avant
+                tout une opération préparée. Notre organisation
+                accorde une importance particulière à la
+                prévention, à la coordination des équipes
+                et à la maîtrise des mouvements.
+
+            </p>
+
+        </div>
+
+
+        <div class="safety-grid-cards">
+
+
+            <article class="safety-card">
+
+                <div class="safety-card-number">
+                    01
+                </div>
+
+                <h3>
+                    Équipes formées
+                </h3>
+
+                <p>
+
+                    Des collaborateurs sensibilisés aux exigences
+                    des opérations portuaires et à la sécurité
+                    sur site.
+
+                </p>
+
+            </article>
+
+
+            <article class="safety-card">
+
+                <div class="safety-card-number">
+                    02
+                </div>
+
+                <h3>
+                    Prévention des risques
+                </h3>
+
+                <p>
+
+                    Identification des contraintes et organisation
+                    des interventions afin de réduire les risques
+                    opérationnels.
+
+                </p>
+
+            </article>
+
+
+            <article class="safety-card">
+
+                <div class="safety-card-number">
+                    03
+                </div>
+
+                <h3>
+                    Coordination
+                </h3>
+
+                <p>
+
+                    Communication et coordination entre les
+                    différents intervenants impliqués dans
+                    l'opération.
+
+                </p>
+
+            </article>
+
+
+            <article class="safety-card">
+
+                <div class="safety-card-number">
+                    04
+                </div>
+
+                <h3>
+                    Maîtrise des mouvements
+                </h3>
+
+                <p>
+
+                    Organisation des flux et des déplacements
+                    afin de maintenir une opération structurée
+                    et contrôlée.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PERFORMANCE
+========================================================= -->
+
+<section class="performance">
+
+    <div class="container">
+
+        <div class="performance-grid">
+
+            <div class="performance-item">
+
+                <div class="performance-number">
+                    24<span>/7</span>
+                </div>
+
+                <p>
+                    Disponibilité opérationnelle
+                </p>
+
+            </div>
+
+
+            <div class="performance-item">
+
+                <div class="performance-number">
+                    1997
+                </div>
+
+                <p>
+                    Expérience
+                </p>
+
+            </div>
+
+
+            <div class="performance-item">
+
+                <div class="performance-number">
+                    2<span>+</span>
+                </div>
+
+                <p>
+                    Zones portuaires majeures
+                </p>
+
+            </div>
+
+
+            <div class="performance-item">
+
+                <div class="performance-number">
+                    360<span>°</span>
+                </div>
+
+                <p>
+                    Coordination opérationnelle
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOCATIONS
+========================================================= -->
+
+<section class="locations">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                NOS ZONES D'INTERVENTION
+            </div>
+
+            <h2>
+
+                Présents là où
+                <span>l'activité maritime compte.</span>
+
+            </h2>
+
+            <p>
+
+                Une présence opérationnelle au Maroc,
+                notamment à Agadir et Dakhla, au plus près
+                des activités portuaires et halieutiques.
+
+            </p>
+
+        </div>
+
+
+        <div class="locations-grid">
+
+
+            <a
+                href="agadir.html"
+                class="location-card">
+
+                <img
+                    src="../images/agadir-port.webp"
+                    alt="Port d'Agadir">
+
+                <div class="location-content">
+
+                    <small>
+                        SOUSS-MASSA · MAROC
+                    </small>
+
+                    <h3>
+                        Agadir
+                    </h3>
+
+                    <p>
+                        Opérations portuaires & activités de pêche
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="dakhla.html"
+                class="location-card">
+
+                <img
+                    src="../images/dakhla.webp"
+                    alt="Port de Dakhla">
+
+                <div class="location-content">
+
+                    <small>
+                        DAKHLA-OUED ED-DAHAB · MAROC
+                    </small>
+
+                    <h3>
+                        Dakhla
+                    </h3>
+
+                    <p>
+                        Manutention & opérations maritimes
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="cta-content">
+
+                <div class="eyebrow">
+                    PRÉPARONS VOTRE PROCHAINE OPÉRATION
+                </div>
+
+                <h2>
+
+                    Votre navire arrive.
+                    <span>Nous sommes prêts.</span>
+
+                </h2>
+
+                <p>
+
+                    Besoin d'organiser un déchargement de
+                    thonier ou une opération maritime ?
+                    Échangeons sur votre navire, votre
+                    marchandise, votre port et vos contraintes
+                    opérationnelles.
+
+                </p>
+
+                <div class="cta-actions">
+
+                    <a
+                        href="../devis.html?service=dechargement"
+                        class="btn btn-primary">
+
+                        DEMANDER UN DEVIS
+                        <span>↗</span>
+
+                    </a>
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-outline">
+
+                        CONTACTER NOS ÉQUIPES
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="../images/logo.webp"
+                alt="HANDLING SERVICES SARL">
+
+            <p>
+
+                Solutions professionnelles de manutention,
+                déchargement maritime et logistique portuaire
+                au Maroc.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                NAVIGATION
+            </h3>
+
+            <a href="../index.html">
+                Accueil
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="manutention.html">
+                Manutention
+            </a>
+
+            <a href="dechargement.html">
+                Déchargement
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                SERVICES
+            </h3>
+
+            <a href="dechargement.html">
+                Déchargement thonier
+            </a>
+
+            <a href="manutention.html">
+                Manutention portuaire
+            </a>
+
+            <a href="location-materiel.html">
+                Location de matériel
+            </a>
+
+            <a href="../devis.html">
+                Demander un devis
+            </a>
+

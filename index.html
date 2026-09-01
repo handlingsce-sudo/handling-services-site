@@ -1,0 +1,3295 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Handling Services SARL | Manutention Portuaire & Déchargement Maritime au Maroc</title>
+
+<meta name="description"
+    content="Handling Services SARL accompagne les opérations de manutention portuaire, déchargement maritime et location de matériel à Agadir, Dakhla et dans les principaux ports du Maroc.">
+
+<meta name="keywords"
+    content="manutention portuaire Agadir, manutention Dakhla, déchargement thonier Maroc, services portuaires Maroc, logistique pêche Agadir, déchargement maritime, location matériel manutention">
+
+<meta name="author" content="Handling Services SARL">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://VOTRE-DOMAINE.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title"
+    content="Handling Services SARL | La force opérationnelle des ports marocains">
+<meta property="og:description"
+    content="Manutention portuaire, déchargement maritime et location de matériel à Agadir, Dakhla et au Maroc.">
+<meta property="og:image" content="images/og-image.webp">
+<meta property="og:locale" content="fr_MA">
+
+<link rel="icon" type="image/webp" href="images/logo.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+    --navy:#031b33;
+    --navy-2:#062642;
+    --blue:#168fe5;
+    --blue-light:#51b7ef;
+
+    --white:#ffffff;
+    --light:#f4f8fb;
+    --border:#dfe8ef;
+
+    --text:#17344e;
+    --muted:#708092;
+
+    --container:1180px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:min(var(--container),calc(100% - 44px));
+    margin:auto;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar{
+    background:#02172a;
+    color:#9bb1c1;
+    font-size:10px;
+}
+
+.topbar-inner{
+    min-height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.topbar-info,
+.topbar-contact{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.topbar-contact a{
+    color:#dce8ef;
+    transition:.25s;
+}
+
+.topbar-contact a:hover{
+    color:var(--blue-light);
+}
+
+.topbar-separator{
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:#557286;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+    height:80px;
+    background:#fff;
+    border-bottom:1px solid #e7edf1;
+    position:relative;
+    z-index:100;
+}
+
+.header-inner{
+    height:100%;
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.brand{
+    width:155px;
+    flex-shrink:0;
+}
+
+.brand img{
+    height:auto;
+}
+
+.main-navigation{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.nav-item{
+    position:relative;
+}
+
+.nav-link{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:4px;
+    height:80px;
+    color:#30485d;
+    font-size:11px;
+    font-weight:700;
+    white-space:nowrap;
+    transition:.25s;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:var(--blue);
+}
+
+.nav-link.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:20px;
+    height:2px;
+    background:var(--blue);
+}
+
+.dropdown-arrow{
+    font-size:9px;
+}
+
+.dropdown-panel{
+    position:absolute;
+    top:75px;
+    left:50%;
+    width:245px;
+    transform:translate(-50%,10px);
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:0 25px 60px rgba(3,27,51,.14);
+    opacity:0;
+    visibility:hidden;
+    transition:.25s;
+}
+
+.nav-item:hover .dropdown-panel{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%,0);
+}
+
+.dropdown-panel a{
+    display:flex;
+    gap:13px;
+    padding:16px;
+    border-bottom:1px solid #edf1f4;
+}
+
+.dropdown-panel a:last-child{
+    border-bottom:0;
+}
+
+.dropdown-panel a:hover{
+    background:#edf7fd;
+}
+
+.dropdown-panel > a > span{
+    color:var(--blue);
+    font-size:9px;
+    font-weight:800;
+}
+
+.dropdown-panel strong{
+    display:block;
+    color:var(--navy);
+    font-size:11px;
+}
+
+.dropdown-panel small{
+    display:block;
+    margin-top:3px;
+    color:var(--muted);
+    font-size:9px;
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.header-quote{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:13px 16px;
+    background:var(--navy);
+    color:#fff;
+    font-size:10px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.header-quote strong{
+    color:var(--blue-light);
+    font-size:15px;
+}
+
+.header-quote:hover{
+    background:var(--blue);
+    transform:translateY(-2px);
+}
+
+.language{
+    position:relative;
+}
+
+.language button{
+    border:0;
+    background:none;
+    color:var(--navy);
+    font-size:10px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.language-dropdown{
+    position:absolute;
+    right:0;
+    top:25px;
+    width:110px;
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(5px);
+    transition:.2s;
+}
+
+.language:hover .language-dropdown{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.language-dropdown a{
+    display:block;
+    padding:9px 12px;
+    font-size:10px;
+}
+
+.language-dropdown a:hover{
+    background:#edf7fd;
+    color:var(--blue);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:690px;
+    position:relative;
+    overflow:hidden;
+    background:var(--navy);
+}
+
+.hero-background{
+    position:absolute;
+    inset:0;
+}
+
+.hero-background img{
+    height:100%;
+    object-fit:cover;
+    animation:heroZoom 12s ease-out both;
+}
+
+.hero-gradient{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,20,38,.98) 0%,
+            rgba(3,27,51,.93) 34%,
+            rgba(3,27,51,.68) 62%,
+            rgba(3,27,51,.20) 100%
+        );
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 70%,
+            rgba(2,20,38,.75)
+        );
+    pointer-events:none;
+}
+
+.hero-inner{
+    min-height:690px;
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+}
+
+.hero-copy{
+    max-width:750px;
+    padding:90px 0 150px;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--blue-light);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.eyebrow-line{
+    width:38px;
+    height:2px;
+    background:var(--blue);
+}
+
+.hero h1{
+    color:#fff;
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(43px,6vw,72px);
+    line-height:1.01;
+    letter-spacing:-3px;
+    font-weight:800;
+    max-width:780px;
+}
+
+.hero h1 span{
+    color:var(--blue-light);
+}
+
+.hero-description{
+    max-width:650px;
+    color:#c4d5e1;
+    font-size:13px;
+    line-height:1.9;
+    margin-top:25px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:12px;
+    margin-top:32px;
+}
+
+.btn-primary,
+.btn-secondary{
+    display:inline-flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 21px;
+    font-size:10px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--blue);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#087fc8;
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.3);
+    color:#fff;
+    background:rgba(255,255,255,.04);
+}
+
+.btn-secondary:hover{
+    background:#fff;
+    color:var(--navy);
+    transform:translateY(-3px);
+}
+
+.hero-location{
+    position:absolute;
+    bottom:145px;
+    right:0;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:#c5d5df;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+.location-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--blue-light);
+    box-shadow:0 0 0 5px rgba(81,183,239,.12);
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.hero-stats-wrap{
+    position:absolute;
+    z-index:4;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(2,20,38,.92);
+    border-top:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+}
+
+.hero-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.hero-stat{
+    min-height:100px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:20px 25px;
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.hero-stat:last-child{
+    border-right:0;
+}
+
+.hero-stat-number{
+    color:var(--blue-light);
+    font-family:"Manrope",sans-serif;
+    font-size:30px;
+    font-weight:800;
+    line-height:1;
+}
+
+.hero-stat-text strong,
+.hero-stat-text span{
+    display:block;
+}
+
+.hero-stat-text strong{
+    color:#fff;
+    font-size:10px;
+}
+
+.hero-stat-text span{
+    color:#8fa8ba;
+    font-size:9px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-section{
+    padding:105px 0;
+    background:#fff;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:100px;
+    align-items:start;
+}
+
+.section-kicker{
+    color:var(--blue);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1.8px;
+}
+
+.intro-heading h2,
+.section-header h2,
+.why-intro h2{
+    margin-top:10px;
+    color:var(--navy);
+    font-family:"Manrope",sans-serif;
+    font-size:38px;
+    line-height:1.12;
+    letter-spacing:-1.2px;
+}
+
+.intro-heading h2 span,
+.section-header h2 span,
+.why-intro h2 span{
+    color:var(--blue);
+}
+
+.intro-content{
+    max-width:650px;
+}
+
+.intro-lead{
+    color:var(--navy);
+    font-family:"Manrope",sans-serif;
+    font-size:21px;
+    line-height:1.45;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.intro-content > p:not(.intro-lead){
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.9;
+}
+
+.text-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:24px;
+    color:var(--blue);
+    font-size:10px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.text-link span{
+    transition:.25s;
+}
+
+.text-link:hover span{
+    transform:translateX(5px);
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-section{
+    padding:100px 0;
+    background:var(--light);
+}
+
+.section-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:30px;
+    margin-bottom:45px;
+}
+
+.section-link{
+    display:inline-flex;
+    gap:10px;
+    color:var(--blue);
+    font-size:10px;
+    font-weight:800;
+}
+
+.section-link span{
+    transition:.25s;
+}
+
+.section-link:hover span{
+    transform:translateX(5px);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service-card{
+    position:relative;
+    background:#fff;
+    border:1px solid var(--border);
+    overflow:hidden;
+    transition:.4s cubic-bezier(.2,.8,.2,1);
+}
+
+.service-card:hover{
+    transform:translateY(-9px);
+    box-shadow:0 25px 60px rgba(3,27,51,.13);
+    border-color:#b9dced;
+}
+
+.service-number{
+    position:absolute;
+    z-index:3;
+    top:17px;
+    left:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:33px;
+    background:var(--navy);
+    color:#fff;
+    font-size:9px;
+    font-weight:800;
+}
+
+.service-image{
+    height:255px;
+    overflow:hidden;
+}
+
+.service-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
+}
+
+.service-card:hover .service-image img{
+    transform:scale(1.07);
+}
+
+.service-card-body{
+    padding:28px 25px 30px;
+}
+
+.service-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;
+    height:38px;
+    margin-bottom:18px;
+    background:#edf7fd;
+    color:var(--blue);
+    font-weight:800;
+}
+
+.service-card h3{
+    color:var(--navy);
+    font-family:"Manrope",sans-serif;
+    font-size:22px;
+    line-height:1.15;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.service-card-body > a{
+    color:var(--blue);
+    font-size:10px;
+    font-weight:800;
+}
+
+
+/* =========================================================
+   OPERATIONAL SYSTEM
+========================================================= */
+
+.system-section{
+    padding:110px 0;
+    background:#fff;
+}
+
+.system-heading{
+    max-width:700px;
+    margin-bottom:55px;
+}
+
+.system-heading h2{
+    margin-top:10px;
+    color:var(--navy);
+    font-family:"Manrope",sans-serif;
+    font-size:40px;
+    line-height:1.1;
+    letter-spacing:-1.3px;
+}
+
+.system-heading h2 span{
+    color:var(--blue);
+}
+
+.system-heading p{
+    margin-top:17px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.9;
+}
+
+.operation-line{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:10px;
+}
+
+.operation-line::before{
+    content:"";
+    position:absolute;
+    top:26px;
+    left:5%;
+    right:5%;
+    height:1px;
+    background:#cbdde8;
+}
+
+.operation-step{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.operation-number{
+    width:52px;
+    height:52px;
+    margin:0 auto 17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#fff;
+    border:1px solid #bcd5e3;
+    color:var(--blue);
+    font-size:10px;
+    font-weight:800;
+    box-shadow:0 0 0 7px #fff;
+    transition:.3s;
+}
+
+.operation-step:hover .operation-number{
+    background:var(--blue);
+    color:#fff;
+    border-color:var(--blue);
+    transform:scale(1.08);
+}
+
+.operation-step h3{
+    color:var(--navy);
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:7px;
+}
+
+.operation-step p{
+    max-width:150px;
+    margin:auto;
+    color:var(--muted);
+    font-size:9px;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   MARITIME EXPERTISE
+========================================================= */
+
+.maritime-section{
+    position:relative;
+    min-height:530px;
+    overflow:hidden;
+    background:var(--navy);
+}
+
+.maritime-image{
+    position:absolute;
+    inset:0;
+}
+
+.maritime-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.maritime-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,27,51,.98) 0%,
+            rgba(3,27,51,.91) 42%,
+            rgba(3,27,51,.42) 100%
+        );
+}
+
+.maritime-content{
+    position:relative;
+    z-index:2;
+    min-height:530px;
+    display:flex;
+    align-items:center;
+}
+
+.maritime-copy{
+    max-width:630px;
+}
+
+.section-kicker.light{
+    color:var(--blue-light);
+}
+
+.maritime-copy h2{
+    margin-top:11px;
+    color:#fff;
+    font-family:"Manrope",sans-serif;
+    font-size:42px;
+    line-height:1.08;
+    letter-spacing:-1.4px;
+}
+
+.maritime-copy h2 span{
+    color:var(--blue-light);
+}
+
+.maritime-copy p{
+    margin-top:18px;
+    color:#c3d3de;
+    font-size:12px;
+    line-height:1.9;
+}
+
+.maritime-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:27px;
+}
+
+.maritime-tag{
+    padding:8px 11px;
+    border:1px solid rgba(255,255,255,.17);
+    color:#d6e3eb;
+    font-size:9px;
+    background:rgba(255,255,255,.04);
+}
+
+
+/* =========================================================
+   WHY US
+========================================================= */
+
+.why-section{
+    padding:105px 0;
+    background:var(--light);
+}
+
+.why-intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:end;
+    margin-bottom:48px;
+}
+
+.why-intro > p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.9;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:#dbe5eb;
+    border:1px solid #dbe5eb;
+}
+
+.why-card{
+    position:relative;
+    min-height:220px;
+    padding:28px;
+    background:#fff;
+    transition:.35s;
+}
+
+.why-card:hover{
+    background:var(--navy);
+    transform:translateY(-5px);
+}
+
+.why-number{
+    color:var(--blue);
+    font-size:9px;
+    font-weight:800;
+}
+
+.why-card h3{
+    margin-top:38px;
+    color:var(--navy);
+    font-family:"Manrope",sans-serif;
+    font-size:19px;
+    transition:.3s;
+}
+
+.why-card p{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.7;
+    transition:.3s;
+}
+
+.why-card:hover h3{
+    color:#fff;
+}
+
+.why-card:hover p{
+    color:#a9c0cf;
+}
+
+
+/* =========================================================
+   LOCATIONS
+========================================================= */
+
+.locations-section{
+    padding:105px 0;
+    background:#fff;
+}
+
+.locations-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.location-card{
+    position:relative;
+    height:390px;
+    overflow:hidden;
+}
+
+.location-card img{
+    position:absolute;
+    inset:0;
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
+}
+
+.location-card:hover img{
+    transform:scale(1.06);
+}
+
+.location-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            0deg,
+            rgba(3,27,51,.95),
+            rgba(3,27,51,.08)
+        );
+}
+
+.location-content{
+    position:absolute;
+    z-index:2;
+    left:30px;
+    right:30px;
+    bottom:30px;
+    display:flex;
+    gap:18px;
+}
+
+.location-index{
+    color:var(--blue-light);
+    font-size:10px;
+    font-weight:800;
+}
+
+.location-country{
+    color:#8eb0c4;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1.5px;
+}
+
+.location-content h3{
+    margin:5px 0 2px;
+    color:#fff;
+    font-family:"Manrope",sans-serif;
+    font-size:35px;
+    line-height:1;
+}
+
+.location-content p{
+    color:#c4d4df;
+    font-size:10px;
+}
+
+.location-link{
+    display:inline-block;
+    margin-top:14px;
+    color:#fff;
+    font-size:9px;
+    font-weight:800;
+}
+
+
+/* =========================================================
+   CLIENTS
+========================================================= */
+
+.clients-section{
+    padding:95px 0;
+    background:var(--light);
+    border-top:1px solid #e5edf2;
+}
+
+.clients-heading{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:30px;
+    margin-bottom:42px;
+}
+
+.clients-heading h2{
+    margin-top:9px;
+    color:var(--navy);
+    font-family:"Manrope",sans-serif;
+    font-size:34px;
+}
+
+.clients-heading p{
+    max-width:400px;
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.8;
+}
+
+.clients-logos{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.client-logo{
+    height:115px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:#fff;
+    border:1px solid var(--border);
+    transition:.35s;
+}
+
+.client-logo:hover{
+    transform:translateY(-5px);
+    border-color:#b8d8e8;
+    box-shadow:0 15px 35px rgba(3,27,51,.08);
+}
+
+.client-logo img{
+    width:auto;
+    max-width:80%;
+    max-height:62px;
+    object-fit:contain;
+    filter:grayscale(100%);
+    opacity:.72;
+    transition:.35s;
+}
+
+.client-logo:hover img{
+    filter:grayscale(0);
+    opacity:1;
+}
+
+.clients-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
+    padding-top:22px;
+    border-top:1px solid #dce6ec;
+}
+
+.clients-bottom span{
+    color:var(--muted);
+    font-size:10px;
+}
+
+
+/* =========================================================
+   MAP / PRESENCE
+========================================================= */
+
+.map-contact-section{
+    position:relative;
+    min-height:370px;
+    overflow:hidden;
+    background:var(--navy);
+}
+
+.map-background{
+    position:absolute;
+    inset:0;
+}
+
+.map-background img{
+    height:100%;
+    object-fit:cover;
+    opacity:.32;
+}
+
+.map-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(3,27,51,.98),
+        rgba(3,27,51,.72),
+        rgba(3,27,51,.45)
+    );
+}
+
+.map-contact-inner{
+    position:relative;
+    z-index:2;
+    min-height:370px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.map-copy h2{
+    margin-top:10px;
+    color:#fff;
+    font-family:"Manrope",sans-serif;
+    font-size:37px;
+    line-height:1.1;
+}
+
+.map-copy h2 span{
+    color:var(--blue-light);
+}
+
+.map-copy p{
+    max-width:500px;
+    margin-top:15px;
+    color:#b9ccd9;
+    font-size:11px;
+    line-height:1.8;
+}
+
+.map-locations{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.map-location{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(255,255,255,.04);
+    transition:.3s;
+}
+
+.map-location:hover{
+    background:rgba(22,143,229,.16);
+    border-color:rgba(81,183,239,.4);
+    transform:translateX(5px);
+}
+
+.map-pin{
+    width:35px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(81,183,239,.5);
+    color:var(--blue-light);
+    font-size:9px;
+    font-weight:800;
+}
+
+.map-location strong{
+    display:block;
+    color:#fff;
+    font-size:12px;
+}
+
+.map-location small{
+    display:block;
+    margin-top:2px;
+    color:#91aabb;
+    font-size:9px;
+}
+
+.map-arrow{
+    margin-left:auto;
+    color:var(--blue-light);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+    padding:90px 0;
+    background:#fff;
+}
+
+.final-cta-inner{
+    padding:55px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:35px;
+    background:var(--navy);
+    position:relative;
+    overflow:hidden;
+}
+
+.final-cta-inner::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    right:-180px;
+    top:-210px;
+    border:1px solid rgba(81,183,239,.18);
+    border-radius:50%;
+}
+
+.final-cta h2{
+    margin-top:9px;
+    color:#fff;
+    font-family:"Manrope",sans-serif;
+    font-size:34px;
+    line-height:1.1;
+}
+
+.final-cta h2 span{
+    color:var(--blue-light);
+}
+
+.final-cta-action{
+    position:relative;
+    z-index:2;
+    flex-shrink:0;
+}
+
+.final-cta-action p{
+    color:#9eb6c7;
+    font-size:10px;
+    margin-bottom:10px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer{
+    background:#021a2e;
+    color:#fff;
+}
+
+.footer-main{
+    padding:65px 0 50px;
+    display:grid;
+    grid-template-columns:1.5fr .8fr .9fr 1fr;
+    gap:45px;
+}
+
+.footer-brand img{
+    width:150px;
+    margin-bottom:18px;
+}
+
+.footer-brand p{
+    max-width:280px;
+    color:#91a8b9;
+    font-size:10px;
+    line-height:1.8;
+}
+
+.footer-social{
+    display:flex;
+    gap:7px;
+    margin-top:20px;
+}
+
+.footer-social a{
+    width:31px;
+    height:31px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,255,255,.13);
+    color:#9eb6c7;
+    font-size:9px;
+    transition:.25s;
+}
+
+.footer-social a:hover{
+    background:var(--blue);
+    color:#fff;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.footer-column h3{
+    color:var(--blue-light);
+    font-size:9px;
+    letter-spacing:1.3px;
+    margin-bottom:8px;
+}
+
+.footer-column a,
+.footer-column span{
+    color:#9eb2c1;
+    font-size:10px;
+    transition:.2s;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+.footer-contact a:first-of-type{
+    color:#fff;
+}
+
+.footer-bottom{
+    padding:20px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-bottom p,
+.footer-bottom a{
+    color:#71899a;
+    font-size:9px;
+}
+
+.footer-bottom div{
+    display:flex;
+    gap:8px;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu-button{
+    display:none;
+    position:fixed;
+    z-index:200;
+    top:17px;
+    right:18px;
+    width:42px;
+    height:38px;
+    border:0;
+    background:var(--navy);
+    cursor:pointer;
+}
+
+.mobile-menu-button span{
+    display:block;
+    width:20px;
+    height:2px;
+    margin:4px auto;
+    background:#fff;
+    transition:.3s;
+}
+
+.mobile-menu-button.active span:nth-child(1){
+    transform:translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2){
+    opacity:0;
+}
+
+.mobile-menu-button.active span:nth-child(3){
+    transform:translateY(-6px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATIONS
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes heroZoom{
+    from{transform:scale(1.08);}
+    to{transform:scale(1);}
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-copy{
+    animation:fadeUp .9s ease both;
+}
+
+.hero-location{
+    animation:fadeUp 1s .25s ease both;
+}
+
+.hero-stat{
+    animation:fadeUp .7s .4s ease both;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
+
+    .main-navigation{
+        gap:14px;
+    }
+
+    .header-quote span{
+        display:none;
+    }
+
+    .intro-grid{
+        gap:50px;
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .clients-logos{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+
+@media(max-width:850px){
+
+    .topbar-contact{
+        display:none;
+    }
+
+    .main-navigation{
+        display:none;
+        position:fixed;
+        top:70px;
+        left:15px;
+        right:15px;
+        padding:20px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        background:#fff;
+        border:1px solid var(--border);
+        box-shadow:0 20px 50px rgba(0,0,0,.12);
+    }
+
+    .main-navigation.mobile-open{
+        display:flex;
+    }
+
+    .nav-link{
+        height:auto;
+        padding:15px 5px;
+        border-bottom:1px solid #edf1f4;
+    }
+
+    .nav-link.active::after{
+        display:none;
+    }
+
+    .dropdown-panel{
+        position:static;
+        width:100%;
+        transform:none;
+        display:none;
+        opacity:1;
+        visibility:visible;
+        box-shadow:none;
+        border:0;
+    }
+
+    .nav-item:hover .dropdown-panel{
+        display:block;
+        transform:none;
+    }
+
+    .mobile-menu-button{
+        display:block;
+    }
+
+    .hero,
+    .hero-inner{
+        min-height:680px;
+    }
+
+    .hero-copy{
+        padding-bottom:170px;
+    }
+
+    .hero-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-stat{
+        min-height:80px;
+    }
+
+    .intro-grid,
+    .why-intro,
+    .map-contact-inner{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .operation-line{
+        grid-template-columns:repeat(3,1fr);
+        row-gap:40px;
+    }
+
+    .operation-line::before{
+        display:none;
+    }
+
+    .locations-grid{
+        grid-template-columns:1fr;
+    }
+
+    .clients-heading,
+    .section-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .clients-logos{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:550px){
+
+    .container{
+        width:calc(100% - 30px);
+    }
+
+    .topbar{
+        display:none;
+    }
+
+    .site-header{
+        height:70px;
+    }
+
+    .brand{
+        width:130px;
+    }
+
+    .header-actions{
+        margin-left:auto;
+        margin-right:55px;
+    }
+
+    .header-quote{
+        padding:10px 12px;
+    }
+
+    .language{
+        display:none;
+    }
+
+    .hero,
+    .hero-inner{
+        min-height:720px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-2px;
+    }
+
+    .hero-description{
+        font-size:11px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .hero-location{
+        display:none;
+    }
+
+    .hero-stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero-stat{
+        padding:14px;
+        gap:9px;
+    }
+
+    .hero-stat-number{
+        font-size:23px;
+    }
+
+    .hero-stat-text strong{
+        font-size:8px;
+    }
+
+    .hero-stat-text span{
+        font-size:7px;
+    }
+
+    .intro-section,
+    .services-section,
+    .system-section,
+    .why-section,
+    .locations-section,
+    .clients-section,
+    .final-cta{
+        padding:70px 0;
+    }
+
+    .intro-heading h2,
+    .section-header h2,
+    .why-intro h2,
+    .system-heading h2,
+    .maritime-copy h2,
+    .map-copy h2{
+        font-size:29px;
+    }
+
+    .intro-lead{
+        font-size:18px;
+    }
+
+    .operation-line{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .maritime-content{
+        min-height:600px;
+    }
+
+    .maritime-copy h2{
+        font-size:31px;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .location-card{
+        height:300px;
+    }
+
+    .clients-logos{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .client-logo{
+        height:95px;
+    }
+
+    .map-contact-inner{
+        padding:70px 0;
+        min-height:500px;
+    }
+
+    .final-cta-inner{
+        padding:38px 25px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+
+}
+
+</style></head><body><!-- =========================================================
+     TOP BAR
+========================================================= --><div class="topbar"><div class="container topbar-inner">
+
+    <div class="topbar-info">
+
+        <span>Agadir · Dakhla · Maroc</span>
+
+        <span class="topbar-separator"></span>
+
+        <span>Disponibilité opérationnelle</span>
+
+    </div>
+
+    <div class="topbar-contact">
+
+        <a href="tel:+212528822185">
+            +212 528 82 21 85
+        </a>
+
+        <a href="mailto:handlingservices1@gmail.com">
+            handlingservices1@gmail.com
+        </a>
+
+    </div>
+
+</div>
+
+</div><!-- =========================================================
+     HEADER
+========================================================= --><header class="site-header"><div class="container header-inner">
+
+    <a href="index.html" class="brand">
+
+        <img
+            src="images/logo.webp"
+            alt="Handling Services SARL">
+
+    </a>
+
+
+    <nav class="main-navigation"
+         aria-label="Navigation principale">
+
+        <a href="index.html"
+           class="nav-link active">
+            Accueil
+        </a>
+
+
+        <div class="nav-item">
+
+            <a href="fr/services.html"
+               class="nav-link">
+
+                Services
+                <span class="dropdown-arrow">⌄</span>
+
+            </a>
+
+
+            <div class="dropdown-panel">
+
+                <a href="fr/manutention.html">
+
+                    <span>01</span>
+
+                    <div>
+                        <strong>Manutention</strong>
+                        <small>Opérations portuaires</small>
+                    </div>
+
+                </a>
+
+
+                <a href="fr/dechargement.html">
+
+                    <span>02</span>
+
+                    <div>
+                        <strong>Déchargement</strong>
+                        <small>Opérations maritimes</small>
+                    </div>
+
+                </a>
+
+
+                <a href="fr/location-materiel.html">
+
+                    <span>03</span>
+
+                    <div>
+                        <strong>Location de matériel</strong>
+                        <small>Équipements professionnels</small>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a href="fr/agadir.html"
+           class="nav-link">
+            Agadir
+        </a>
+
+        <a href="fr/dakhla.html"
+           class="nav-link">
+            Dakhla
+        </a>
+
+        <a href="fr/about.html"
+           class="nav-link">
+            À propos
+        </a>
+
+        <a href="fr/realisations.html"
+           class="nav-link">
+            Réalisations
+        </a>
+
+        <a href="fr/contact.html"
+           class="nav-link">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <a href="fr/contact.html?source=general"
+           class="header-quote">
+
+            <span>Demander un devis</span>
+            <strong>↗</strong>
+
+        </a>
+
+
+        <div class="language">
+
+            <button type="button">
+                FR ⌄
+            </button>
+
+            <div class="language-dropdown">
+
+                <a href="index.html">Français</a>
+                <a href="en/">English</a>
+                <a href="es/">Español</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</header><!-- =========================================================
+     MAIN
+========================================================= --><main><!-- =========================================================
+     HERO
+========================================================= --><section class="hero"><div class="hero-background">
+
+    <img
+        src="images/about-handling.webp"
+        alt="Opérations professionnelles de manutention portuaire au Maroc">
+
+</div>
+
+<div class="hero-gradient"></div>
+
+
+<div class="container hero-inner">
+
+    <div class="hero-copy">
+
+        <div class="eyebrow">
+
+            <span class="eyebrow-line"></span>
+
+            <span>
+                EXPERTISE PORTUAIRE · DEPUIS 1997
+            </span>
+
+        </div>
+
+
+        <h1>
+
+            La force
+            <span>opérationnelle</span>
+            au cœur des ports marocains.
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Handling Services SARL accompagne les professionnels
+            dans leurs opérations de manutention portuaire,
+            de déchargement maritime et de logistique,
+            avec une organisation pensée pour les exigences
+            du terrain.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a href="fr/services.html"
+               class="btn-primary">
+
+                Découvrir nos services
+                <span>→</span>
+
+            </a>
+
+
+            <a href="fr/contact.html?source=general"
+               class="btn-secondary">
+
+                Demander un devis
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-location">
+
+        <span class="location-dot"></span>
+
+        Agadir · Dakhla · Maroc
+
+    </div>
+
+</div>
+
+
+<div class="hero-stats-wrap">
+
+    <div class="container">
+
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+
+                <div class="hero-stat-number">
+                    29+
+                </div>
+
+                <div class="hero-stat-text">
+                    <strong>Années</strong>
+                    <span>d'expérience</span>
+                </div>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <div class="hero-stat-number">
+                    5000+
+                </div>
+
+                <div class="hero-stat-text">
+                    <strong>Opérations</strong>
+                    <span>réalisées</span>
+                </div>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <div class="hero-stat-number">
+                    02
+                </div>
+
+                <div class="hero-stat-text">
+                    <strong>Implantations</strong>
+                    <span>Agadir · Dakhla</span>
+                </div>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <div class="hero-stat-number">
+                    24/7
+                </div>
+
+                <div class="hero-stat-text">
+                    <strong>Réactivité</strong>
+                    <span>selon opération</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     INTRO
+========================================================= --><section class="intro-section"><div class="container intro-grid">
+
+    <div class="intro-heading">
+
+        <div class="section-kicker">
+            HANDLING SERVICES SARL
+        </div>
+
+        <h2>
+
+            Une entreprise construite
+            autour de la
+            <span>réalité opérationnelle.</span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="intro-content">
+
+        <p class="intro-lead">
+
+            Depuis 1997, nous mettons notre expérience
+            au service des opérations qui exigent
+            organisation, réactivité et maîtrise du terrain.
+
+        </p>
+
+
+        <p>
+
+            Notre activité s'inscrit au cœur des opérations
+            portuaires et logistiques. Nous mobilisons nos
+            équipes, nos moyens et notre savoir-faire pour
+            accompagner chaque intervention avec méthode
+            et professionnalisme.
+
+        </p>
+
+
+        <a href="fr/about.html"
+           class="text-link">
+
+            Découvrir notre entreprise
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     SERVICES
+========================================================= --><section class="services-section"><div class="container">
+
+    <div class="section-header">
+
+        <div>
+
+            <div class="section-kicker">
+                NOS EXPERTISES
+            </div>
+
+            <h2>
+
+                Trois métiers.
+                <span>Une même exigence.</span>
+
+            </h2>
+
+        </div>
+
+
+        <a href="fr/services.html"
+           class="section-link">
+
+            Voir tous les services
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <article class="service-card">
+
+            <div class="service-number">
+                01
+            </div>
+
+            <div class="service-image">
+
+                <img
+                    src="images/manutention.webp"
+                    alt="Manutention portuaire professionnelle"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="service-card-body">
+
+                <div class="service-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Manutention portuaire
+                </h3>
+
+                <p>
+
+                    Organisation et réalisation des opérations
+                    de manipulation, déplacement et gestion
+                    des flux sur site.
+
+                </p>
+
+                <a href="fr/manutention.html">
+                    Découvrir → 
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+            <div class="service-number">
+                02
+            </div>
+
+            <div class="service-image">
+
+                <img
+                    src="images/dechargement.webp"
+                    alt="Déchargement maritime et portuaire"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="service-card-body">
+
+                <div class="service-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Déchargement maritime
+                </h3>
+
+                <p>
+
+                    Des opérations coordonnées pour accompagner
+                    les navires, thoniers et activités liées
+                    aux produits de la mer.
+
+                </p>
+
+                <a href="fr/dechargement.html">
+                    Découvrir →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <div class="service-image">
+
+                <img
+                    src="images/location-materiel.webp"
+                    alt="Location de matériel de manutention"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="service-card-body">
+
+                <div class="service-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Location de matériel
+                </h3>
+
+                <p>
+
+                    Mise à disposition d'équipements adaptés
+                    aux besoins des opérations professionnelles.
+
+                </p>
+
+                <a href="fr/location-materiel.html">
+                    Découvrir →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     OPERATIONAL SYSTEM
+========================================================= --><section class="system-section"><div class="container">
+
+    <div class="system-heading reveal">
+
+        <div class="section-kicker">
+            NOTRE ORGANISATION
+        </div>
+
+        <h2>
+
+            Une opération maîtrisée
+            <span>à chaque étape.</span>
+
+        </h2>
+
+        <p>
+
+            Une intervention efficace commence par une
+            préparation rigoureuse. Nos opérations sont
+            organisées autour d'un enchaînement clair,
+            de la préparation jusqu'à l'orientation finale
+            des marchandises.
+
+        </p>
+
+    </div>
+
+
+    <div class="operation-line">
+
+
+        <div class="operation-step reveal">
+
+            <div class="operation-number">
+                01
+            </div>
+
+            <h3>
+                Préparation
+            </h3>
+
+            <p>
+                Analyse du besoin et préparation de l'intervention.
+            </p>
+
+        </div>
+
+
+        <div class="operation-step reveal">
+
+            <div class="operation-number">
+                02
+            </div>
+
+            <h3>
+                Coordination
+            </h3>
+
+            <p>
+                Organisation des équipes et des moyens.
+            </p>
+
+        </div>
+
+
+        <div class="operation-step reveal">
+
+            <div class="operation-number">
+                03
+            </div>
+
+            <h3>
+                Opération
+            </h3>
+
+            <p>
+                Exécution des opérations sur le terrain.
+            </p>
+
+        </div>
+
+
+        <div class="operation-step reveal">
+
+            <div class="operation-number">
+                04
+            </div>
+
+            <h3>
+                Contrôle
+            </h3>
+
+            <p>
+                Suivi des flux et attention portée au produit.
+            </p>
+
+        </div>
+
+
+        <div class="operation-step reveal">
+
+            <div class="operation-number">
+                05
+            </div>
+
+            <h3>
+                Orientation
+            </h3>
+
+            <p>
+                Acheminement vers stockage, froid ou transport.
+            </p>
+
+        </div>
+
+
+        <div class="operation-step reveal">
+
+            <div class="operation-number">
+                06
+            </div>
+
+            <h3>
+                Finalisation
+            </h3>
+
+            <p>
+                Clôture organisée de l'opération.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     MARITIME EXPERTISE
+========================================================= --><section class="maritime-section"><div class="maritime-image">
+
+    <img
+        src="images/dechargement.webp"
+        alt="Opération de déchargement maritime">
+
+</div>
+
+<div class="maritime-overlay"></div>
+
+
+<div class="container maritime-content">
+
+    <div class="maritime-copy reveal">
+
+        <div class="section-kicker light">
+            EXPERTISE MARITIME
+        </div>
+
+        <h2>
+
+            Une connaissance concrète
+            des opérations liées aux
+            <span>produits de la mer.</span>
+
+        </h2>
+
+        <p>
+
+            Notre expérience nous permet d'intervenir
+            sur différentes opérations liées aux activités
+            de pêche et aux produits de la mer, en tenant
+            compte des caractéristiques du produit,
+            des volumes et des exigences de l'opération.
+
+        </p>
+
+
+        <div class="maritime-tags">
+
+            <span class="maritime-tag">Thon</span>
+            <span class="maritime-tag">Dorade</span>
+            <span class="maritime-tag">Gamba</span>
+            <span class="maritime-tag">Calamar</span>
+            <span class="maritime-tag">Choco</span>
+            <span class="maritime-tag">Lenguado</span>
+            <span class="maritime-tag">Raya</span>
+            <span class="maritime-tag">Autres espèces</span>
+
+        </div>
+
+
+        <a href="fr/dechargement.html"
+           class="btn-primary"
+           style="margin-top:28px;">
+
+            Voir notre expertise maritime
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     WHY US
+========================================================= --><section class="why-section"><div class="container">
+
+    <div class="why-intro reveal">
+
+        <div>
+
+            <div class="section-kicker">
+                POURQUOI NOUS
+            </div>
+
+            <h2>
+
+                Une exigence qui se traduit
+                sur le <span>terrain.</span>
+
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Notre engagement repose sur une organisation
+            professionnelle, des équipes impliquées et
+            une attention constante portée à la sécurité,
+            aux délais et à la qualité d'exécution.
+
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card reveal">
+
+            <span class="why-number">
+                01
+            </span>
+
+            <h3>
+                Expérience
+            </h3>
+
+            <p>
+                Un savoir-faire développé depuis 1997
+                au contact des réalités opérationnelles.
+            </p>
+
+        </div>
+
+
+        <div class="why-card reveal">
+
+            <span class="why-number">
+                02
+            </span>
+
+            <h3>
+                Réactivité
+            </h3>
+
+            <p>
+                Une organisation capable de s'adapter
+                aux contraintes de chaque opération.
+            </p>
+
+        </div>
+
+
+        <div class="why-card reveal">
+
+            <span class="why-number">
+                03
+            </span>
+
+            <h3>
+                Sécurité
+            </h3>
+
+            <p>
+                Une attention permanente portée aux
+                conditions d'intervention et aux procédures.
+            </p>
+
+        </div>
+
+
+        <div class="why-card reveal">
+
+            <span class="why-number">
+                04
+            </span>
+
+            <h3>
+                Fiabilité
+            </h3>
+
+            <p>
+                Une relation professionnelle fondée sur
+                la régularité et la confiance.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     LOCATIONS
+========================================================= --><section class="locations-section"><div class="container">
+
+    <div class="section-header reveal">
+
+        <div>
+
+            <div class="section-kicker">
+                NOS IMPLANTATIONS
+            </div>
+
+            <h2>
+
+                Présents au plus près
+                de <span>vos opérations.</span>
+
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="locations-grid">
+
+
+        <a href="fr/agadir.html"
+           class="location-card reveal">
+
+            <img
+                src="images/agadir-port.webp"
+                alt="Handling Services au port d'Agadir"
+                loading="lazy">
+
+            <div class="location-overlay"></div>
+
+
+            <div class="location-content">
+
+                <span class="location-index">
+                    01
+                </span>
+
+                <div>
+
+                    <div class="location-country">
+                        MAROC · SOUSS-MASSA
+                    </div>
+
+                    <h3>
+                        Agadir
+                    </h3>
+
+                    <p>
+                        Ancien Port d'Agadir
+                    </p>
+
+                    <span class="location-link">
+                        Découvrir Agadir →
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <a href="fr/dakhla.html"
+           class="location-card reveal">
+
+            <img
+                src="images/dakhla.webp"
+                alt="Handling Services à Dakhla"
+                loading="lazy">
+
+            <div class="location-overlay"></div>
+
+
+            <div class="location-content">
+
+                <span class="location-index">
+                    02
+                </span>
+
+                <div>
+
+                    <div class="location-country">
+                        MAROC · DAKHLA-OUED ED-DAHAB
+                    </div>
+
+                    <h3>
+                        Dakhla
+                    </h3>
+
+                    <p>
+                        Opérations maritimes & portuaires
+                    </p>
+
+                    <span class="location-link">
+                        Découvrir Dakhla →
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     CLIENTS
+========================================================= --><section class="clients-section"><div class="container">
+
+    <div class="clients-heading reveal">
+
+        <div>
+
+            <div class="section-kicker">
+                ILS NOUS FONT CONFIANCE
+            </div>
+
+            <h2>
+                Nos clients & partenaires
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Des collaborations professionnelles construites
+            autour de la confiance, de la qualité d'exécution
+            et de la continuité opérationnelle.
+
+        </p>
+
+    </div>
+
+
+    <div class="clients-logos">
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-01.webp"
+                alt="Client Handling Services 01"
+                loading="lazy">
+        </div>
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-02.webp"
+                alt="Client Handling Services 02"
+                loading="lazy">
+        </div>
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-03.webp"
+                alt="Client Handling Services 03"
+                loading="lazy">
+        </div>
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-04.webp"
+                alt="Client Handling Services 04"
+                loading="lazy">
+        </div>
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-05.webp"
+                alt="Client Handling Services 05"
+                loading="lazy">
+        </div>
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-06.webp"
+                alt="Client Handling Services 06"
+                loading="lazy">
+        </div>
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-07.webp"
+                alt="Client Handling Services 07"
+                loading="lazy">
+        </div>
+
+
+        <div class="client-logo reveal">
+            <img
+                src="images/clients/client-08.webp"
+                alt="Client Handling Services 08"
+                loading="lazy">
+        </div>
+
+    </div>
+
+
+    <div class="clients-bottom">
+
+        <span>
+            Vous souhaitez collaborer avec nous ?
+        </span>
+
+        <a href="fr/contact.html?source=general"
+           class="text-link">
+
+            Parlons de votre opération
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     PRESENCE
+========================================================= --><section class="map-contact-section"><div class="map-background">
+
+    <img
+        src="images/map-bg.webp"
+        alt=""
+        aria-hidden="true">
+
+</div>
+
+<div class="map-overlay"></div>
+
+
+<div class="container map-contact-inner">
+
+
+    <div class="map-copy reveal">
+
+        <div class="section-kicker light">
+            NOTRE PRÉSENCE
+        </div>
+
+        <h2>
+
+            Deux implantations.
+            <span>Une même exigence.</span>
+
+        </h2>
+
+        <p>
+
+            Une présence opérationnelle à Agadir et Dakhla
+            pour accompagner les professionnels au plus
+            près des zones d'activité portuaire.
+
+        </p>
+
+    </div>
+
+
+    <div class="map-locations">
+
+
+        <a
+            href="https://maps.app.goo.gl/2RAmpsryeZvXCNrs8?g_st=aw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-location reveal">
+
+            <span class="map-pin">
+                01
+            </span>
+
+            <div>
+
+                <strong>
+                    Agadir
+                </strong>
+
+                <small>
+                    Ancien Port d'Agadir
+                </small>
+
+            </div>
+
+            <span class="map-arrow">
+                ↗
+            </span>
+
+        </a>
+
+
+        <a href="fr/dakhla.html"
+           class="map-location reveal">
+
+            <span class="map-pin">
+                02
+            </span>
+
+            <div>
+
+                <strong>
+                    Dakhla
+                </strong>
+
+                <small>
+                    Opérations portuaires & maritimes
+                </small>
+
+            </div>
+
+            <span class="map-arrow">
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     FINAL CTA
+========================================================= --><section class="final-cta"><div class="container">
+
+    <div class="final-cta-inner reveal">
+
+
+        <div>
+
+            <div class="section-kicker">
+                PARLONS DE VOTRE OPÉRATION
+            </div>
+
+            <h2>
+
+                Une opération à préparer ?
+                <span>Nous sommes prêts.</span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="final-cta-action">
+
+            <p>
+                Contactez notre équipe.
+            </p>
+
+            <a href="fr/contact.html?source=general"
+               class="btn-primary">
+
+                Demander un devis
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section></main><!-- =========================================================
+     FOOTER
+========================================================= --><footer class="site-footer"><div class="container footer-main">
+
+
+    <div class="footer-brand">
+
+        <a href="index.html">
+
+            <img
+                src="images/logo.webp"
+                alt="Handling Services SARL">
+
+        </a>
+
+        <p>
+
+            Manutention portuaire, déchargement maritime
+            et location de matériel au service des
+            professionnels au Maroc.
+
+        </p>
+
+
+        <div class="footer-social">
+
+            <a href="#"
+               aria-label="Facebook">
+                f
+            </a>
+
+            <a href="#"
+               aria-label="LinkedIn">
+                in
+            </a>
+
+            <a
+                href="https://wa.me/212528822185"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp">
+                W
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            NAVIGATION
+        </h3>
+
+        <a href="index.html">Accueil</a>
+        <a href="fr/services.html">Services</a>
+        <a href="fr/agadir.html">Agadir</a>
+        <a href="fr/dakhla.html">Dakhla</a>
+        <a href="fr/about.html">À propos</a>
+        <a href="fr/realisations.html">Réalisations</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            SERVICES
+        </h3>
+
+        <a href="fr/manutention.html">
+            Manutention
+        </a>
+
+        <a href="fr/dechargement.html">
+            Déchargement
+        </a>
+
+        <a href="fr/location-materiel.html">
+            Location de matériel
+        </a>
+
+        <a href="fr/contact.html?source=general">
+            Demander un devis
+        </a>
+
+    </div>
+
+
+    <div class="footer-column footer-contact">
+
+        <h3>
+            CONTACT
+        </h3>
+
+        <a href="tel:+212528822185">
+            +212 528 82 21 85
+        </a>
+
+        <a href="mailto:handlingservices1@gmail.com">
+            handlingservices1@gmail.com
+        </a>
+
+        <span>
+            Agadir · Dakhla · Maroc
+        </span>
+
+        <span>
+            Lun — Sam · 09:00 — 17:00
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="container footer-bottom">
+
+    <p>
+        © 2026 Handling Services SARL.
+        Tous droits réservés.
+    </p>
+
+    <div>
+
+        <a href="fr/mentions-legales.html">
+            Mentions légales
+        </a>
+
+        <span>·</span>
+
+        <a href="fr/politique-confidentialite.html">
+            Politique de confidentialité
+        </a>
+
+    </div>
+
+</div>
+
+</footer><!-- =========================================================
+     MOBILE MENU
+========================================================= --><button
+class="mobile-menu-button"
+type="button"
+aria-label="Ouvrir le menu"
+aria-expanded="false">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button><!-- =========================================================
+     JAVASCRIPT
+========================================================= --><script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    /* MOBILE MENU */
+
+    const menuButton =
+        document.querySelector(".mobile-menu-button");
+
+    const navigation =
+        document.querySelector(".main-navigation");
+
+
+    if(menuButton && navigation){
+
+        menuButton.addEventListener("click", function(){
+
+            const open =
+                navigation.classList.toggle("mobile-open");
+
+            menuButton.classList.toggle(
+                "active",
+                open
+            );
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                open ? "true" : "false"
+            );
+
+        });
+
+    }
+
+
+    /* SCROLL REVEAL */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            function(entries){
+
+                entries.forEach(function(entry){
+
+                    if(entry.isIntersecting){
+
+                        entry.target.classList.add("visible");
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold:.12
+            }
+
+        );
+
+
+    revealElements.forEach(function(element){
+
+        revealObserver.observe(element);
+
+    });
+
+});
+
+</script></body></html>

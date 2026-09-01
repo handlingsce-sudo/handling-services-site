@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demander un devis | Handling Services SARL</title>
+
+    <meta name="description"
+        content="Demandez votre devis auprès de Handling Services SARL pour vos opérations de manutention, déchargement et location de matériel à Agadir et Dakhla.">
+
+    <meta name="keywords"
+        content="devis manutention Agadir, devis déchargement Agadir, devis manutention Dakhla, location matériel manutention Maroc, Handling Services SARL">
+
+    <meta name="author" content="Handling Services SARL">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://VOTRE-DOMAINE.com/devis.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="Demander un devis | Handling Services SARL">
+    <meta property="og:description"
+        content="Présentez-nous votre besoin et recevez une réponse adaptée à votre opération.">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:locale" content="fr_MA">
+
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           DEVIS PAGE
+        ===================================================== */
+
+        .devis-page {
+            background: #f5f8fb;
+        }
+
+        /* HERO */
+
+        .devis-hero {
+            position: relative;
+            min-height: 390px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: var(--navy, #062542);
+        }
+
+        .devis-hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .devis-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .devis-hero-overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 24, 45, .98) 0%,
+                    rgba(3, 24, 45, .91) 42%,
+                    rgba(3, 24, 45, .62) 72%,
+                    rgba(3, 24, 45, .30) 100%
+                );
+        }
+
+        .devis-hero-inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .devis-hero-copy {
+            max-width: 720px;
+            padding: 72px 0;
+        }
+
+        .devis-kicker {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            color: #55b9f0;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+
+            margin-bottom: 18px;
+        }
+
+        .devis-kicker::before {
+            content: "";
+            width: 35px;
+            height: 2px;
+            background: #168fe5;
+        }
+
+        .devis-hero h1 {
+            margin: 0 0 20px;
+
+            color: #fff;
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(42px, 5vw, 64px);
+            line-height: 1;
+            letter-spacing: -2.5px;
+            font-weight: 800;
+        }
+
+        .devis-hero h1 span {
+            color: #36a8ef;
+        }
+
+        .devis-hero-description {
+            max-width: 590px;
+
+            color: #dce9f3;
+            font-size: 14px;
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+
+        /* MAIN */
+
+        .devis-section {
+            padding: 80px 0 90px;
+        }
+
+        .devis-layout {
+            display: grid;
+            grid-template-columns: .72fr 1.28fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+
+        /* LEFT SIDE */
+
+        .devis-info {
+            position: sticky;
+            top: 110px;
+        }
+
+        .devis-info-kicker {
+            color: var(--blue, #168fe5);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+
+            margin-bottom: 12px;
+        }
+
+        .devis-info h2 {
+            margin: 0 0 18px;
+
+            color: var(--navy, #062542);
+            font-family: "Manrope", sans-serif;
+
+            font-size: 34px;
+            line-height: 1.08;
+            letter-spacing: -1.3px;
+            font-weight: 800;
+        }
+
+        .devis-info h2 span {
+            color: var(--blue, #168fe5);
+        }
+
+        .devis-info > p {
+            color: #68798b;
+            font-size: 12px;
+            line-height: 1.8;
+
+            margin: 0 0 30px;
+        }
+
+
+        /* INFO CARDS */
+
+        .devis-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .devis-info-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            padding: 15px 16px;
+
+            background: #fff;
+            border: 1px solid #e3eaf0;
+            border-radius: 5px;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                border-color .25s ease;
+        }
+
+        .devis-info-card:hover {
+            transform: translateX(4px);
+            border-color: #cfe5f3;
+            box-shadow: 0 10px 30px rgba(5, 42, 70, .07);
+        }
+
+        .devis-info-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #eaf6fd;
+            color: var(--blue, #168fe5);
+
+            border-radius: 50%;
+
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .devis-info-card strong {
+            display: block;
+
+            color: var(--navy, #062542);
+            font-size: 11px;
+            font-weight: 800;
+
+            margin-bottom: 3px;
+        }
+
+        .devis-info-card span,
+        .devis-info-card a {
+            color: #748394;
+            font-size: 10px;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+
+
+        /* FORM CARD */
+
+        .devis-form-card {
+            background: #fff;
+
+            border: 1px solid #e1e9ef;
+            border-radius: 8px;
+
+            padding: 42px;
+
+            box-shadow:
+                0 18px 55px rgba(4, 35, 60, .08);
+        }
+
+        .devis-form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
+
+            padding-bottom: 25px;
+            margin-bottom: 28px;
+
+            border-bottom: 1px solid #e5ebf0;
+        }
+
+        .devis-form-header h2 {
+            color: var(--navy, #062542);
+
+            font-family: "Manrope", sans-serif;
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 800;
+
+            margin: 0 0 7px;
+        }
+
+        .devis-form-header p {
+            color: #7b8997;
+            font-size: 11px;
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+        .devis-required {
+            color: #8998a7;
+            font-size: 9px;
+            white-space: nowrap;
+        }
+
+
+        /* SOURCE BADGE */
+
+        .devis-context {
+            display: none;
+
+            padding: 12px 14px;
+            margin-bottom: 22px;
+
+            background: #edf8fe;
+            border-left: 3px solid #168fe5;
+
+            color: #35556e;
+
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .devis-context.active {
+            display: block;
+        }
+
+        .devis-context strong {
+            color: #087bc4;
+        }
+
+
+        /* FORM */
+
+        .devis-form {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #233d55;
+
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .2px;
+        }
+
+        .form-group label span {
+            color: #168fe5;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+
+            border: 1px solid #dbe4eb;
+            border-radius: 4px;
+
+            background: #fbfcfd;
+
+            color: #203b54;
+
+            font-family: "Inter", sans-serif;
+            font-size: 11px;
+
+            outline: none;
+
+            transition:
+                border-color .2s ease,
+                background .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .form-group input,
+        .form-group select {
+            height: 47px;
+            padding: 0 14px;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            padding: 14px;
+            resize: vertical;
+            line-height: 1.7;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #5ab8e9;
+            background: #fff;
+
+            box-shadow:
+                0 0 0 3px rgba(22, 143, 229, .08);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #a2adb8;
+        }
+
+
+        /* SELECTS */
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-wrapper select {
+            appearance: none;
+            -webkit-appearance: none;
+
+            padding-right: 40px;
+
+            cursor: pointer;
+        }
+
+        .select-wrapper::after {
+            content: "⌄";
+
+            position: absolute;
+            right: 14px;
+            top: 50%;
+
+            transform: translateY(-55%);
+
+            color: #168fe5;
+            font-size: 14px;
+
+            pointer-events: none;
+        }
+
+
+        /* CHECKBOX */
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            margin-top: -2px;
+        }
+
+        .form-check input {
+            width: 15px;
+            height: 15px;
+
+            margin: 1px 0 0;
+
+            accent-color: #168fe5;
+        }
+
+        .form-check label {
+            color: #758392;
+            font-size: 9px;
+            line-height: 1.6;
+            cursor: pointer;
+        }
+
+        .form-check label a {
+            color: #168fe5;
+            text-decoration: underline;
+        }
+
+
+        /* SUBMIT */
+
+        .devis-submit {
+            width: 100%;
+            min-height: 52px;
+
+            border: 0;
+            border-radius: 4px;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #087bc4,
+                    #168fe5
+                );
+
+            color: #fff;
+
+            font-family: "Inter", sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px rgba(22, 143, 229, .20);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .devis-submit:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 15px 30px rgba(22, 143, 229, .28);
+        }
+
+        .devis-submit span {
+            font-size: 15px;
+        }
+
+
+        /* NOTE */
+
+        .devis-form-note {
+            text-align: center;
+
+            color: #96a2ad;
+            font-size: 9px;
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+
+        /* SUCCESS */
+
+        .devis-success {
+            display: none;
+
+            padding: 20px;
+
+            background: #edf9f3;
+            border: 1px solid #c9ead8;
+            border-radius: 5px;
+
+            color: #27734e;
+
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .devis-success.active {
+            display: block;
+        }
+
+
+        /* BOTTOM STRIP */
+
+        .devis-bottom {
+            padding: 0 0 80px;
+        }
+
+        .devis-bottom-inner {
+            min-height: 145px;
+
+            padding: 35px 42px;
+
+            border-radius: 7px;
+
+            background:
+                linear-gradient(
+                    105deg,
+                    #052c4e,
+                    #075f98
+                );
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .devis-bottom-copy small {
+            display: block;
+
+            color: #64c0f2;
+
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1px;
+
+            margin-bottom: 8px;
+        }
+
+        .devis-bottom-copy h2 {
+            color: #fff;
+
+            font-family: "Manrope", sans-serif;
+            font-size: 25px;
+            line-height: 1.15;
+            font-weight: 800;
+
+            margin: 0;
+        }
+
+        .devis-bottom-copy h2 span {
+            color: #55b9f0;
+        }
+
+        .devis-bottom-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 7px;
+        }
+
+        .devis-bottom-contact a {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .devis-bottom-contact span {
+            color: #c5dce9;
+            font-size: 9px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .devis-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .devis-info {
+                position: static;
+            }
+
+            .devis-info-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .devis-hero {
+                min-height: 450px;
+            }
+
+            .devis-hero-overlay {
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(3,24,45,.75),
+                        rgba(3,24,45,.96)
+                    );
+            }
+
+            .devis-hero-copy {
+                padding: 55px 0;
+            }
+
+            .devis-hero h1 {
+                font-size: 41px;
+                letter-spacing: -1.8px;
+            }
+
+            .devis-hero-description {
+                font-size: 12px;
+            }
+
+            .devis-section {
+                padding: 55px 0 65px;
+            }
+
+            .devis-info h2 {
+                font-size: 29px;
+            }
+
+            .devis-info-list {
+                grid-template-columns: 1fr;
+            }
+
+            .devis-form-card {
+                padding: 25px 20px;
+            }
+
+            .devis-form-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .devis-bottom {
+                padding-bottom: 55px;
+            }
+
+            .devis-bottom-inner {
+                padding: 30px 25px;
+
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .devis-bottom-contact {
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <div class="topbar-info">
+
+            <span>Agadir · Dakhla · Maroc</span>
+
+            <span class="topbar-separator"></span>
+
+            <span>Lun — Sam · 09:00 — 17:00</span>
+
+        </div>
+
+
+        <div class="topbar-contact">
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="images/logo.webp"
+                alt="Handling Services SARL"
+            >
+
+        </a>
+
+
+        <nav class="main-navigation" aria-label="Navigation principale">
+
+            <a href="index.html" class="nav-link">
+                Accueil
+            </a>
+
+
+            <div class="nav-item dropdown">
+
+                <a href="fr/services.html" class="nav-link active">
+                    Services
+                    <span class="dropdown-arrow">⌄</span>
+                </a>
+
+                <div class="dropdown-panel">
+
+                    <a href="fr/manutention.html">
+                        <span>01</span>
+                        Manutention
+                    </a>
+
+                    <a href="fr/dechargement.html">
+                        <span>02</span>
+                        Déchargement
+                    </a>
+
+                    <a href="fr/location-materiel.html">
+                        <span>03</span>
+                        Location de matériel
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="fr/agadir.html" class="nav-link">
+                Agadir
+            </a>
+
+            <a href="fr/dakhla.html" class="nav-link">
+                Dakhla
+            </a>
+
+            <a href="fr/about.html" class="nav-link">
+                À propos
+            </a>
+
+            <a href="fr/realisations.html" class="nav-link">
+                Réalisations
+            </a>
+
+            <a href="fr/contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="devis.html" class="header-quote">
+                <span>Demander un devis</span>
+                <strong>↗</strong>
+            </a>
+
+
+            <div class="language">
+
+                <button type="button">
+                    FR
+                    <span>⌄</span>
+                </button>
+
+                <div class="language-dropdown">
+
+                    <a href="devis.html">
+                        Français
+                    </a>
+
+                    <a href="en/devis.html">
+                        English
+                    </a>
+
+                    <a href="es/devis.html">
+                        Español
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="devis-page">
+
+
+<!-- HERO -->
+
+<section class="devis-hero">
+
+    <div class="devis-hero-bg">
+
+        <img
+            src="images/manutention.webp"
+            alt=""
+            aria-hidden="true"
+        >
+
+    </div>
+
+    <div class="devis-hero-overlay"></div>
+
+
+    <div class="container devis-hero-inner">
+
+        <div class="devis-hero-copy">
+
+            <div class="devis-kicker">
+                HANDLING SERVICES SARL · DEPUIS 1997
+            </div>
+
+            <h1>
+                Préparons votre
+                <span>opération.</span>
+            </h1>
+
+            <p class="devis-hero-description">
+
+                Décrivez-nous votre besoin.
+                Notre équipe étudiera votre demande
+                afin de vous proposer une solution adaptée
+                à votre opération.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FORM SECTION -->
+
+<section class="devis-section">
+
+    <div class="container devis-layout">
+
+
+        <!-- LEFT -->
+
+        <aside class="devis-info">
+
+            <div class="devis-info-kicker">
+                DEMANDE DE DEVIS
+            </div>
+
+            <h2>
+                Parlons de votre
+                <span>besoin.</span>
+            </h2>
+
+            <p>
+
+                Quelques informations suffisent pour nous
+                permettre de comprendre votre projet et
+                de préparer votre demande.
+
+            </p>
+
+
+            <div class="devis-info-list">
+
+
+                <div class="devis-info-card">
+
+                    <div class="devis-info-icon">
+                        01
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Service
+                        </strong>
+
+                        <span>
+                            Manutention · Déchargement · Location
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="devis-info-card">
+
+                    <div class="devis-info-icon">
+                        02
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Zones
+                        </strong>
+
+                        <span>
+                            Agadir · Dakhla
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="devis-info-card">
+
+                    <div class="devis-info-icon">
+                        03
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Téléphone
+                        </strong>
+
+                        <a href="tel:+212528822185">
+                            +212 528 82 21 85
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="devis-info-card">
+
+                    <div class="devis-info-icon">
+                        04
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <a href="mailto:handlingservices1@gmail.com">
+                            handlingservices1@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </aside>
+
+
+        <!-- FORM -->
+
+        <div class="devis-form-card">
+
+
+            <div class="devis-form-header">
+
+                <div>
+
+                    <h2>
+                        Votre demande
+                    </h2>
+
+                    <p>
+                        Remplissez les informations ci-dessous.
+                    </p>
+
+                </div>
+
+                <div class="devis-required">
+                    * Champs obligatoires
+                </div>
+
+            </div>
+
+
+            <!-- CONTEXT MESSAGE -->
+
+            <div
+                class="devis-context"
+                id="devisContext"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- FORM -->
+
+            <form
+                class="devis-form"
+                id="devisForm"
+                action="#"
+                method="POST"
+            >
+
+
+                <!-- SERVICE + ZONE -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Service <span>*</span>
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select
+                                id="service"
+                                name="service"
+                                required
+                            >
+
+                                <option value="">
+                                    Sélectionnez un service
+                                </option>
+
+                                <option value="manutention">
+                                    Manutention
+                                </option>
+
+                                <option value="dechargement">
+                                    Déchargement
+                                </option>
+
+                                <option value="location">
+                                    Location de matériel
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="zone">
+                            Zone d'intervention <span>*</span>
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select
+                                id="zone"
+                                name="zone"
+                                required
+                            >
+
+                                <option value="">
+                                    Sélectionnez une zone
+                                </option>
+
+                                <option value="agadir">
+                                    Agadir
+                                </option>
+
+                                <option value="dakhla">
+                                    Dakhla
+                                </option>
+
+                                <option value="autre">
+                                    Autre
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NAME + COMPANY -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Nom / Prénom <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Votre nom"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="company">
+                            Entreprise
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            placeholder="Nom de votre entreprise"
+                            autocomplete="organization"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE + EMAIL -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Téléphone <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+212 ..."
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="email@entreprise.com"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATE -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="date">
+                            Date souhaitée
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="quantity">
+                            Quantité / Volume
+                        </label>
+
+                        <input
+                            type="text"
+                            id="quantity"
+                            name="quantity"
+                            placeholder="Ex. 20 tonnes, 2 machines..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group full">
+
+                    <label for="message">
+                        Détails de votre opération <span>*</span>
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Décrivez votre opération, la marchandise, les besoins spécifiques, les délais ou toute autre information utile..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- CHECKBOX -->
+
+                <div class="form-check">
+
+                    <input
+                        type="checkbox"
+                        id="privacy"
+                        name="privacy"
+                        required
+                    >
+
+                    <label for="privacy">
+
+                        J'accepte que Handling Services SARL
+                        utilise ces informations pour traiter ma demande.
+                        <a href="fr/politique-confidentialite.html">
+                            Politique de confidentialité
+                        </a>.
+
+                    </label>
+
+                </div>
+
+
+                <!-- SUCCESS -->
+
+                <div
+                    class="devis-success"
+                    id="devisSuccess"
+                >
+                    Votre demande est prête à être envoyée.
+                    Merci pour votre confiance.
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="devis-submit"
+                >
+
+                    Envoyer ma demande
+
+                    <span>↗</span>
+
+                </button>
+
+
+                <p class="devis-form-note">
+
+                    Handling Services SARL · Agadir · Dakhla · Maroc
+
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOTTOM CTA -->
+
+<section class="devis-bottom">
+
+    <div class="container">
+
+        <div class="devis-bottom-inner">
+
+
+            <div class="devis-bottom-copy">
+
+                <small>
+                    UNE QUESTION ?
+                </small>
+
+                <h2>
+                    Notre équipe reste à votre
+                    <span>écoute.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="devis-bottom-contact">
+
+                <a href="tel:+212528822185">
+                    +212 528 82 21 85
+                </a>
+
+                <a href="mailto:handlingservices1@gmail.com">
+                    handlingservices1@gmail.com
+                </a>
+
+                <span>
+                    Lun — Sam · 09:00 — 17:00
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.webp"
+                    alt="Handling Services SARL"
+                >
+
+            </a>
+
+            <p>
+                Expertise en manutention, déchargement
+                et location de matériel au Maroc.
+            </p>
+
+
+            <div class="footer-social">
+
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    in
+                </a>
+
+                <a
+                    href="https://wa.me/212528822185"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="WhatsApp"
+                >
+                    W
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                NAVIGATION
+            </h3>
+
+            <a href="index.html">Accueil</a>
+            <a href="fr/services.html">Services</a>
+            <a href="fr/agadir.html">Agadir</a>
+            <a href="fr/dakhla.html">Dakhla</a>
+            <a href="fr/about.html">À propos</a>
+            <a href="fr/realisations.html">Réalisations</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                SERVICES
+            </h3>
+
+            <a href="fr/manutention.html">
+                Manutention
+            </a>
+
+            <a href="fr/dechargement.html">
+                Déchargement
+            </a>
+
+            <a href="fr/location-materiel.html">
+                Location de matériel
+            </a>
+
+            <a href="devis.html">
+                Demander un devis
+            </a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h3>
+                CONTACT
+            </h3>
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+            <span>
+                Agadir · Dakhla · Maroc
+            </span>
+
+            <span>
+                Lun — Sam · 09:00 — 17:00
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © 2026 Handling Services SARL.
+            Tous droits réservés.
+        </p>
+
+        <div>
+
+            <a href="fr/mentions-legales.html">
+                Mentions légales
+            </a>
+
+            <span>·</span>
+
+            <a href="fr/politique-confidentialite.html">
+                Politique de confidentialité
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- MOBILE MENU -->
+
+<button
+    class="mobile-menu-button"
+    type="button"
+    aria-label="Ouvrir le menu"
+    aria-expanded="false"
+>
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+
+<script src="js/devis.js"></script>
+
+</body>
+</html>

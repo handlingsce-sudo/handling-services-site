@@ -1,0 +1,3524 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Handling Services SARL</title>
+
+    <meta name="description"
+        content="Contactez Handling Services SARL à Agadir et Dakhla pour vos besoins en manutention, déchargement et location de matériel.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+        href="https://www.handlingservices.ma/contact.html">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   HANDLING SERVICES SARL
+   CONTACT PAGE — ALL CSS INSIDE THIS FILE
+========================================================= */
+
+:root {
+
+    --navy: #071d3a;
+    --navy-dark: #041426;
+    --navy-soft: #0c2949;
+
+    --blue: #148edb;
+    --blue-dark: #0877c4;
+    --blue-light: #42b0f2;
+
+    --white: #ffffff;
+
+    --text: #172b43;
+    --muted: #68798b;
+
+    --light: #f5f8fb;
+
+    --line: #e3eaf0;
+
+    --shadow-sm:
+        0 8px 25px rgba(7,29,58,.07);
+
+    --shadow:
+        0 18px 50px rgba(7,29,58,.11);
+
+    --shadow-lg:
+        0 25px 70px rgba(7,29,58,.17);
+
+    --container: 1180px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background: #fff;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+::selection {
+    background: var(--blue);
+    color: #fff;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width:
+        min(
+            calc(100% - 64px),
+            var(--container)
+        );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar {
+
+    height: 34px;
+
+    background:
+        var(--navy-dark);
+
+    color:
+        #dce8f2;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+.topbar-inner {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.topbar-info,
+.topbar-contact {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.topbar-contact {
+    gap: 25px;
+}
+
+.topbar a {
+    transition: color .2s ease;
+}
+
+.topbar a:hover {
+    color: var(--blue-light);
+}
+
+.topbar-separator {
+
+    width: 1px;
+    height: 11px;
+
+    background:
+        rgba(255,255,255,.2);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+    position: relative;
+
+    z-index: 1000;
+
+    height: 86px;
+
+    background:
+        rgba(255,255,255,.98);
+
+    border-bottom:
+        1px solid #edf1f4;
+}
+
+.header-inner {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    width: 190px;
+}
+
+.brand img {
+
+    width: 178px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-navigation {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 27px;
+
+    margin-left: auto;
+}
+
+.nav-link {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    height: 100%;
+
+    color: #20344c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        color .2s ease;
+}
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 20px;
+
+    height: 2px;
+
+    background:
+        var(--blue);
+
+    transform:
+        scaleX(0);
+
+    transition:
+        transform .25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+
+    color: var(--blue);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.nav-item.dropdown {
+
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.nav-item.dropdown > .nav-link {
+
+    gap: 6px;
+}
+
+.dropdown-arrow {
+
+    font-size: 12px;
+
+    transition:
+        transform .25s ease;
+}
+
+.nav-item.dropdown:hover
+.dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+}
+
+.dropdown-panel {
+
+    position: absolute;
+
+    top: calc(100% - 1px);
+
+    left: 50%;
+
+    width: 235px;
+
+    padding: 9px;
+
+    background: #fff;
+
+    border:
+        1px solid #e8eef3;
+
+    border-radius: 9px;
+
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translate(-50%,10px);
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease,
+        transform .2s ease;
+}
+
+.nav-item.dropdown:hover
+.dropdown-panel {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%,0);
+}
+
+.dropdown-panel a {
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        padding .2s ease;
+}
+
+.dropdown-panel a span {
+
+    width: 25px;
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+.dropdown-panel a:hover {
+
+    background: #f2f7fb;
+
+    color: var(--blue);
+
+    padding-left: 16px;
+}
+
+
+/* =========================================================
+   HEADER ACTION
+========================================================= */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    flex: 0 0 auto;
+}
+
+.header-quote {
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #fff;
+
+    background:
+        var(--blue);
+
+    border-radius: 4px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 6px 18px rgba(20,142,219,.18);
+
+    transition:
+        .2s ease;
+}
+
+.header-quote strong {
+    font-size: 13px;
+}
+
+.header-quote:hover {
+
+    background:
+        var(--blue-dark);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 9px 22px rgba(20,142,219,.27);
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-menu-button {
+
+    display: none;
+
+    width: 39px;
+    height: 39px;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border:
+        1px solid #dce6ed;
+
+    border-radius: 5px;
+
+    background: #fff;
+}
+
+.mobile-menu-button span {
+
+    width: 17px;
+    height: 1.5px;
+
+    background:
+        var(--navy);
+}
+
+
+/* =========================================================
+   CONTACT HERO
+========================================================= */
+
+.contact-hero {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        var(--navy);
+}
+
+.contact-hero-background {
+
+    position: absolute;
+
+    inset: 0;
+}
+
+.contact-hero-background img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+.contact-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,22,42,.98) 0%,
+            rgba(4,22,42,.92) 35%,
+            rgba(4,22,42,.65) 62%,
+            rgba(4,22,42,.22) 100%
+        );
+}
+
+.contact-hero-inner {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.contact-hero-content {
+
+    max-width: 650px;
+
+    padding-bottom: 25px;
+}
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color:
+        #8fd5fa;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.eyebrow-line {
+
+    width: 32px;
+    height: 1px;
+
+    background:
+        var(--blue-light);
+}
+
+.contact-hero h1 {
+
+    color: #fff;
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(45px,5.5vw,70px);
+
+    line-height: .98;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+
+    margin-bottom: 24px;
+}
+
+.contact-hero h1 span {
+
+    display: block;
+
+    color:
+        #43aee9;
+}
+
+.contact-hero-content > p {
+
+    max-width: 540px;
+
+    color:
+        #d4e1eb;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+}
+
+.contact-hero-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-primary,
+.btn-secondary {
+
+    min-height: 45px;
+
+    padding: 0 19px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    transition:
+        .25s ease;
+}
+
+.btn-primary {
+
+    color: #fff;
+
+    background:
+        var(--blue);
+
+    box-shadow:
+        0 9px 24px rgba(20,142,219,.22);
+}
+
+.btn-primary:hover {
+
+    background:
+        var(--blue-dark);
+
+    transform:
+        translateY(-3px);
+}
+
+.btn-secondary {
+
+    color: #fff;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.4);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+.btn-secondary:hover {
+
+    color:
+        var(--navy);
+
+    background:
+        #fff;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTACT INFO
+========================================================= */
+
+.contact-info-section {
+
+    padding:
+        85px 0 90px;
+
+    background:
+        #fff;
+}
+
+.contact-section-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.section-kicker {
+
+    margin-bottom: 9px;
+
+    color:
+        var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.section-kicker::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 21px;
+
+    height: 1px;
+
+    margin-right: 8px;
+
+    vertical-align: middle;
+
+    background:
+        var(--blue);
+}
+
+.contact-section-header h2 {
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(30px,3vw,42px);
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+}
+
+.contact-section-header h2 span {
+
+    display: block;
+
+    color:
+        var(--blue);
+}
+
+.contact-section-header > p {
+
+    max-width: 390px;
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   INFO GRID
+========================================================= */
+
+.contact-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 15px;
+}
+
+.contact-card {
+
+    position: relative;
+
+    min-height: 235px;
+
+    overflow: hidden;
+
+    padding: 27px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background:
+        #fff;
+
+    border:
+        1px solid #e2eaf0;
+
+    border-radius: 9px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.contact-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--shadow-lg);
+
+    border-color:
+        rgba(20,142,219,.35);
+}
+
+.contact-card-number {
+
+    position: absolute;
+
+    top: 16px;
+    left: 18px;
+
+    color:
+        #a2b2c0;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.contact-card-icon {
+
+    position: absolute;
+
+    top: 17px;
+    right: 17px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color:
+        var(--blue);
+
+    background:
+        #eef8fe;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    transition:
+        .3s ease;
+}
+
+.contact-card:hover
+.contact-card-icon {
+
+    color: #fff;
+
+    background:
+        var(--blue);
+
+    transform:
+        rotate(8deg) scale(1.05);
+}
+
+.contact-card-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.contact-card h3 {
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+
+    word-break: break-word;
+}
+
+.contact-card p {
+
+    color:
+        #728292;
+
+    font-size: 9.5px;
+
+    line-height: 1.65;
+}
+
+.contact-card-arrow {
+
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    color:
+        var(--blue);
+
+    font-size: 17px;
+
+    transition:
+        transform .25s ease;
+}
+
+.contact-card:hover
+.contact-card-arrow {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================================
+   MAP + FORM
+========================================================= */
+
+.contact-main-section {
+
+    padding:
+        85px 0 95px;
+
+    background:
+        var(--light);
+}
+
+.contact-main-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.08fr .92fr;
+
+    gap: 45px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.contact-map-wrapper {
+
+    overflow: hidden;
+
+    background:
+        #fff;
+
+    border:
+        1px solid #e1e9ef;
+
+    border-radius: 10px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+.contact-map-header {
+
+    min-height: 105px;
+
+    padding:
+        22px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid #e7edf2;
+}
+
+.contact-map-header > div > span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color:
+        var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.contact-map-header h2 {
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size: 25px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+.contact-map-header h2 strong {
+
+    color:
+        var(--blue);
+}
+
+.contact-map-header > a {
+
+    color:
+        var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+        .2s ease;
+}
+
+.contact-map-header > a:hover {
+
+    color:
+        var(--navy);
+
+    transform:
+        translateX(3px);
+}
+
+.contact-map {
+
+    position: relative;
+
+    height: 430px;
+
+    background:
+        #dce6ed;
+}
+
+.contact-map iframe {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form-wrapper {
+
+    padding:
+        34px 32px;
+
+    background:
+        #fff;
+
+    border:
+        1px solid #e1e9ef;
+
+    border-radius: 10px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+.contact-form-wrapper h2 {
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size: 32px;
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+
+    font-weight: 800;
+
+    margin-bottom: 13px;
+}
+
+.contact-form-wrapper h2 span {
+
+    display: block;
+
+    color:
+        var(--blue);
+}
+
+.contact-form-intro {
+
+    color:
+        #718192;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.contact-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 13px;
+}
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.form-group label {
+
+    color:
+        var(--navy);
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+    width: 100%;
+
+    border:
+        1px solid #dce5ec;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    background:
+        #fbfdfe;
+
+    color:
+        var(--text);
+
+    font-size: 10px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.form-group input,
+.form-group select {
+
+    height: 43px;
+
+    padding:
+        0 12px;
+}
+
+.form-group textarea {
+
+    min-height: 115px;
+
+    padding:
+        12px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color:
+        var(--blue);
+
+    background:
+        #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(20,142,219,.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color:
+        #a0adba;
+}
+
+.contact-submit {
+
+    min-height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 2px;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    color:
+        #fff;
+
+    background:
+        var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 22px rgba(20,142,219,.18);
+
+    transition:
+        .25s ease;
+}
+
+.contact-submit:hover {
+
+    background:
+        var(--blue-dark);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 11px 27px rgba(20,142,219,.25);
+}
+
+
+/* =========================================================
+   LOCATIONS
+========================================================= */
+
+.contact-locations-section {
+
+    padding:
+        85px 0 90px;
+
+    background:
+        #fff;
+}
+
+.contact-locations-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    margin-bottom: 32px;
+}
+
+.contact-locations-heading h2 {
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(31px,3vw,43px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+}
+
+.contact-locations-heading h2 span {
+
+    display: block;
+
+    color:
+        var(--blue);
+}
+
+.contact-locations-heading p {
+
+    max-width: 400px;
+
+    color:
+        var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.contact-location-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 18px;
+}
+
+.contact-location {
+
+    position: relative;
+
+    min-height: 300px;
+
+    overflow: hidden;
+
+    display: block;
+
+    border-radius: 10px;
+
+    background:
+        var(--navy);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.contact-location:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+.contact-location img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s ease;
+}
+
+.contact-location:hover img {
+
+    transform:
+        scale(1.06);
+}
+
+.contact-location-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,25,47,.95),
+            rgba(4,38,65,.62),
+            rgba(4,38,65,.18)
+        );
+}
+
+.contact-location-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 300px;
+
+    padding:
+        35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+.contact-location-content > span {
+
+    color:
+        #7ccbf3;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.contact-location-content h3 {
+
+    color:
+        #fff;
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size: 43px;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.contact-location-content p {
+
+    max-width: 330px;
+
+    color:
+        #d6e4ed;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+.contact-location-content strong {
+
+    color:
+        #fff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.contact-location:hover
+.contact-location-content strong {
+
+    color:
+        #72c8f2;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+
+    padding:
+        75px 0;
+
+    background:
+        #fff;
+}
+
+.final-cta-inner {
+
+    min-height: 170px;
+
+    padding:
+        35px 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #071d3a,
+            #0b3b65
+        );
+
+    box-shadow:
+        var(--shadow);
+}
+
+.final-cta h2 {
+
+    max-width: 570px;
+
+    color:
+        #fff;
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(30px,3.3vw,43px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+}
+
+.final-cta h2 span {
+
+    display: block;
+
+    color:
+        var(--blue-light);
+}
+
+.final-cta-action {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.final-cta-action p {
+
+    color:
+        #b9cedd;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+.final-cta .btn-primary {
+
+    background:
+        #fff;
+
+    color:
+        var(--navy);
+}
+
+.final-cta .btn-primary:hover {
+
+    background:
+        var(--blue);
+
+    color:
+        #fff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    color:
+        #fff;
+
+    background:
+        var(--navy-dark);
+}
+
+.footer-main {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1.35fr;
+
+    gap: 55px;
+
+    padding-top: 62px;
+
+    padding-bottom: 52px;
+}
+
+.footer-brand img {
+
+    width: 165px;
+
+    margin-bottom: 17px;
+
+    filter:
+        brightness(0) invert(1);
+}
+
+.footer-brand p {
+
+    max-width: 235px;
+
+    color:
+        #aebfce;
+
+    font-size: 9px;
+
+    line-height: 1.75;
+
+    margin-bottom: 19px;
+}
+
+.footer-social {
+
+    display: flex;
+
+    gap: 7px;
+}
+
+.footer-social a {
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    color:
+        #dce7ef;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    transition:
+        .2s ease;
+}
+
+.footer-social a:hover {
+
+    background:
+        var(--blue);
+
+    border-color:
+        var(--blue);
+}
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.footer-column h3 {
+
+    margin-bottom: 8px;
+
+    color:
+        #fff;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.1px;
+}
+
+.footer-column a,
+.footer-column span {
+
+    color:
+        #9fb2c2;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    transition:
+        color .2s ease;
+}
+
+.footer-column a:hover {
+
+    color:
+        var(--blue-light);
+}
+
+.footer-bottom {
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.09);
+
+    color:
+        #718798;
+
+    font-size: 8px;
+}
+
+.footer-bottom div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.footer-bottom a:hover {
+
+    color:
+        #fff;
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .container {
+        width:
+            calc(100% - 44px);
+    }
+
+    .main-navigation {
+        gap: 17px;
+    }
+
+    .nav-link {
+        font-size: 9px;
+    }
+
+    .contact-info-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .contact-main-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .contact-map {
+        height: 400px;
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+    }
+
+    .footer-contact {
+        grid-column:
+            1 / -1;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .topbar {
+        display: none;
+    }
+
+    .site-header {
+        height: 76px;
+    }
+
+    .brand {
+        width: 160px;
+    }
+
+    .brand img {
+        width: 150px;
+    }
+
+    .main-navigation {
+        display: none;
+    }
+
+    .header-actions {
+        margin-left: auto;
+        margin-right: 53px;
+    }
+
+    .mobile-menu-button {
+
+        display: flex;
+
+        position: absolute;
+
+        top: 18px;
+        right: 18px;
+    }
+
+    .contact-hero,
+    .contact-hero-inner {
+        min-height: 610px;
+    }
+
+    .contact-hero-content {
+        max-width: 680px;
+    }
+
+    .contact-section-header,
+    .contact-locations-heading {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contact-location-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .final-cta-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width:
+            calc(100% - 30px);
+    }
+
+    .site-header {
+        height: 70px;
+    }
+
+    .brand {
+        width: 140px;
+    }
+
+    .brand img {
+        width: 130px;
+    }
+
+    .header-actions {
+        margin-right: 48px;
+    }
+
+    .header-quote {
+
+        min-height: 36px;
+
+        width: 37px;
+
+        padding: 0;
+    }
+
+    .header-quote span {
+        display: none;
+    }
+
+    .mobile-menu-button {
+
+        top: 15px;
+        right: 15px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* HERO */
+
+    .contact-hero,
+    .contact-hero-inner {
+        min-height: 620px;
+    }
+
+    .contact-hero-inner {
+        align-items: flex-start;
+
+        padding-top: 70px;
+    }
+
+    .contact-hero h1 {
+
+        font-size:
+            clamp(39px,12vw,55px);
+
+        letter-spacing:
+            -2px;
+    }
+
+    .contact-hero-content > p {
+        font-size: 11px;
+    }
+
+    .contact-hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .contact-hero-actions a {
+        width: 100%;
+    }
+
+
+    /* INFO */
+
+    .contact-info-section,
+    .contact-main-section,
+    .contact-locations-section {
+        padding:
+            60px 0;
+    }
+
+    .contact-info-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .contact-card {
+        min-height: 205px;
+    }
+
+
+    /* MAP */
+
+    .contact-map-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .contact-map {
+        height: 320px;
+    }
+
+
+    /* FORM */
+
+    .contact-form-wrapper {
+        padding:
+            27px 20px;
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 29px;
+    }
+
+    .form-row {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* LOCATIONS */
+
+    .contact-location,
+    .contact-location-content {
+        min-height: 260px;
+    }
+
+    .contact-location-content {
+        padding:
+            27px;
+    }
+
+    .contact-location-content h3 {
+        font-size: 36px;
+    }
+
+
+    /* CTA */
+
+    .final-cta {
+        padding:
+            45px 0;
+    }
+
+    .final-cta-inner {
+        padding:
+            30px 23px;
+    }
+
+    .final-cta h2 {
+        font-size:
+            31px;
+    }
+
+    .final-cta-action {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 13px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-main {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            40px 25px;
+
+        padding-top:
+            50px;
+    }
+
+    .footer-brand {
+        grid-column:
+            1 / -1;
+    }
+
+    .footer-contact {
+        grid-column:
+            auto;
+    }
+
+    .footer-bottom {
+
+        min-height: auto;
+
+        padding:
+            18px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .container {
+        width:
+            calc(100% - 24px);
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1fr;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        grid-column:
+            auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <div class="topbar-info">
+
+            <span>
+                Handling Services SARL
+            </span>
+
+            <span class="topbar-separator"></span>
+
+            <span>
+                Agadir · Dakhla · Maroc
+            </span>
+
+        </div>
+
+
+        <div class="topbar-contact">
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+            <span class="topbar-separator"></span>
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="images/logo.webp"
+                alt="Handling Services SARL">
+
+        </a>
+
+
+
+        <nav class="main-navigation">
+
+
+            <a
+                href="index.html"
+                class="nav-link">
+
+                Accueil
+
+            </a>
+
+
+            <div class="nav-item dropdown">
+
+                <a
+                    href="services.html"
+                    class="nav-link">
+
+                    Services
+
+                    <span class="dropdown-arrow">
+                        ↓
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-panel">
+
+                    <a href="services.html#manutention">
+
+                        <span>01</span>
+
+                        Manutention
+
+                    </a>
+
+                    <a href="services.html#dechargement">
+
+                        <span>02</span>
+
+                        Déchargement
+
+                    </a>
+
+                    <a href="services.html#location">
+
+                        <span>03</span>
+
+                        Location de matériel
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="agadir.html"
+                class="nav-link">
+
+                Agadir
+
+            </a>
+
+
+            <a
+                href="dakhla.html"
+                class="nav-link">
+
+                Dakhla
+
+            </a>
+
+
+            <a
+                href="realisations.html"
+                class="nav-link">
+
+                Réalisations
+
+            </a>
+
+
+            <a
+                href="about.html"
+                class="nav-link">
+
+                À propos
+
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="nav-link active">
+
+                Contact
+
+            </a>
+
+        </nav>
+
+
+
+        <div class="header-actions">
+
+            <a
+                href="devis.html"
+                class="header-quote">
+
+                <strong>↗</strong>
+
+                <span>
+                    Demander un devis
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <button
+            class="mobile-menu-button"
+            type="button"
+            aria-label="Menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-background">
+
+        <img
+            src="images/contact.webp"
+            alt="Contact Handling Services SARL">
+
+    </div>
+
+
+    <div class="contact-hero-overlay"></div>
+
+
+    <div class="container contact-hero-inner">
+
+        <div class="contact-hero-content">
+
+            <div class="eyebrow">
+
+                <span class="eyebrow-line"></span>
+
+                CONTACTEZ-NOUS
+
+            </div>
+
+
+            <h1>
+
+                Parlons de votre
+                <span>prochain projet.</span>
+
+            </h1>
+
+
+            <p>
+
+                Notre équipe est à votre disposition
+                pour répondre à vos besoins en
+                manutention, déchargement et
+                location de matériel.
+
+            </p>
+
+
+            <div class="contact-hero-actions">
+
+                <a
+                    href="devis.html"
+                    class="btn-primary">
+
+                    Demander un devis
+
+                    <span>→</span>
+
+                </a>
+
+
+                <a
+                    href="https://maps.app.goo.gl/4jvUzSo5U5Q7tLCw9?g_st=aw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-secondary">
+
+                    Nous trouver
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT INFORMATION
+========================================================= -->
+
+<section class="contact-info-section">
+
+    <div class="container">
+
+
+        <div class="contact-section-header">
+
+            <div>
+
+                <div class="section-kicker">
+                    NOS COORDONNÉES
+                </div>
+
+                <h2>
+
+                    Un contact direct,
+                    <span>simple et efficace.</span>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Contactez directement notre équipe
+                pour discuter de votre opération et
+                obtenir les informations adaptées
+                à votre besoin.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-info-grid">
+
+
+            <a
+                href="tel:+212528822185"
+                class="contact-card reveal">
+
+                <span class="contact-card-number">
+                    01
+                </span>
+
+                <span class="contact-card-icon">
+                    ☎
+                </span>
+
+                <span class="contact-card-label">
+                    TÉLÉPHONE
+                </span>
+
+                <h3>
+                    +212 528 82 21 85
+                </h3>
+
+                <p>
+                    Appelez directement notre équipe.
+                </p>
+
+                <span class="contact-card-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="mailto:handlingservices1@gmail.com"
+                class="contact-card reveal">
+
+                <span class="contact-card-number">
+                    02
+                </span>
+
+                <span class="contact-card-icon">
+                    @
+                </span>
+
+                <span class="contact-card-label">
+                    EMAIL
+                </span>
+
+                <h3>
+                    handlingservices1@gmail.com
+                </h3>
+
+                <p>
+                    Envoyez-nous votre demande.
+                </p>
+
+                <span class="contact-card-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="https://maps.app.goo.gl/4jvUzSo5U5Q7tLCw9?g_st=aw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card reveal">
+
+                <span class="contact-card-number">
+                    03
+                </span>
+
+                <span class="contact-card-icon">
+                    ⌖
+                </span>
+
+                <span class="contact-card-label">
+                    LOCALISATION
+                </span>
+
+                <h3>
+                    Agadir · Maroc
+                </h3>
+
+                <p>
+                    Voir notre localisation sur Google Maps.
+                </p>
+
+                <span class="contact-card-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+
+            <div class="contact-card reveal">
+
+                <span class="contact-card-number">
+                    04
+                </span>
+
+                <span class="contact-card-icon">
+                    ◷
+                </span>
+
+                <span class="contact-card-label">
+                    DISPONIBILITÉ
+                </span>
+
+                <h3>
+                    Sur demande
+                </h3>
+
+                <p>
+                    Contactez-nous pour connaître
+                    nos disponibilités.
+                </p>
+
+                <span class="contact-card-arrow">
+                    •
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MAP + CONTACT
+========================================================= -->
+
+<section class="contact-main-section">
+
+    <div class="container contact-main-grid">
+
+
+        <!-- MAP -->
+
+        <div class="contact-map-wrapper reveal">
+
+            <div class="contact-map-header">
+
+                <div>
+
+                    <span>
+                        NOTRE LOCALISATION
+                    </span>
+
+                    <h2>
+
+                        Retrouvez-nous
+                        <strong>à Agadir.</strong>
+
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="https://maps.app.goo.gl/4jvUzSo5U5Q7tLCw9?g_st=aw"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Google Maps ↗
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Agadir%2C%20Morocco&output=embed"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <div class="contact-form-wrapper reveal">
+
+            <div class="section-kicker">
+                DEMANDE DE DEVIS
+            </div>
+
+
+            <h2>
+
+                Décrivez-nous
+                <span>votre besoin.</span>
+
+            </h2>
+
+
+            <p class="contact-form-intro">
+
+                Remplissez le formulaire ci-dessous.
+                Notre équipe reviendra vers vous
+                dans les meilleurs délais.
+
+            </p>
+
+
+            <form
+                class="contact-form"
+                action="devis.html"
+                method="get">
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Nom / Société
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Votre nom ou société"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Téléphone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+212 ..."
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="votre@email.com"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="service">
+                        Service souhaité
+                    </label>
+
+                    <select
+                        id="service"
+                        name="service"
+                        required>
+
+                        <option value="">
+                            Sélectionnez un service
+                        </option>
+
+                        <option value="manutention">
+                            Manutention
+                        </option>
+
+                        <option value="dechargement">
+                            Déchargement
+                        </option>
+
+                        <option value="location">
+                            Location de matériel
+                        </option>
+
+                        <option value="autre">
+                            Autre demande
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Votre demande
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Décrivez votre besoin..."
+                        required></textarea>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="contact-submit">
+
+                    Envoyer la demande
+
+                    <span>→</span>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LOCATIONS
+========================================================= -->
+
+<section class="contact-locations-section">
+
+    <div class="container">
+
+
+        <div class="section-kicker">
+            NOS ZONES D'INTERVENTION
+        </div>
+
+
+        <div class="contact-locations-heading">
+
+            <h2>
+
+                Présents là où
+                <span>vos opérations se déroulent.</span>
+
+            </h2>
+
+
+            <p>
+
+                Handling Services SARL intervient
+                notamment à Agadir et Dakhla pour
+                accompagner les opérations
+                professionnelles de manutention.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-location-grid">
+
+
+            <a
+                href="agadir.html"
+                class="contact-location reveal">
+
+                <img
+                    src="images/agadir.webp"
+                    alt="Handling Services à Agadir"
+                    loading="lazy">
+
+                <div class="contact-location-overlay"></div>
+
+
+                <div class="contact-location-content">
+
+                    <span>
+                        01 · MAROC
+                    </span>
+
+                    <h3>
+                        Agadir
+                    </h3>
+
+                    <p>
+                        Manutention · Déchargement ·
+                        Location de matériel
+                    </p>
+
+                    <strong>
+                        Découvrir →
+                    </strong>
+
+                </div>
+
+            </a>
+
+
+
+            <a
+                href="dakhla.html"
+                class="contact-location reveal">
+
+                <img
+                    src="images/dakhla.webp"
+                    alt="Handling Services à Dakhla"
+                    loading="lazy">
+
+                <div class="contact-location-overlay"></div>
+
+
+                <div class="contact-location-content">
+
+                    <span>
+                        02 · MAROC
+                    </span>
+
+                    <h3>
+                        Dakhla
+                    </h3>
+
+                    <p>
+                        Des solutions adaptées
+                        aux opérations portuaires.
+                    </p>
+
+                    <strong>
+                        Découvrir →
+                    </strong>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="final-cta">
+
+    <div class="container">
+
+        <div class="final-cta-inner reveal">
+
+            <h2>
+
+                Un projet en tête ?
+                <span>Parlons-en.</span>
+
+            </h2>
+
+
+            <div class="final-cta-action">
+
+                <p>
+                    Une équipe à votre écoute.
+                </p>
+
+
+                <a
+                    href="tel:+212528822185"
+                    class="btn-primary">
+
+                    Appeler maintenant
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="images/logo.webp"
+                alt="Handling Services SARL">
+
+            <p>
+
+                Handling Services SARL accompagne
+                les professionnels dans leurs opérations
+                de manutention, déchargement et
+                location de matériel au Maroc.
+
+            </p>
+
+
+            <div class="footer-social">
+
+                <a
+                    href="#"
+                    aria-label="LinkedIn">
+
+                    in
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Facebook">
+
+                    f
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                NAVIGATION
+            </h3>
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="realisations.html">
+                Réalisations
+            </a>
+
+            <a href="about.html">
+                À propos
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                SERVICES
+            </h3>
+
+            <a href="services.html#manutention">
+                Manutention
+            </a>
+
+            <a href="services.html#dechargement">
+                Déchargement
+            </a>
+
+            <a href="services.html#location">
+                Location de matériel
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column footer-contact">
+
+            <h3>
+                CONTACT
+            </h3>
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+            <span>
+                Agadir · Dakhla · Maroc
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container footer-bottom">
+
+        <div>
+
+            <span>
+                © 2026 Handling Services SARL
+            </span>
+
+            <span>·</span>
+
+            <span>
+                Tous droits réservés
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <a href="#">
+                Mentions légales
+            </a>
+
+            <span>·</span>
+
+            <a href="#">
+                Politique de confidentialité
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach(function(element) {
+
+        revealObserver.observe(element);
+
+    });
+
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    const menuButton =
+        document.querySelector(".mobile-menu-button");
+
+    const navigation =
+        document.querySelector(".main-navigation");
+
+
+    if (menuButton && navigation) {
+
+        menuButton.addEventListener(
+            "click",
+            function() {
+
+                const opened =
+                    navigation.classList.toggle(
+                        "mobile-open"
+                    );
+
+                if (opened) {
+
+                    navigation.style.display = "flex";
+
+                    navigation.style.position =
+                        "absolute";
+
+                    navigation.style.top =
+                        "70px";
+
+                    navigation.style.left =
+                        "0";
+
+                    navigation.style.right =
+                        "0";
+
+                    navigation.style.height =
+                        "auto";
+
+                    navigation.style.padding =
+                        "15px";
+
+                    navigation.style.background =
+                        "#fff";
+
+                    navigation.style.flexDirection =
+                        "column";
+
+                    navigation.style.alignItems =
+                        "stretch";
+
+                    navigation.style.gap =
+                        "0";
+
+                    navigation.style.boxShadow =
+                        "0 15px 35px rgba(7,29,58,.12)";
+
+                    navigation
+                        .querySelectorAll(".nav-link")
+                        .forEach(function(link) {
+
+                            link.style.height =
+                                "48px";
+
+                        });
+
+                } else {
+
+                    navigation.removeAttribute(
+                        "style"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>

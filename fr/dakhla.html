@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Handling Services à Dakhla | Manutention & Services Portuaires</title>
+
+    <meta name="description"
+        content="Handling Services SARL à Dakhla : manutention, déchargement et location de matériel pour les opérations professionnelles à Dakhla et au Maroc.">
+
+    <meta name="keywords"
+        content="Handling Services Dakhla, manutention Dakhla, déchargement Dakhla, services portuaires Dakhla, location matériel Dakhla, manutention Maroc">
+
+    <meta name="author" content="Handling Services SARL">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://VOTRE-DOMAINE.com/fr/dakhla.html">
+
+    <link rel="alternate" hreflang="fr"
+        href="https://VOTRE-DOMAINE.com/fr/dakhla.html">
+
+    <link rel="alternate" hreflang="en"
+        href="https://VOTRE-DOMAINE.com/en/dakhla.html">
+
+    <link rel="alternate" hreflang="es"
+        href="https://VOTRE-DOMAINE.com/es/dakhla.html">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:title"
+        content="Handling Services à Dakhla | Services Portuaires">
+
+    <meta property="og:description"
+        content="Manutention, déchargement et location de matériel à Dakhla avec Handling Services SARL.">
+
+    <meta property="og:image"
+        content="../images/dakhla.webp">
+
+    <meta property="og:locale" content="fr_MA">
+
+    <link rel="icon" type="image/webp" href="../images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+
+        /* =====================================================
+           DAKHLA PAGE
+        ===================================================== */
+
+        .dakhla-page {
+            background: #fff;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .dakhla-hero {
+            position: relative;
+            min-height: 560px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .dakhla-hero-image {
+            position: absolute;
+            inset: 0;
+        }
+
+        .dakhla-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .dakhla-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4, 25, 49, .97) 0%,
+                    rgba(4, 25, 49, .90) 35%,
+                    rgba(4, 25, 49, .55) 65%,
+                    rgba(4, 25, 49, .20) 100%
+                );
+        }
+
+        .dakhla-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .dakhla-hero-copy {
+            max-width: 690px;
+            padding: 80px 0;
+        }
+
+        .dakhla-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #4eb5ed;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            margin-bottom: 20px;
+        }
+
+        .dakhla-eyebrow::before {
+            content: "";
+            width: 36px;
+            height: 2px;
+            background: #1595e6;
+        }
+
+        .dakhla-hero-copy h1 {
+            margin: 0 0 24px;
+            color: #fff;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(42px, 5.5vw, 70px);
+            line-height: .98;
+            letter-spacing: -3px;
+            font-weight: 800;
+        }
+
+        .dakhla-hero-copy h1 span {
+            color: #3aa8ed;
+        }
+
+        .dakhla-hero-copy p {
+            max-width: 570px;
+            margin: 0 0 30px;
+            color: #d9e7f1;
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .dakhla-actions {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .dakhla-actions .btn-primary,
+        .dakhla-actions .btn-secondary {
+            min-height: 47px;
+            padding: 0 22px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .dakhla-actions .btn-secondary {
+            border: 1px solid rgba(255,255,255,.45);
+            color: #fff;
+        }
+
+        .dakhla-actions .btn-secondary:hover {
+            background: #fff;
+            color: var(--navy);
+        }
+
+        .dakhla-location-badge {
+            position: absolute;
+            right: 0;
+            bottom: 35px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .7px;
+        }
+
+        .dakhla-location-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #42b4ed;
+            box-shadow: 0 0 0 5px rgba(66,180,237,.14);
+        }
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .dakhla-stats {
+            position: relative;
+            z-index: 4;
+            margin-top: -1px;
+            background: #062b4c;
+        }
+
+        .dakhla-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .dakhla-stat {
+            min-height: 120px;
+            padding: 25px 28px;
+            border-right: 1px solid rgba(255,255,255,.09);
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .dakhla-stat:last-child {
+            border-right: none;
+        }
+
+        .dakhla-stat-number {
+            color: #45ace9;
+            font-family: "Manrope", sans-serif;
+            font-size: 29px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .dakhla-stat-text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .dakhla-stat-text strong {
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .dakhla-stat-text span {
+            color: #9eb5c8;
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .dakhla-intro {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .dakhla-intro-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .dakhla-kicker {
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            margin-bottom: 13px;
+        }
+
+        .dakhla-intro h2 {
+            max-width: 470px;
+            margin: 0;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -1.7px;
+            font-weight: 800;
+        }
+
+        .dakhla-intro h2 span {
+            color: var(--blue);
+        }
+
+        .dakhla-intro-content {
+            max-width: 620px;
+        }
+
+        .dakhla-intro-content .lead {
+            margin: 0 0 18px;
+            color: #213c58;
+            font-size: 16px;
+            line-height: 1.75;
+            font-weight: 600;
+        }
+
+        .dakhla-intro-content p {
+            margin: 0 0 17px;
+            color: #68798b;
+            font-size: 13px;
+            line-height: 1.85;
+        }
+
+
+        /* =====================================================
+           MAIN FEATURE
+        ===================================================== */
+
+        .dakhla-feature {
+            padding: 0 0 90px;
+        }
+
+        .dakhla-feature-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 450px;
+            background: #f4f7f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .dakhla-feature-image {
+            position: relative;
+            min-height: 450px;
+            overflow: hidden;
+        }
+
+        .dakhla-feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
+
+        .dakhla-feature-box:hover .dakhla-feature-image img {
+            transform: scale(1.025);
+        }
+
+        .dakhla-feature-label {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            padding: 9px 13px;
+            background: #168fdf;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border-radius: 3px;
+        }
+
+        .dakhla-feature-content {
+            padding: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .dakhla-feature-content h2 {
+            margin: 0 0 17px;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 32px;
+            line-height: 1.12;
+            letter-spacing: -1.2px;
+            font-weight: 800;
+        }
+
+        .dakhla-feature-content h2 span {
+            color: var(--blue);
+        }
+
+        .dakhla-feature-content p {
+            margin: 0 0 24px;
+            color: #697a8c;
+            font-size: 12px;
+            line-height: 1.85;
+        }
+
+        .dakhla-check-list {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            margin: 0 0 27px;
+            padding: 0;
+        }
+
+        .dakhla-check-list li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #29435d;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .dakhla-check-list li::before {
+            content: "✓";
+            flex: 0 0 21px;
+            width: 21px;
+            height: 21px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #e1f2fb;
+            color: var(--blue);
+            font-size: 9px;
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ===================================================== */
+
+        .dakhla-services {
+            padding: 90px 0;
+            background: #f6f8fa;
+        }
+
+        .dakhla-section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 40px;
+            margin-bottom: 38px;
+        }
+
+        .dakhla-section-head h2 {
+            margin: 0;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 37px;
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            font-weight: 800;
+        }
+
+        .dakhla-section-head h2 span {
+            color: var(--blue);
+        }
+
+        .dakhla-section-head p {
+            max-width: 430px;
+            margin: 0;
+            color: #718194;
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        .dakhla-service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .dakhla-service-card {
+            position: relative;
+            min-height: 330px;
+            padding: 28px;
+            background: #fff;
+            border: 1px solid #e2e8ed;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .dakhla-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 45px rgba(10,48,77,.10);
+        }
+
+        .dakhla-service-number {
+            color: #a5b5c2;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 50px;
+        }
+
+        .dakhla-service-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 22px;
+            border-radius: 50%;
+            background: #e8f5fc;
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .dakhla-service-card h3 {
+            margin: 0 0 11px;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .dakhla-service-card p {
+            margin: 0 0 20px;
+            color: #718092;
+            font-size: 11px;
+            line-height: 1.75;
+        }
+
+        .dakhla-service-card a {
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           DAKHLA ZONE
+        ===================================================== */
+
+        .dakhla-zone {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .dakhla-zone-box {
+            display: grid;
+            grid-template-columns: 1fr .8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .dakhla-zone-image {
+            height: 390px;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .dakhla-zone-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dakhla-zone-content h2 {
+            margin: 0 0 17px;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 36px;
+            line-height: 1.1;
+            letter-spacing: -1.4px;
+            font-weight: 800;
+        }
+
+        .dakhla-zone-content h2 span {
+            color: var(--blue);
+        }
+
+        .dakhla-zone-content > p {
+            margin: 0 0 25px;
+            color: #6c7c8d;
+            font-size: 12px;
+            line-height: 1.85;
+        }
+
+        .dakhla-zone-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 0 0 27px;
+            padding: 0;
+        }
+
+        .dakhla-zone-points li {
+            list-style: none;
+            padding: 13px;
+            background: #f5f8fa;
+            border-left: 2px solid var(--blue);
+            color: #29415a;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           ADVANTAGES
+        ===================================================== */
+
+        .dakhla-advantages {
+            padding: 90px 0;
+            background: #f6f8fa;
+        }
+
+        .dakhla-advantages-head {
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        .dakhla-advantages-head h2 {
+            margin: 0;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 37px;
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            font-weight: 800;
+        }
+
+        .dakhla-advantages-head h2 span {
+            color: var(--blue);
+        }
+
+        .dakhla-advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #dce4ea;
+            border: 1px solid #dce4ea;
+        }
+
+        .dakhla-advantage {
+            min-height: 210px;
+            padding: 28px;
+            background: #fff;
+        }
+
+        .dakhla-advantage-number {
+            color: #9badbb;
+            font-size: 10px;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        .dakhla-advantage h3 {
+            margin: 0 0 9px;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .dakhla-advantage p {
+            margin: 0;
+            color: #718193;
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .dakhla-cta {
+            padding: 0 0 85px;
+            background: #f6f8fa;
+        }
+
+        .dakhla-cta-box {
+            min-height: 210px;
+            padding: 42px 50px;
+            border-radius: 7px;
+            background:
+                linear-gradient(
+                    105deg,
+                    rgba(4,35,66,.97),
+                    rgba(8,101,160,.91)
+                ),
+                url("../images/dakhla.webp");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .dakhla-cta-box .dakhla-kicker {
+            color: #64c1f1;
+            margin-bottom: 8px;
+        }
+
+        .dakhla-cta-box h2 {
+            max-width: 650px;
+            margin: 0;
+            color: #fff;
+            font-family: "Manrope", sans-serif;
+            font-size: 30px;
+            line-height: 1.12;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+
+        .dakhla-cta-box h2 span {
+            color: #58b9ee;
+        }
+
+        .dakhla-cta-box .btn-primary {
+            flex: 0 0 auto;
+            min-height: 47px;
+            padding: 0 23px;
+            background: #fff;
+            color: var(--blue);
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .dakhla-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dakhla-stat:nth-child(2) {
+                border-right: none;
+            }
+
+            .dakhla-stat:nth-child(-n+2) {
+                border-bottom: 1px solid rgba(255,255,255,.09);
+            }
+
+            .dakhla-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .dakhla-feature-box {
+                grid-template-columns: 1fr;
+            }
+
+            .dakhla-feature-image {
+                min-height: 330px;
+            }
+
+            .dakhla-service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dakhla-zone-box {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .dakhla-zone-image {
+                height: 320px;
+            }
+
+            .dakhla-advantages-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dakhla-cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .dakhla-hero {
+                min-height: 600px;
+            }
+
+            .dakhla-hero-copy {
+                padding: 65px 0 90px;
+            }
+
+            .dakhla-hero-copy h1 {
+                font-size: 43px;
+                letter-spacing: -2px;
+            }
+
+            .dakhla-hero-copy p {
+                font-size: 13px;
+            }
+
+            .dakhla-location-badge {
+                left: 0;
+                right: auto;
+                bottom: 30px;
+            }
+
+            .dakhla-intro,
+            .dakhla-services,
+            .dakhla-zone,
+            .dakhla-advantages {
+                padding: 60px 0;
+            }
+
+            .dakhla-intro h2,
+            .dakhla-section-head h2,
+            .dakhla-zone-content h2,
+            .dakhla-advantages-head h2 {
+                font-size: 29px;
+            }
+
+            .dakhla-section-head {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dakhla-zone-points {
+                grid-template-columns: 1fr;
+            }
+
+            .dakhla-advantages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dakhla-cta {
+                padding-bottom: 60px;
+            }
+
+            .dakhla-cta-box {
+                padding: 32px 25px;
+            }
+
+            .dakhla-cta-box h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .dakhla-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dakhla-stat {
+                min-height: 90px;
+                border-right: none !important;
+                border-bottom: 1px solid rgba(255,255,255,.09);
+            }
+
+            .dakhla-stat:last-child {
+                border-bottom: none;
+            }
+
+            .dakhla-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .dakhla-actions a {
+                width: 100%;
+            }
+
+            .dakhla-feature-content {
+                padding: 35px 25px;
+            }
+
+            .dakhla-feature-content h2 {
+                font-size: 27px;
+            }
+
+            .dakhla-service-card {
+                min-height: 290px;
+            }
+
+        }
+
+    </style>
+
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Handling Services SARL",
+        "description": "Handling Services SARL propose des services professionnels de manutention, déchargement et location de matériel à Dakhla.",
+        "foundingDate": "1997",
+        "telephone": "+212528822185",
+        "email": "handlingservices1@gmail.com",
+        "url": "https://VOTRE-DOMAINE.com/fr/dakhla.html",
+        "areaServed": {
+            "@type": "City",
+            "name": "Dakhla"
+        },
+        "serviceType": [
+            "Manutention",
+            "Déchargement",
+            "Location de matériel"
+        ]
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <div class="topbar-info">
+
+            <span>
+                Agadir · Dakhla · Maroc
+            </span>
+
+            <span class="topbar-separator"></span>
+
+            <span>
+                Lun — Sam · 09:00 — 17:00
+            </span>
+
+        </div>
+
+
+        <div class="topbar-contact">
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <a href="../index.html" class="brand">
+
+            <img
+                src="../images/logo.webp"
+                alt="Handling Services SARL"
+            >
+
+        </a>
+
+
+        <nav class="main-navigation" aria-label="Navigation principale">
+
+
+            <a href="../index.html" class="nav-link">
+                Accueil
+            </a>
+
+
+            <div class="nav-item dropdown">
+
+                <a href="services.html" class="nav-link">
+
+                    Services
+
+                    <span class="dropdown-arrow">
+                        ⌄
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-panel">
+
+                    <a href="manutention.html">
+
+                        <span>01</span>
+
+                        Manutention
+
+                    </a>
+
+
+                    <a href="dechargement.html">
+
+                        <span>02</span>
+
+                        Déchargement
+
+                    </a>
+
+
+                    <a href="location-materiel.html">
+
+                        <span>03</span>
+
+                        Location de matériel
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="agadir.html" class="nav-link">
+                Agadir
+            </a>
+
+
+            <a href="dakhla.html" class="nav-link active">
+                Dakhla
+            </a>
+
+
+            <a href="about.html" class="nav-link">
+                À propos
+            </a>
+
+
+            <a href="realisations.html" class="nav-link">
+                Réalisations
+            </a>
+
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+
+        </nav>
+
+
+        <div class="header-actions">
+
+
+            <a href="../devis.html?zone=dakhla" class="btn-primary">
+
+                <span>
+                    Demander un devis
+                </span>
+
+                <strong>
+                    ↗
+                </strong>
+
+            </a>
+
+
+            <div class="language">
+
+
+                <button type="button">
+
+                    FR
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div class="language-dropdown">
+
+                    <a href="dakhla.html">
+                        Français
+                    </a>
+
+                    <a href="../en/dakhla.html">
+                        English
+                    </a>
+
+                    <a href="../es/dakhla.html">
+                        Español
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="dakhla-page">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="dakhla-hero">
+
+
+    <div class="dakhla-hero-image">
+
+        <img
+            src="../images/dakhla.webp"
+            alt="Services de manutention portuaire à Dakhla"
+        >
+
+    </div>
+
+
+    <div class="dakhla-hero-overlay"></div>
+
+
+    <div class="container dakhla-hero-content">
+
+
+        <div class="dakhla-hero-copy">
+
+
+            <div class="dakhla-eyebrow">
+
+                HANDLING SERVICES · DAKHLA
+
+            </div>
+
+
+            <h1>
+
+                Votre partenaire
+
+                <span>
+                    à Dakhla.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Handling Services SARL accompagne les
+                professionnels dans leurs opérations de
+                manutention, de déchargement et de location
+                de matériel à Dakhla.
+
+            </p>
+
+
+            <div class="dakhla-actions">
+
+
+                <a href="../devis.html?zone=dakhla" class="btn-primary">
+
+                    <span>
+                        Demander un devis
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <a href="contact.html" class="btn-secondary">
+
+                    Nous contacter
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="dakhla-location-badge">
+
+            <span class="dakhla-location-dot"></span>
+
+            DAKHLA · DAKHLA-OUED ED-DAHAB · MAROC
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="dakhla-stats">
+
+
+    <div class="container dakhla-stats-grid">
+
+
+        <div class="dakhla-stat">
+
+            <div class="dakhla-stat-number">
+                29+
+            </div>
+
+            <div class="dakhla-stat-text">
+
+                <strong>
+                    Années
+                </strong>
+
+                <span>
+                    d'expérience
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dakhla-stat">
+
+            <div class="dakhla-stat-number">
+                5000+
+            </div>
+
+            <div class="dakhla-stat-text">
+
+                <strong>
+                    Opérations
+                </strong>
+
+                <span>
+                    réalisées
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dakhla-stat">
+
+            <div class="dakhla-stat-number">
+                03
+            </div>
+
+            <div class="dakhla-stat-text">
+
+                <strong>
+                    Services
+                </strong>
+
+                <span>
+                    professionnels
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dakhla-stat">
+
+            <div class="dakhla-stat-number">
+                100%
+            </div>
+
+            <div class="dakhla-stat-text">
+
+                <strong>
+                    Engagement
+                </strong>
+
+                <span>
+                    qualité & sécurité
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="dakhla-intro">
+
+
+    <div class="container dakhla-intro-grid">
+
+
+        <div>
+
+            <div class="dakhla-kicker">
+
+                HANDLING SERVICES À DAKHLA
+
+            </div>
+
+
+            <h2>
+
+                Une présence locale
+
+                <span>
+                    au service de vos opérations.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="dakhla-intro-content">
+
+
+            <p class="lead">
+
+                Depuis 1997, Handling Services SARL développe
+                son savoir-faire dans le domaine de la manutention
+                et des opérations professionnelles au Maroc.
+
+            </p>
+
+
+            <p>
+
+                Notre présence à Dakhla nous permet d'accompagner
+                les professionnels au plus près de leurs besoins,
+                avec une organisation adaptée aux contraintes
+                des opérations.
+
+            </p>
+
+
+            <p>
+
+                Chaque intervention est préparée avec attention
+                afin de garantir une exécution efficace,
+                structurée et sécurisée.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURE
+===================================================== -->
+
+<section class="dakhla-feature">
+
+
+    <div class="container">
+
+
+        <div class="dakhla-feature-box">
+
+
+            <div class="dakhla-feature-image">
+
+
+                <img
+                    src="../images/dakhla.webp"
+                    alt="Opérations professionnelles à Dakhla"
+                >
+
+
+                <div class="dakhla-feature-label">
+
+                    DAKHLA · MAROC
+
+                </div>
+
+
+            </div>
+
+
+            <div class="dakhla-feature-content">
+
+
+                <div class="dakhla-kicker">
+
+                    NOTRE EXPERTISE
+
+                </div>
+
+
+                <h2>
+
+                    Une intervention pensée
+                    pour <span>vos besoins.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Nous adaptons nos moyens et notre organisation
+                    à la nature de chaque opération afin d'assurer
+                    une intervention maîtrisée.
+
+                </p>
+
+
+                <ul class="dakhla-check-list">
+
+
+                    <li>
+                        Organisation des opérations
+                    </li>
+
+
+                    <li>
+                        Équipes expérimentées
+                    </li>
+
+
+                    <li>
+                        Coordination et suivi
+                    </li>
+
+
+                    <li>
+                        Attention portée à la sécurité
+                    </li>
+
+
+                    <li>
+                        Solutions adaptées aux besoins
+                    </li>
+
+
+                </ul>
+
+
+                <a href="contact.html" class="text-link">
+
+                    Discuter de votre opération
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="dakhla-services">
+
+
+    <div class="container">
+
+
+        <div class="dakhla-section-head">
+
+
+            <div>
+
+
+                <div class="dakhla-kicker">
+
+                    NOS SERVICES À DAKHLA
+
+                </div>
+
+
+                <h2>
+
+                    Des solutions pour
+
+                    <span>
+                        vos opérations.
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+            <p>
+
+                Trois expertises complémentaires pour répondre
+                aux besoins des professionnels et accompagner
+                leurs opérations avec efficacité.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="dakhla-service-grid">
+
+
+            <article class="dakhla-service-card">
+
+
+                <div class="dakhla-service-number">
+
+                    SERVICE · 01
+
+                </div>
+
+
+                <div class="dakhla-service-icon">
+
+                    ↗
+
+                </div>
+
+
+                <h3>
+
+                    Manutention
+
+                </h3>
+
+
+                <p>
+
+                    Des opérations de manutention adaptées
+                    aux caractéristiques des marchandises
+                    et aux conditions du site.
+
+                </p>
+
+
+                <a href="manutention.html">
+
+                    Découvrir le service →
+
+                </a>
+
+
+            </article>
+
+
+            <article class="dakhla-service-card">
+
+
+                <div class="dakhla-service-number">
+
+                    SERVICE · 02
+
+                </div>
+
+
+                <div class="dakhla-service-icon">
+
+                    ↗
+
+                </div>
+
+
+                <h3>
+
+                    Déchargement
+
+                </h3>
+
+
+                <p>
+
+                    Une organisation rigoureuse pour assurer
+                    des opérations de déchargement efficaces
+                    et sécurisées.
+
+                </p>
+
+
+                <a href="dechargement.html">
+
+                    Découvrir le service →
+
+                </a>
+
+
+            </article>
+
+
+            <article class="dakhla-service-card">
+
+
+                <div class="dakhla-service-number">
+
+                    SERVICE · 03
+
+                </div>
+
+
+                <div class="dakhla-service-icon">
+
+                    ↗
+
+                </div>
+
+
+                <h3>
+
+                    Location de matériel
+
+                </h3>
+
+
+                <p>
+
+                    Des équipements adaptés aux besoins
+                    spécifiques de vos opérations
+                    professionnelles.
+
+                </p>
+
+
+                <a href="location-materiel.html">
+
+                    Découvrir le service →
+
+                </a>
+
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ZONE DAKHLA
+===================================================== -->
+
+<section class="dakhla-zone">
+
+
+    <div class="container dakhla-zone-box">
+
+
+        <div class="dakhla-zone-image">
+
+
+            <img
+                src="../images/dakhla.webp"
+                alt="Dakhla et son environnement portuaire"
+            >
+
+
+        </div>
+
+
+        <div class="dakhla-zone-content">
+
+
+            <div class="dakhla-kicker">
+
+                DAKHLA · OUED ED-DAHAB
+
+            </div>
+
+
+            <h2>
+
+                Une implantation au cœur
+                de <span>la région.</span>
+
+            </h2>
+
+
+            <p>
+
+                Dakhla occupe une position stratégique dans
+                le développement des activités maritimes,
+                portuaires et logistiques du Sud du Maroc.
+
+            </p>
+
+
+            <ul class="dakhla-zone-points">
+
+
+                <li>
+                    Présence locale
+                </li>
+
+
+                <li>
+                    Réactivité
+                </li>
+
+
+                <li>
+                    Organisation professionnelle
+                </li>
+
+
+                <li>
+                    Accompagnement sur mesure
+                </li>
+
+
+            </ul>
+
+
+            <a href="contact.html" class="text-link">
+
+                Nous contacter
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADVANTAGES
+===================================================== -->
+
+<section class="dakhla-advantages">
+
+
+    <div class="container">
+
+
+        <div class="dakhla-advantages-head">
+
+
+            <div class="dakhla-kicker">
+
+                POURQUOI NOUS CHOISIR
+
+            </div>
+
+
+            <h2>
+
+                Une approche fondée sur
+
+                <span>
+                    l'expérience.
+                </span>
+
+            </h2>
+
+
+        </div>
+
+
+        <div class="dakhla-advantages-grid">
+
+
+            <article class="dakhla-advantage">
+
+
+                <div class="dakhla-advantage-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Expérience
+                </h3>
+
+
+                <p>
+
+                    Une expérience dans le domaine de la
+                    manutention depuis 1997.
+
+                </p>
+
+
+            </article>
+
+
+            <article class="dakhla-advantage">
+
+
+                <div class="dakhla-advantage-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Réactivité
+                </h3>
+
+
+                <p>
+
+                    Une organisation capable de s'adapter
+                    aux exigences de chaque intervention.
+
+                </p>
+
+
+            </article>
+
+
+            <article class="dakhla-advantage">
+
+
+                <div class="dakhla-advantage-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Sécurité
+                </h3>
+
+
+                <p>
+
+                    Une attention constante portée aux
+                    conditions et aux procédures d'intervention.
+
+                </p>
+
+
+            </article>
+
+
+            <article class="dakhla-advantage">
+
+
+                <div class="dakhla-advantage-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Fiabilité
+                </h3>
+
+
+                <p>
+
+                    Un partenaire professionnel pour accompagner
+                    durablement vos opérations.
+
+                </p>
+
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="dakhla-cta">
+
+
+    <div class="container">
+
+
+        <div class="dakhla-cta-box">
+
+
+            <div>
+
+
+                <div class="dakhla-kicker">
+
+                    HANDLING SERVICES À DAKHLA
+
+                </div>
+
+
+                <h2>
+
+                    Une opération à Dakhla ?
+
+                    <span>
+                        Parlons-en.
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+            <a href="../devis.html?zone=dakhla" class="btn-primary">
+
+                <span>
+                    Demander un devis
+                </span>
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+
+            <a href="../index.html">
+
+                <img
+                    src="../images/logo.webp"
+                    alt="Handling Services SARL"
+                >
+
+            </a>
+
+
+            <p>
+
+                Expertise en manutention, déchargement
+                et location de matériel au Maroc.
+
+            </p>
+
+
+            <div class="footer-social">
+
+
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+
+                <a href="#" aria-label="LinkedIn">
+                    in
+                </a>
+
+
+                <a
+                    href="https://wa.me/212528822185"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="WhatsApp"
+                >
+                    W
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-column">
+
+
+            <h3>
+                NAVIGATION
+            </h3>
+
+
+            <a href="../index.html">
+                Accueil
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="agadir.html">
+                Agadir
+            </a>
+
+
+            <a href="dakhla.html">
+                Dakhla
+            </a>
+
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <a href="realisations.html">
+                Réalisations
+            </a>
+
+
+        </div>
+
+
+        <div class="footer-column">
+
+
+            <h3>
+                SERVICES
+            </h3>
+
+
+            <a href="manutention.html">
+                Manutention
+            </a>
+
+
+            <a href="dechargement.html">
+                Déchargement
+            </a>
+
+
+            <a href="location-materiel.html">
+                Location de matériel
+            </a>
+
+
+            <a href="../devis.html?zone=dakhla">
+                Demander un devis
+            </a>
+
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+
+            <h3>
+                CONTACT
+            </h3>
+
+
+            <a href="tel:+212528822185">
+                +212 528 82 21 85
+            </a>
+
+
+            <a href="mailto:handlingservices1@gmail.com">
+                handlingservices1@gmail.com
+            </a>
+
+
+            <span>
+                Agadir · Dakhla · Maroc
+            </span>
+
+
+            <span>
+                Lun — Sam · 09:00 — 17:00
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+
+        <p>
+
+            © 2026 Handling Services SARL.
+            Tous droits réservés.
+
+        </p>
+
+
+        <div>
+
+
+            <a href="mentions-legales.html">
+                Mentions légales
+            </a>
+
+
+            <span>
+                ·
+            </span>
+
+
+            <a href="politique-confidentialite.html">
+                Politique de confidentialité
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+<button
+    class="mobile-menu-button"
+    type="button"
+    aria-label="Ouvrir le menu"
+    aria-expanded="false"
+>
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+
+</body>
+
+</html>
